@@ -105,3 +105,33 @@
     targets.forEach((el) => { const r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add('is-in'); });
   }, 2500));
 })();
+
+(() => {
+  // ---------- 4. 의견함: 홈페이지 안에서 적은 글을 구글 폼 응답함으로 보낸다 ----------
+  // 새 창을 열지 않으려고 숨긴 iframe 으로 제출한다. 구글이 답을 돌려주지 않으므로 제출이 끝나면 "보냈습니다"로 바꾼다.
+  const form = document.getElementById('fb-form');
+  if (!form || form.action.includes('FORM_ACTION')) return;
+  const field = document.getElementById('fb-text');
+  const done = document.getElementById('fb-done');
+  const note = document.getElementById('fb-note');
+  const sink = form.ownerDocument.querySelector('iframe[name="fb-sink"]');
+  let sending = false;
+  form.addEventListener('submit', (e) => {
+    const text = field.value.trim();
+    if (!text) { e.preventDefault(); field.focus(); note.textContent = '내용을 적은 뒤 보내 주세요.'; return; }
+    if (sending) { e.preventDefault(); return; }
+    sending = true;
+    form.classList.add('is-sending');
+    note.textContent = '보내는 중…';
+    const finish = () => {
+      sending = false;
+      form.classList.remove('is-sending');
+      field.value = '';
+      note.textContent = '보내면 치과 의견함에 바로 쌓입니다.';
+      done.hidden = false;
+      done.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    };
+    if (sink) { sink.addEventListener('load', finish, { once: true }); setTimeout(() => { if (sending) finish(); }, 4000); }
+    else setTimeout(finish, 800);
+  });
+})();

@@ -160,6 +160,21 @@
         <p data-reveal style="--i:9"><b>스케일링은 얼마나 자주 받나요?</b> 여섯 달에 한 번이 기준입니다. 잇몸에서 피가 나면 더 일찍 오세요.</p>
       </div>
     </section>
+
+    <section class="section feedback" data-scene="form" aria-labelledby="fb-title">
+      <h2 id="fb-title">의견함</h2>
+      <p class="measure">불편했던 점, 바라는 점을 적어 주세요. 이름은 받지 않습니다. 적은 내용은 치과에만 전달되고 이 페이지에는 보이지 않습니다.</p>
+      <form class="fb" id="fb-form" action="https://docs.google.com/forms/d/e/1FAIpQLScYv5OPSOPAkaIRf9biORDnwYV5szAisddn2qoDDCzbE45UtQ/formResponse" method="post" target="fb-sink" novalidate>
+        <label class="fb__label" for="fb-text">바라는 점이나 불편했던 점</label>
+        <textarea class="fb__field" id="fb-text" name="entry.2080021156" rows="5" required maxlength="1000" placeholder="예: 점심시간 직후에는 대기가 길어요"></textarea>
+        <div class="fb__row">
+          <button class="button" type="submit" id="fb-send">의견 보내기</button>
+          <span class="fb__note small muted" id="fb-note">보내면 치과 의견함에 바로 쌓입니다.</span>
+        </div>
+      </form>
+      <iframe name="fb-sink" class="sr-only" title="전송 처리" tabindex="-1" aria-hidden="true"></iframe>
+      <p class="fb__done" id="fb-done" hidden>보냈습니다. 읽고 진료에 반영하겠습니다. 하나 더 적으려면 칸에 다시 쓰면 됩니다.</p>
+    </section>
   </main>
 </div>
 {{CTA}}
