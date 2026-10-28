@@ -135,6 +135,13 @@ p + p { margin-top: 0.9em; }
 .features__head { position: sticky; top: 0; font-size: var(--step-display); line-height: 1.05; letter-spacing: -0.03em; padding: calc(1rem + var(--gap)) 0 1rem; margin-top: calc(var(--gap) * -1); background: var(--field-light); z-index: 1; }
 .features__list { margin-top: 2.5rem; display: grid; gap: clamp(5rem, 6vw, 5.5rem); }
 .feature h3 { font-size: var(--step-head); }
+.feature__statement { margin-top: 0.5rem; max-width: 36em; }
+.feature__cases { margin-top: 1.25rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.feature__cases figure { margin: 0; min-width: 0; }
+.feature__cases img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; background: var(--surface-deep); }
+.feature__cases figcaption { font-size: var(--step-small); color: var(--muted); margin-top: 0.35rem; }
+.feature__credit { margin-top: 0.75rem; }
+.feature__row--full, .feature:nth-child(even) .feature__row--full { grid-template-columns: 1fr; }
 .feature__row { display: grid; grid-template-columns: 200px 1fr; gap: clamp(1.25rem, 3vw, 2rem); align-items: start; margin-top: 1.25rem; }
 .feature:nth-child(even) .feature__row { grid-template-columns: 1fr 200px; }
 .feature:nth-child(even) .feature__row figure { order: 2; }

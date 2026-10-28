@@ -12,7 +12,7 @@
 <script>document.documentElement.classList.add('js')</script>
 
 <title>진료 안내 · 3사단 의무대대 치과</title>
-<meta name="description" content="충치 치료, 사랑니와 발치, 스케일링과 잇몸 치료. 부대 안에서 끝내는 치료와 군병원으로 보내는 치료.">
+<meta name="description" content="충치 치료, 사랑니와 발치, 보철 치료, 스케일링과 잇몸 치료. 임플란트와 교정을 제외한 모든 술식을 의무대 안에서 시행.">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -224,6 +224,16 @@
     <rect x="0" y="760" width="1600" height="14" fill="var(--ink)"/>
   </symbol>
 
+  <symbol id="d-crown" viewBox="0 0 300 400">
+    <rect x="0" y="0" width="300" height="400" fill="var(--field-light)"/>
+    <rect x="0" y="250" width="300" height="150" fill="var(--field)"/>
+    <!-- 삭제된 치아 위에 씌운 크라운 -->
+    <path d="M110 260 l-16 90 q-4 20 16 20 l10 0 l14-90z M190 260 l16 90 q4 20-16 20 l-10 0 l-14-90z" fill="var(--paper)"/>
+    <path d="M90 170 l0 60 q0 30 40 30 l40 0 q40 0 40-30 l0-60z" fill="var(--paper)"/>
+    <path d="M70 120 q10-50 50-50 q30 0 30 20 q0-20 30-20 q40 0 50 50 l0 50 q0 14-14 14 l-132 0 q-14 0-14-14z" fill="var(--field-deep)"/>
+    <path d="M86 118 q8-36 30-36 q20 0 24 16 q4-16 24-16 q22 0 30 36 l0 20 l-108 0z" fill="var(--field)" opacity="0.6"/>
+    <rect x="120" y="150" width="60" height="8" fill="var(--paper)" opacity="0.5"/>
+  </symbol>
   <!-- 진료 과목 그림 3개 (3:4) -->
   <symbol id="d-cavity" viewBox="0 0 300 400">
     <rect x="0" y="0" width="300" height="400" fill="var(--field-light)"/>
@@ -289,7 +299,7 @@
 
     <section class="section intro" aria-labelledby="page-title">
       <h1 class="display" id="page-title">진료 안내</h1>
-      <p class="lead-p">부대 안에서 끝내는 치료와 군병원으로 보내는 치료를 나눠 적었습니다. 어느 쪽인지 모르겠으면 일단 오세요. 보고 나서 정합니다.</p>
+      <p class="lead-p">임플란트, 교정을 제외한 모든 술식은 의무대 내에서 진행 가능합니다. 의료진의 판단, 혹은 환자의 요청에 따라 국군병원으로 연결해 드리기도 합니다.</p>
       <a class="button" href="tel:033-450-7119">전화로 예약 문의</a>
     </section>
 
@@ -298,40 +308,63 @@
       <div class="features__list">
         <article class="feature" data-reveal>
           <h3>충치 치료</h3>
-          <div class="feature__row">
-            <figure aria-hidden="true"><svg><use href="#d-cavity"/></svg></figure>
+          <p class="feature__statement">우식의 깊이와 범위에 따라 수복에서 근관치료까지 단계적으로 진행합니다.</p>
+          <div class="feature__cases">
+            <figure><img src="photos/caries-1-before.jpg" alt="치료 전: 상악 전치부 우식" width="1220" height="752" loading="lazy"><figcaption>치료 전</figcaption></figure>
+            <figure><img src="photos/caries-1-after.jpg" alt="치료 후: 레진 수복 완료" width="1400" height="852" loading="lazy"><figcaption>치료 후</figcaption></figure>
+            <figure><img src="photos/caries-2-before.jpg" alt="치료 전: 상악 측절치 우식과 변색" width="1400" height="592" loading="lazy"><figcaption>치료 전</figcaption></figure>
+            <figure><img src="photos/caries-2-after.jpg" alt="치료 후: 레진 수복으로 형태와 색 회복" width="1400" height="687" loading="lazy"><figcaption>치료 후</figcaption></figure>
+          </div>
+          <p class="feature__credit small muted">Courtesy of Dr. Lee Won Woo</p>
+          <div class="feature__row feature__row--full">
             <ul>
-              <li>작은 충치는 그날 레진으로 메웁니다</li>
-              <li>신경까지 닿은 충치는 신경치료를 합니다. 세 번에서 네 번 옵니다</li>
-              <li>신경치료 뒤 크라운이 필요하면 군병원으로 연결합니다</li>
-              <li>깨진 치아는 당일 응급 처치를 합니다</li>
-              <li>파노라마 X선으로 보이지 않는 충치를 찾습니다</li>
+              <li>최소 삭제 원칙에 따른 직접 레진 수복</li>
+              <li>치수까지 진행된 우식은 근관치료 후 수복</li>
+              <li>파절·외상 치아의 당일 응급 처치</li>
+              <li>파노라마 및 구내 방사선 촬영으로 인접면 우식 진단</li>
+              <li>통상 1~3회 내원, 근관치료는 3~4회</li>
             </ul>
           </div>
         </article>
         <article class="feature" data-reveal>
           <h3>사랑니와 발치</h3>
+          <p class="feature__statement">구강악안면외과 전문의가 매복 사랑니를 포함한 발치를 직접 시행합니다.</p>
           <div class="feature__row">
             <figure aria-hidden="true"><svg><use href="#d-wisdom"/></svg></figure>
             <ul>
-              <li>X선으로 사랑니의 방향과 뿌리를 확인합니다</li>
-              <li>바로 선 사랑니는 여기서 뺍니다. 30분에서 한 시간입니다</li>
-              <li>누웠거나 묻힌 사랑니는 군병원 구강외과로 의뢰합니다</li>
-              <li>발치 뒤 이틀에서 사흘 훈련 조정 소견서를 씁니다</li>
-              <li>다음 날 소독, 일주일 뒤 실밥을 뺍니다</li>
+              <li>방사선 영상으로 맹출 방향과 하치조신경 위치 확인</li>
+              <li>단순 발치부터 매복 사랑니 발치까지 원내 시행</li>
+              <li>발치 후 2~3일 훈련·체력단련 조정 소견서 발급</li>
+              <li>익일 소독, 1주 후 발사</li>
+              <li>전신마취가 필요한 경우 국군병원 의뢰</li>
+            </ul>
+          </div>
+        </article>
+        <article class="feature" data-reveal>
+          <h3>보철 치료</h3>
+          <p class="feature__statement">치과보철과 전문의가 손상된 치아의 형태와 기능을 회복합니다.</p>
+          <div class="feature__row">
+            <figure aria-hidden="true"><svg><use href="#d-crown"/></svg></figure>
+            <ul>
+              <li>크라운, 인레이·온레이 수복</li>
+              <li>브릿지 및 부분·완전 틀니</li>
+              <li>근관치료 후 치아의 보철 수복</li>
+              <li>파절된 보철물의 수리와 재제작</li>
+              <li>임플란트는 국군병원으로 연결</li>
             </ul>
           </div>
         </article>
         <article class="feature" data-reveal>
           <h3>스케일링과 잇몸 치료</h3>
+          <p class="feature__statement">치석 제거와 치주 치료로 잇몸의 염증을 관리합니다.</p>
           <div class="feature__row">
             <figure aria-hidden="true"><svg><use href="#d-gum"/></svg></figure>
             <ul>
-              <li>잇몸선 위아래의 치석을 걷어냅니다. 30분입니다</li>
-              <li>붓고 피 나는 잇몸은 치석 제거 뒤 약을 처방합니다</li>
-              <li>시린 이는 원인을 보고 약을 바르거나 메웁니다</li>
-              <li>칫솔과 치실 쓰는 법을 거울 앞에서 알려 드립니다</li>
-              <li>여섯 달에 한 번, 전역 전 한 번 더 받기를 권합니다</li>
+              <li>초음파 스케일링 및 치근활택술</li>
+              <li>치은염·치주염의 단계별 치료</li>
+              <li>지각과민(시린 이) 처치</li>
+              <li>칫솔질·치실 등 구강위생 교육</li>
+              <li>6개월 주기 정기 검진 권장</li>
             </ul>
           </div>
         </article>
@@ -339,14 +372,13 @@
     </section>
 
     <section class="section" aria-labelledby="out-title">
-      <h2 id="out-title" data-reveal>군병원으로 보내는 치료</h2>
-      <p data-reveal style="--i:1">아래 치료는 장비와 시간이 더 필요해 군병원 치과에서 합니다. 진단과 의뢰서, 외진 일정은 이곳에서 잡아 드립니다.</p>
+      <h2 id="out-title" data-reveal>국군병원으로 연결하는 치료</h2>
+      <p data-reveal style="--i:1">아래 치료는 국군병원 치과에서 시행합니다. 진단과 의뢰서, 외진 일정은 이곳에서 잡아 드립니다.</p>
       <ul class="plain" data-reveal>
-        <li>크라운, 브릿지, 틀니 같은 보철 치료</li>
         <li>임플란트</li>
         <li>교정 상담과 교정 치료</li>
-        <li>깊이 묻힌 사랑니와 전신마취가 필요한 발치</li>
-        <li>턱관절 장애, 구강 내 종양 의심</li>
+        <li>전신마취가 필요한 수술</li>
+        <li>의료진의 판단 또는 환자의 요청이 있는 경우</li>
       </ul>
       <p>외진 당일에는 소속 부대의 이동 계획이 필요합니다. 외진 일정을 받으면 바로 부대에 알리세요.</p>
     </section>
