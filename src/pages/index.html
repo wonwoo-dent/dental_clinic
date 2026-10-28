@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+<head>
+{{HEAD}}
+<title>3사단 의무대대 치과</title>
+<meta name="description" content="3사단 장병과 간부가 부대 안에서 진료비 없이 치료받는 치과. 평일 09:00–17:00, 소속 의무실 진료 의뢰 후 전화 예약.">
+</head>
+<body>
+{{SPRITE}}
+<div class="stage">
+  <aside class="panel" aria-label="진료 시간 안내판과 치과 그림">
+{{BOARD}}
+    <div class="panel__scene" data-scene-name="chart" hidden>
+      <div class="panel__art" aria-hidden="true"><svg><use href="#d-chart"/></svg></div>
+      <div class="panel__caption"><p class="panel__status">치식표에서 보는 세 과목</p><p class="panel__next">큰어금니의 충치, 맨 안쪽의 사랑니, 잇몸선의 치석. 장병 진료의 대부분이 이 세 자리에서 생깁니다.</p></div>
+    </div>
+    <div class="panel__scene" data-scene-name="week" hidden>
+      <div class="panel__art" aria-hidden="true"><svg><use href="#d-week"/></svg></div>
+      <div class="panel__caption"><p class="panel__status">일과 안에서 다녀옵니다</p><p class="panel__next">오전 09:00–12:00, 오후 13:00–17:00. 한 번 진료에 보통 30분이면 됩니다.</p></div>
+    </div>
+    <div class="panel__scene" data-scene-name="form" hidden>
+      <div class="panel__art" aria-hidden="true"><svg><use href="#d-form"/></svg></div>
+      <div class="panel__caption"><p class="panel__status">의뢰서 한 장이면 됩니다</p><p class="panel__next">소속 의무실에서 받은 진료 의뢰서와 군 신분증을 가지고 오세요. 간부는 전화 예약만으로 됩니다.</p></div>
+    </div>
+  </aside>
+
+  <main class="column">
+    <header class="card" data-scene="board">
+      <div class="stripe" aria-hidden="true">{{STRIPE}}</div>
+      <div class="card__body">
+        <a class="wordmark" href="index.html" data-load style="--d:200ms">3사단 의무대대 치과</a>
+        <h1 class="display lines">
+          <span class="line"><span data-line style="--i:0">아픈 치아,</span></span>
+          <span class="line"><span data-line style="--i:1">부대 안에서 고칩니다</span></span>
+        </h1>
+        <p class="lead" data-load style="--d:420ms">3사단 장병과 간부는 진료비 없이, 일과 시간 안에 이곳에서 치료받습니다. 소속 의무실에 말하고 전화 한 통이면 예약이 끝납니다.</p>
+        <a class="button" href="tel:000-0000-0000" data-load style="--d:500ms">전화로 예약 문의</a>
+      </div>
+      <nav class="nav" aria-label="주요 메뉴" data-load style="--d:600ms">
+      {{NAV}}
+      </nav>
+    </header>
+
+    <section class="features" data-scene="chart" aria-labelledby="features-title">
+      <h2 class="features__head" id="features-title">진료 과목</h2>
+      <p class="measure" data-reveal>장병이 치과를 찾는 이유는 대개 세 가지입니다. 이 세 가지는 부대 안에서 끝냅니다. 그 밖의 치료는 군병원으로 연결해 드립니다.</p>
+      <div class="features__list">
+        <article class="feature" data-reveal>
+          <h3>충치 치료</h3>
+          <div class="feature__row">
+            <figure aria-hidden="true"><svg><use href="#d-cavity"/></svg></figure>
+            <ul>
+              <li>충치를 긁어내고 레진으로 메웁니다</li>
+              <li>깊은 충치는 신경치료로 이어집니다</li>
+              <li>깨진 치아의 응급 처치를 합니다</li>
+              <li>필요하면 파노라마 X선을 찍습니다</li>
+              <li>보통 한 번에서 세 번 방문이면 끝납니다</li>
+            </ul>
+          </div>
+        </article>
+        <article class="feature" data-reveal>
+          <h3>사랑니와 발치</h3>
+          <div class="feature__row">
+            <figure aria-hidden="true"><svg><use href="#d-wisdom"/></svg></figure>
+            <ul>
+              <li>사랑니 상태를 보고 뺄지 둘지 상담합니다</li>
+              <li>바로 선 사랑니와 흔들리는 치아를 뺍니다</li>
+              <li>깊이 묻힌 사랑니는 군병원으로 의뢰합니다</li>
+              <li>발치 뒤 훈련과 체력단련 조정 소견을 씁니다</li>
+              <li>다음 날 소독, 일주일 뒤 실밥을 뺍니다</li>
+            </ul>
+          </div>
+        </article>
+        <article class="feature" data-reveal>
+          <h3>스케일링과 잇몸 치료</h3>
+          <div class="feature__row">
+            <figure aria-hidden="true"><svg><use href="#d-gum"/></svg></figure>
+            <ul>
+              <li>잇몸선의 치석을 걷어냅니다</li>
+              <li>피가 나거나 부은 잇몸을 치료합니다</li>
+              <li>입냄새와 시린 이를 상담합니다</li>
+              <li>칫솔질 방법을 직접 알려 드립니다</li>
+              <li>여섯 달에 한 번 받기를 권합니다</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section hours" data-scene="week" aria-labelledby="hours-title">
+      <h2 class="hours__word" id="hours-title">진료시간</h2>
+      <div class="inline-figure" aria-hidden="true"><svg><use href="#d-week"/></svg></div>
+      <div class="bars">
+        <details class="bar" open data-reveal style="--i:0">
+          <summary>평일 진료</summary>
+          <div class="bar__panel">
+            <dl><dt>오전 진료</dt><dd>09:00–12:00</dd><dt>점심시간</dt><dd>12:00–13:00</dd><dt>오후 진료</dt><dd>13:00–17:00</dd><dt>마지막 접수</dt><dd>16:30</dd></dl>
+            <p>훈련과 부대 행사 기간에는 시간이 바뀔 수 있습니다. 전화로 확인하세요.</p>
+          </div>
+        </details>
+        <details class="bar" data-reveal style="--i:1">
+          <summary>토요일 · 일요일 · 공휴일</summary>
+          <div class="bar__panel">
+            <dl><dt>정규 진료</dt><dd>휴진</dd><dt>응급 치통 · 외상</dt><dd>당직 의무병</dd></dl>
+            <p>당직 의무병이 당직 군의관에게 연결합니다. 심한 출혈이나 외상은 바로 알리세요.</p>
+          </div>
+        </details>
+        <details class="bar" data-reveal style="--i:2">
+          <summary>병사 진료</summary>
+          <div class="bar__panel">
+            <dl><dt>진료비</dt><dd>없음</dd><dt>필요한 것</dt><dd>의무실 진료 의뢰서</dd><dt>외출 처리</dt><dd>소속 부대</dd></dl>
+            <p>소속 의무실에 증상을 말하면 의뢰서를 써 줍니다. 의뢰서를 들고 전화 예약 후 방문하세요.</p>
+          </div>
+        </details>
+        <details class="bar" data-reveal style="--i:3">
+          <summary>간부 · 군무원 진료</summary>
+          <div class="bar__panel">
+            <dl><dt>진료비</dt><dd>없음</dd><dt>필요한 것</dt><dd>전화 예약, 군 신분증</dd></dl>
+            <p>가족과 민간인은 진료 대상이 아닙니다. 가까운 군병원을 안내해 드립니다.</p>
+          </div>
+        </details>
+        <details class="bar" data-reveal style="--i:4">
+          <summary>군병원으로 보내는 치료</summary>
+          <div class="bar__panel">
+            <dl><dt>크라운 · 틀니 · 브릿지</dt><dd>군병원</dd><dt>임플란트 · 교정</dt><dd>군병원</dd><dt>깊이 묻힌 사랑니</dt><dd>군병원</dd></dl>
+            <p>외진 일정은 이곳에서 잡아 드립니다. 외진 당일 이동은 소속 부대와 상의하세요.</p>
+          </div>
+        </details>
+        <details class="bar" data-reveal style="--i:5">
+          <summary>응급일 때</summary>
+          <div class="bar__panel">
+            <dl><dt>일과 중</dt><dd>바로 전화</dd><dt>일과 후 · 주말</dt><dd>당직 의무병</dd></dl>
+            <p>심한 치통, 부러진 치아, 멎지 않는 출혈은 응급입니다. 예약 없이 연락하세요.</p>
+          </div>
+        </details>
+        <details class="bar" data-reveal style="--i:6">
+          <summary>가져올 것</summary>
+          <div class="bar__panel">
+            <dl><dt>군 신분증</dt><dd>필수</dd><dt>진료 의뢰서</dt><dd>병사</dd><dt>복용 중인 약 목록</dt><dd>있으면</dd></dl>
+            <p>약은 이름만 적어 와도 됩니다. 사진으로 찍어 와도 좋습니다. 피를 묽게 하는 약은 꼭 말하세요.</p>
+          </div>
+        </details>
+      </div>
+      <p>위 시간은 2026년 기준입니다. 훈련 기간의 변동은 각 부대 의무실에 미리 알리고, 이 페이지에도 바꿔 적습니다.</p>
+    </section>
+
+    <section class="section faq" data-scene="form" aria-labelledby="faq-title">
+      <h2 id="faq-title">자주 묻는 질문</h2>
+      <div class="inline-figure" aria-hidden="true"><svg><use href="#d-form"/></svg></div>
+      <div class="measure">
+        <p data-reveal style="--i:0"><b>예약 없이 가도 되나요?</b> 응급이 아니면 전화 예약 후 오세요. 예약 환자가 먼저이고, 비는 시간이 있으면 그 자리에서 봐 드립니다.</p>
+        <p data-reveal style="--i:1"><b>진료비가 정말 없나요?</b> 네. 3사단 소속 병사, 간부, 군무원은 진료비와 약값이 없습니다.</p>
+        <p data-reveal style="--i:2"><b>의무실 의뢰서는 꼭 필요한가요?</b> 병사는 필요합니다. 소속 의무실에 증상을 말하면 바로 써 줍니다. 간부와 군무원은 전화 예약만으로 됩니다.</p>
+        <p data-reveal style="--i:3"><b>한 번 진료에 얼마나 걸리나요?</b> 검사와 상담은 20분, 충치 한 개는 30분쯤입니다. 신경치료와 발치는 한 시간을 잡으세요.</p>
+        <p data-reveal style="--i:4"><b>훈련 중인데 치아가 아픕니다.</b> 훈련장 의무병에게 말하세요. 응급이면 바로 연락이 오고, 아니면 훈련 뒤 가장 빠른 시간으로 잡아 드립니다.</p>
+        <p data-reveal style="--i:5"><b>사랑니는 꼭 빼야 하나요?</b> 아닙니다. 바르게 나고 닦을 수 있으면 둡니다. 자주 붓거나 옆 치아를 밀면 빼기를 권합니다.</p>
+        <p data-reveal style="--i:6"><b>발치 후 훈련은 어떻게 되나요?</b> 보통 이틀에서 사흘 동안 격한 훈련과 체력단련을 피해야 합니다. 소견서를 써 드리니 소속 부대에 내세요.</p>
+        <p data-reveal style="--i:7"><b>크라운이나 임플란트도 되나요?</b> 여기서는 하지 않습니다. 군병원 외진으로 연결하고 일정을 잡아 드립니다.</p>
+        <p data-reveal style="--i:8"><b>전역이 얼마 안 남았는데 치료를 시작해도 되나요?</b> 전역일을 말해 주세요. 남은 기간 안에 끝낼 수 있는 치료부터 하고, 나머지는 소견서를 써 드립니다.</p>
+        <p data-reveal style="--i:9"><b>스케일링은 얼마나 자주 받나요?</b> 여섯 달에 한 번이 기준입니다. 잇몸에서 피가 나면 더 일찍 오세요.</p>
+      </div>
+    </section>
+  </main>
+</div>
+{{CTA}}
+{{FOOTER}}
+</body>
+</html>

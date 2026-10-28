@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+{{HEAD}}
+<title>진료 시간과 예약 방법 · 3사단 의무대대 치과</title>
+<meta name="description" content="평일 09:00–17:00, 점심 12:00–13:00. 소속 의무실 진료 의뢰, 전화 예약, 방문까지 세 단계.">
+</head>
+<body>
+{{SPRITE}}
+<div class="stage">
+  <aside class="panel panel--short" aria-label="진료 시간 안내판">
+{{BOARD}}
+  </aside>
+  <main class="column">
+    <header class="card card--short">
+      <div class="stripe" aria-hidden="true">{{STRIPE}}</div>
+      <div class="card__body"><a class="wordmark" href="index.html" data-load style="--d:150ms">3사단 의무대대 치과</a></div>
+      <nav class="nav" aria-label="주요 메뉴" data-load style="--d:300ms">
+      {{NAV}}
+      </nav>
+    </header>
+
+    <section class="section intro" aria-labelledby="page-title">
+      <h1 class="display" id="page-title">진료 시간과 예약 방법</h1>
+      <p class="lead-p">일과 안에서 다녀올 수 있게 시간을 짰습니다. 예약은 세 단계, 처음 오는 날 10분이면 접수가 끝납니다.</p>
+      <a class="button" href="tel:000-0000-0000">전화로 예약 문의</a>
+    </section>
+
+    <section class="section" aria-labelledby="t-title">
+      <h2 id="t-title" data-reveal>진료 시간</h2>
+      <div class="inline-figure" aria-hidden="true"><svg><use href="#d-week"/></svg></div>
+      <table class="table" data-reveal>
+        <thead><tr><th scope="col">요일</th><th scope="col">시간</th><th scope="col">비고</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">평일</th><td class="num">09:00–12:00</td><td>오전 진료</td></tr>
+          <tr><th scope="row"></th><td class="num">12:00–13:00</td><td>점심시간</td></tr>
+          <tr><th scope="row"></th><td class="num">13:00–17:00</td><td>오후 진료, 마지막 접수 16:30</td></tr>
+          <tr><th scope="row">주말 · 공휴일</th><td class="num">휴진</td><td>응급은 당직 의무병</td></tr>
+        </tbody>
+      </table>
+      <p>훈련, 부대 행사, 군의관 교육 기간에는 시간이 바뀝니다. 바뀌는 주에는 각 부대 의무실에 미리 알립니다.</p>
+    </section>
+
+    <section class="section" aria-labelledby="s-title">
+      <h2 id="s-title" data-reveal>예약 방법</h2>
+      <ol class="steps" data-reveal>
+        <li><strong>소속 의무실에 말하기</strong>병사는 소속 부대 의무실에 증상을 말하고 진료 의뢰서를 받습니다. 간부와 군무원은 이 단계를 건너뜁니다.</li>
+        <li><strong>전화로 시간 잡기</strong>치과에 전화해 이름, 소속, 증상을 말하면 가장 빠른 시간을 잡아 드립니다. 일과 중 외출 처리는 소속 부대에서 합니다.</li>
+        <li><strong>예약 시간에 방문</strong>군 신분증과 진료 의뢰서를 가지고 10분 전에 오세요. 복용 중인 약이 있으면 이름을 적어 오세요.</li>
+      </ol>
+      <p>전화는 진료 시간 안에 받습니다. 진료 중이면 받지 못할 수 있으니 조금 뒤 다시 걸어 주세요.</p>
+    </section>
+
+    <section class="section" aria-labelledby="e-title">
+      <h2 id="e-title" data-reveal>응급일 때</h2>
+      <p data-reveal style="--i:1">심한 치통, 부러진 치아, 빠진 치아, 멎지 않는 출혈은 응급입니다. 일과 중이면 예약 없이 바로 전화하세요. 일과 후와 주말에는 당직 의무병에게 알리면 당직 군의관이 연락합니다.</p>
+      <p>빠진 치아는 물로 살살 헹궈 우유나 생리식염수에 담아 오세요. 한 시간 안에 오면 다시 심을 수 있습니다.</p>
+    </section>
+
+    <section class="section" aria-labelledby="l-title">
+      <h2 id="l-title" data-reveal>오시는 길</h2>
+      <p data-reveal style="--i:1">의무대대 본부 건물 1층, 정문에서 들어와 오른쪽 복도 끝입니다. 입구에 치과 표지가 있습니다.</p>
+      <p>전화 000-0000-0000 (부대 내선 000-0000). 진료 시간 안에 받습니다.</p>
+    </section>
+  </main>
+</div>
+{{CTA}}
+{{FOOTER}}
+</body>
+</html>
