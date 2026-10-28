@@ -172,6 +172,12 @@ p + p { margin-top: 0.9em; }
 .fb__done { margin-top: 1rem; padding: 1rem 1.25rem; background: var(--field-light); max-width: 36em; }
 .fb.is-sending .button { opacity: 0.6; pointer-events: none; }
 
+/* 의료진 */
+.doctor { margin-top: 5rem; }
+.doctor h3 { font-size: var(--step-head); }
+.doctor__role { margin-top: 0.35rem; font-weight: 500; }
+.doctor ul.plain { margin-top: 1rem; }
+
 /* 표 (실제 표에는 선을 쓴다) */
 .table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; margin-top: 1.5rem; }
 .table th, .table td { text-align: left; padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--surface-deep); vertical-align: top; }
