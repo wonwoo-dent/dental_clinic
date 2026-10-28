@@ -3,7 +3,7 @@
 
 (() => {
   // ---------- 1. 진료 시간 안내판 ----------
-  const HOURS = { open: 9 * 60, lunchStart: 12 * 60, lunchEnd: 13 * 60, close: 17 * 60 }; // 분 단위
+  const HOURS = { open: 9 * 60, lunchStart: 12 * 60, lunchEnd: 13 * 60, close: 16 * 60 }; // 분 단위
   const DAYS = ['일', '월', '화', '수', '목', '금', '토'];
   const status = document.getElementById('now-status');
   const next = document.getElementById('now-next');
@@ -34,13 +34,13 @@
       n = `${left(HOURS.open - minutes)} 뒤인 09:00에 엽니다. 점심시간은 12:00–13:00입니다.`;
     } else if (minutes < HOURS.lunchStart) {
       s = '지금 진료 중입니다';
-      n = `점심시간 12:00까지 ${left(HOURS.lunchStart - minutes)} 남았습니다. 오후 진료는 13:00–17:00입니다.`;
+      n = `점심시간 12:00까지 ${left(HOURS.lunchStart - minutes)} 남았습니다. 오후 진료는 13:00–16:00입니다.`;
     } else if (minutes < HOURS.lunchEnd) {
       s = '점심시간입니다';
       n = `${left(HOURS.lunchEnd - minutes)} 뒤인 13:00에 오후 진료를 시작합니다.`;
     } else if (minutes < HOURS.close) {
       s = '지금 진료 중입니다';
-      n = `오늘 진료는 17:00까지, ${left(HOURS.close - minutes)} 남았습니다.`;
+      n = `오늘 진료는 16:00까지, ${left(HOURS.close - minutes)} 남았습니다.`;
     } else {
       s = '오늘 진료가 끝났습니다';
       n = `${day === 5 ? '월요일' : '내일'} 09:00에 다시 엽니다. 응급 치통은 당직 의무병을 통해 연락하세요.`;

@@ -87,7 +87,9 @@ p + p { margin-top: 0.9em; }
 .stripe--thin { height: 8px; }
 .stripe--thin span { flex-basis: 14px; }
 .card__body { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2.5rem var(--pad) 2rem; width: 100%; }
-.wordmark { font-size: var(--step-lead); font-weight: 700; letter-spacing: -0.01em; text-decoration: none; line-height: 1.2; }
+.wordmark { display: flex; flex-direction: column; align-items: center; gap: 1rem; font-size: var(--step-lead); font-weight: 700; letter-spacing: -0.01em; text-decoration: none; line-height: 1.2; }
+.mark { width: 84px; height: auto; background: none; }
+.mark--small { width: 56px; }
 .card .wordmark { margin-bottom: 2.5rem; }
 .display { font-size: var(--step-display); line-height: 1.12; letter-spacing: -0.03em; max-width: 12em; }
 .lead { font-size: var(--step-body); line-height: 1.6; max-width: 34ch; margin-top: 2rem; }
@@ -245,6 +247,8 @@ p + p { margin-top: 0.9em; }
   .column { position: relative; z-index: 1; margin-top: -24px; }
   .card { min-height: 0; }
   .stripe { height: 40px; }
+  .mark { width: 64px; }
+  .mark--small { width: 44px; }
   .card__body { padding: 2rem 1.25rem 1.5rem; }
   .display { font-size: 8vw; }
   .lead { margin-top: 1.5rem; }

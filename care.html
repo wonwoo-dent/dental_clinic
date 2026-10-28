@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<link rel="icon" href="mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 <script>document.documentElement.classList.add('js')</script>
 
@@ -105,7 +106,7 @@
     <circle cx="80" cy="84" r="7" fill="var(--ink)"/>
     <circle cx="520" cy="84" r="7" fill="var(--ink)"/>
     <text x="80" y="134" font-size="34" font-weight="700" fill="var(--ink)">주간 진료 시간표</text>
-    <text x="80" y="166" font-size="18" fill="var(--muted)">평일 09:00–17:00 · 점심 12:00–13:00</text>
+    <text x="80" y="166" font-size="18" fill="var(--muted)">평일 09:00–16:00 · 점심 12:00–13:00</text>
     <!-- 요일 머리 -->
     <g font-size="18" font-weight="500" fill="var(--ink)" text-anchor="middle">
       <text x="190" y="214">월</text><text x="250" y="214">화</text><text x="310" y="214">수</text><text x="370" y="214">목</text><text x="430" y="214">금</text>
@@ -117,17 +118,17 @@
     </g>
     <!-- 요일 열: 오전 09–12, 점심, 오후 13–17 -->
     <g fill="var(--field)">
-      <rect x="166" y="230" width="48" height="128"/><rect x="166" y="406" width="48" height="172"/>
-      <rect x="226" y="230" width="48" height="128"/><rect x="226" y="406" width="48" height="172"/>
-      <rect x="286" y="230" width="48" height="128"/><rect x="286" y="406" width="48" height="172"/>
-      <rect x="346" y="230" width="48" height="128"/><rect x="346" y="406" width="48" height="172"/>
-      <rect x="406" y="230" width="48" height="128"/><rect x="406" y="406" width="48" height="172"/>
+      <rect x="166" y="230" width="48" height="128"/><rect x="166" y="406" width="48" height="132"/>
+      <rect x="226" y="230" width="48" height="128"/><rect x="226" y="406" width="48" height="132"/>
+      <rect x="286" y="230" width="48" height="128"/><rect x="286" y="406" width="48" height="132"/>
+      <rect x="346" y="230" width="48" height="128"/><rect x="346" y="406" width="48" height="132"/>
+      <rect x="406" y="230" width="48" height="128"/><rect x="406" y="406" width="48" height="132"/>
     </g>
     <g fill="var(--field-light)">
       <rect x="166" y="362" width="48" height="40"/><rect x="226" y="362" width="48" height="40"/><rect x="286" y="362" width="48" height="40"/><rect x="346" y="362" width="48" height="40"/><rect x="406" y="362" width="48" height="40"/>
     </g>
-    <rect x="466" y="230" width="48" height="348" fill="var(--surface-deep)"/>
-    <text x="490" y="412" font-size="16" fill="var(--muted)" text-anchor="middle">휴진</text>
+    <rect x="466" y="230" width="48" height="308" fill="var(--surface-deep)"/>
+    <text x="490" y="392" font-size="16" fill="var(--muted)" text-anchor="middle">휴진</text>
     <text x="290" y="388" font-size="14" fill="var(--ink)" text-anchor="middle">점심</text>
     <!-- 비고 -->
     <rect x="80" y="620" width="22" height="22" fill="var(--field)"/>
@@ -278,7 +279,7 @@
   <main class="column">
     <header class="card card--short">
       <div class="stripe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="card__body"><a class="wordmark" href="index.html" data-load style="--d:150ms">3사단 의무대대 치과</a></div>
+      <div class="card__body"><a class="wordmark" href="index.html" data-load style="--d:150ms"><img class="mark mark--small" src="mark.svg" alt="3사단 부대 마크" width="56" height="49">3사단 의무대대 치과</a></div>
       <nav class="nav" aria-label="주요 메뉴" data-load style="--d:300ms">
       <a href="clinic.html">진료 안내</a>
       <a href="hours.html">진료 시간 · 예약</a>
@@ -363,7 +364,7 @@
   <div class="cta__art" aria-hidden="true"><svg><use href="#d-room"/></svg></div>
   <div class="cta__text">
     <h2 class="cta__line" id="cta-title">전화 한 통이면 됩니다</h2>
-    <p>의무대대 본부 1층 치과 진료실. 평일 09:00–17:00, 점심 12:00–13:00. 소속 의무실의 진료 의뢰서와 군 신분증을 가지고 오세요.</p>
+    <p>의무대대 본부 1층 치과 진료실. 평일 09:00–16:00, 점심 12:00–13:00. 소속 의무실의 진료 의뢰서와 군 신분증을 가지고 오세요.</p>
     <a class="button button--paper" href="tel:000-0000-0000">전화로 예약 문의</a>
   </div>
 </section>

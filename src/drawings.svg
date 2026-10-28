@@ -89,7 +89,7 @@
     <circle cx="80" cy="84" r="7" fill="var(--ink)"/>
     <circle cx="520" cy="84" r="7" fill="var(--ink)"/>
     <text x="80" y="134" font-size="34" font-weight="700" fill="var(--ink)">주간 진료 시간표</text>
-    <text x="80" y="166" font-size="18" fill="var(--muted)">평일 09:00–17:00 · 점심 12:00–13:00</text>
+    <text x="80" y="166" font-size="18" fill="var(--muted)">평일 09:00–16:00 · 점심 12:00–13:00</text>
     <!-- 요일 머리 -->
     <g font-size="18" font-weight="500" fill="var(--ink)" text-anchor="middle">
       <text x="190" y="214">월</text><text x="250" y="214">화</text><text x="310" y="214">수</text><text x="370" y="214">목</text><text x="430" y="214">금</text>
@@ -101,17 +101,17 @@
     </g>
     <!-- 요일 열: 오전 09–12, 점심, 오후 13–17 -->
     <g fill="var(--field)">
-      <rect x="166" y="230" width="48" height="128"/><rect x="166" y="406" width="48" height="172"/>
-      <rect x="226" y="230" width="48" height="128"/><rect x="226" y="406" width="48" height="172"/>
-      <rect x="286" y="230" width="48" height="128"/><rect x="286" y="406" width="48" height="172"/>
-      <rect x="346" y="230" width="48" height="128"/><rect x="346" y="406" width="48" height="172"/>
-      <rect x="406" y="230" width="48" height="128"/><rect x="406" y="406" width="48" height="172"/>
+      <rect x="166" y="230" width="48" height="128"/><rect x="166" y="406" width="48" height="132"/>
+      <rect x="226" y="230" width="48" height="128"/><rect x="226" y="406" width="48" height="132"/>
+      <rect x="286" y="230" width="48" height="128"/><rect x="286" y="406" width="48" height="132"/>
+      <rect x="346" y="230" width="48" height="128"/><rect x="346" y="406" width="48" height="132"/>
+      <rect x="406" y="230" width="48" height="128"/><rect x="406" y="406" width="48" height="132"/>
     </g>
     <g fill="var(--field-light)">
       <rect x="166" y="362" width="48" height="40"/><rect x="226" y="362" width="48" height="40"/><rect x="286" y="362" width="48" height="40"/><rect x="346" y="362" width="48" height="40"/><rect x="406" y="362" width="48" height="40"/>
     </g>
-    <rect x="466" y="230" width="48" height="348" fill="var(--surface-deep)"/>
-    <text x="490" y="412" font-size="16" fill="var(--muted)" text-anchor="middle">휴진</text>
+    <rect x="466" y="230" width="48" height="308" fill="var(--surface-deep)"/>
+    <text x="490" y="392" font-size="16" fill="var(--muted)" text-anchor="middle">휴진</text>
     <text x="290" y="388" font-size="14" fill="var(--ink)" text-anchor="middle">점심</text>
     <!-- 비고 -->
     <rect x="80" y="620" width="22" height="22" fill="var(--field)"/>
