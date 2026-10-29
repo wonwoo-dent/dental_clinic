@@ -186,6 +186,11 @@ p + p { margin-top: 0.9em; }
 .doctor h3 { font-size: var(--step-head); }
 .doctor__role { margin-top: 0.35rem; font-weight: 500; }
 .doctor ul.plain { margin-top: 1rem; }
+.staff__group { margin-top: 4rem; font-size: var(--step-lead); color: var(--muted); }
+.doctor--staff { margin-top: 2.5rem; }
+.doctor--staff h3 { font-size: var(--step-lead); }
+.doctor--staff ul.plain { margin-top: 0.6rem; }
+.bar__panel ul.plain li + li { margin-top: 0.5rem; }
 
 /* 표 (실제 표에는 선을 쓴다) */
 .table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; margin-top: 1.5rem; }
