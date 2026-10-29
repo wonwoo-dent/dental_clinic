@@ -47,6 +47,8 @@
     }
     status.textContent = s;
     next.textContent = n;
+    const bar = document.getElementById('callbar-status');
+    if (bar) bar.textContent = s;
     if (clock) clock.textContent = `${DAYS[day]}요일 ${hhmm(minutes)}`;
 
     // 안내판의 '지금' 막대: 08:00(y=250)부터 18:00(y=690)까지 한 시간에 44px
@@ -134,4 +136,19 @@
     if (sink) { sink.addEventListener('load', finish, { once: true }); setTimeout(() => { if (sending) finish(); }, 4000); }
     else setTimeout(finish, 800);
   });
+})();
+
+(() => {
+  // ---------- 5. 휴대폰 전화 막대: 첫 화면을 지나면 올라오고, 마지막 부름이 보이면 내려간다 ----------
+  const bar = document.getElementById('callbar');
+  const hero = document.querySelector('.card');
+  const ends = document.querySelectorAll('.cta, .footer');
+  if (!bar || !hero || !('IntersectionObserver' in window)) return;
+  bar.hidden = false;
+  let pastHero = false;
+  const endSeen = new Set();
+  const apply = () => bar.classList.toggle('is-on', pastHero && endSeen.size === 0);
+  new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting && e.boundingClientRect.bottom < 0; apply(); }, { threshold: 0 }).observe(hero);
+  const endIo = new IntersectionObserver((entries) => { for (const e of entries) e.isIntersecting ? endSeen.add(e.target) : endSeen.delete(e.target); apply(); }, { threshold: 0.1 });
+  ends.forEach((el) => endIo.observe(el));
 })();

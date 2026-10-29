@@ -152,6 +152,19 @@ p + p { margin-top: 0.9em; }
 .feature__row ul li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 0.5em; height: 0.5em; background: var(--field); }
 .feature__row ul li + li { margin-top: 0.7rem; }
 
+/* 진료 과목 사진: 열 너비를 다 쓰는 16:10 한 장과 한 줄 설명 */
+.feature__photo { margin: 1.25rem 0 0; }
+.feature__photo img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; background: var(--surface-deep); }
+.feature__photo figcaption { margin-top: 0.5rem; font-size: var(--step-small); line-height: 1.5; color: var(--muted); max-width: 36em; }
+
+/* 오시는 길: 사진 한 장과 두 열 목록 */
+.place__photo { margin: 1.5rem 0 0; max-width: 36em; }
+.place__photo img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: var(--surface-deep); }
+.place__list { margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; max-width: 36em; }
+.place__list div { padding-top: 0.75rem; border-top: 1px solid var(--surface-deep); }
+.place__list dt { font-size: var(--step-small); color: var(--muted); }
+.place__list dd { margin-top: 0.15rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+
 /* 진료 시간: 큰 글자 하나와 채운 막대 */
 .hours { container-type: inline-size; }
 .hours__word { font-weight: 800; line-height: 0.95; letter-spacing: -0.04em; font-size: 22cqw; white-space: nowrap; }
@@ -206,14 +219,19 @@ p + p { margin-top: 0.9em; }
 /* 휴대폰에서만 보이는 그림 */
 .inline-figure { display: none; }
 
-/* ---------- 마지막: 진료실 그림 위에 글 ---------- */
-.cta { position: relative; min-height: 90svh; background: var(--field); color: var(--field-ink); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); align-items: end; overflow: hidden; }
-.cta__art { position: absolute; inset: 0; }
-.cta__art svg { width: 100%; height: 100%; }
-.cta__text { position: relative; grid-column: 8 / 13; padding: 0 var(--pad) clamp(3rem, 8vh, 6rem) 0; }
-.cta__line { font-size: var(--step-display); font-weight: 500; line-height: 1.1; letter-spacing: -0.03em; }
+/* ---------- 마지막: 진료실 사진 반, 푸른 판 위의 글 반 ---------- */
+.cta { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); padding: 0 var(--gap); min-height: calc(100svh - var(--gap) * 2); }
+.cta__photo { margin: 0; overflow: hidden; background: var(--surface-deep); }
+.cta__photo img { width: 100%; height: 100%; object-fit: cover; }
+.cta__text { background: var(--field); color: var(--field-ink); display: flex; flex-direction: column; justify-content: flex-end; padding: clamp(3rem, 8vh, 6rem) var(--pad); }
+.cta__line { font-size: var(--step-display); font-weight: 700; line-height: 1.08; letter-spacing: -0.03em; }
 .cta__text p { margin-top: 1.25rem; max-width: 30em; }
-.cta__text .button { margin-top: 1.75rem; }
+.cta__phone { font-size: var(--step-head); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin-top: 1.75rem; }
+.cta__ext { display: block; margin-top: 0.4rem; font-size: var(--step-small); font-weight: 400; letter-spacing: 0; opacity: 0.85; }
+.cta__text .button { margin-top: 1.75rem; align-self: flex-start; }
+
+/* 휴대폰 전화 막대: 첫 화면을 지나면 올라오고, 마지막 부름이 보이면 내려간다 */
+.callbar { display: none; }
 
 /* ---------- 꼬리: 비운 땅 뒤의 한 줄 ---------- */
 .footer { padding: 30svh var(--gap) 30px; }
@@ -222,6 +240,8 @@ p + p { margin-top: 0.9em; }
 .footer__links { display: flex; gap: 24px; justify-content: center; }
 .footer__links a { text-decoration: none; }
 .footer__right { text-align: right; }
+.footer__credits { margin-top: 1.5rem; padding: 0 calc(var(--pad) - var(--gap)); max-width: 72em; line-height: 1.6; }
+.footer__credits a { text-decoration: underline; text-underline-offset: 0.2em; text-decoration-thickness: 0.06em; }
 @media (hover: hover) and (pointer: fine) { .footer__links a:hover { text-decoration: underline; text-underline-offset: 0.2em; } }
 
 /* ---------- 움직임: 스크립트가 있을 때만 숨겼다 드러낸다 ---------- */
@@ -234,8 +254,8 @@ p + p { margin-top: 0.9em; }
   .js [data-reveal].is-in { opacity: 1; transform: none; }
   .js .panel__scene.is-active .panel__art { animation: settle 1200ms var(--ease-soft) both; }
   .js .panel__scene.is-active .panel__caption { animation: arrive 900ms var(--ease-out) both; }
-  .js .cta__art svg { transform: scale(1.06); transition: transform 1800ms var(--ease-soft); }
-  .js .cta.is-in .cta__art svg { transform: none; }
+  .js .cta__photo img { transform: scale(1.06); transition: transform 1800ms var(--ease-soft); }
+  .js .cta.is-in .cta__photo img { transform: none; }
   .bar__panel { animation: rise 300ms var(--ease-out); }
   .js ul.plain[data-reveal] li, .js .steps[data-reveal] li, .js .feature__row ul li { opacity: 0; transform: translateY(12px); transition: opacity 600ms var(--ease-out), transform 700ms var(--ease-expo); }
   .js ul.plain[data-reveal].is-in li, .js .steps[data-reveal].is-in li, .js .feature.is-in .feature__row ul li { opacity: 1; transform: none; }
@@ -290,9 +310,17 @@ p + p { margin-top: 0.9em; }
   .bar summary { min-height: 54px; }
   .inline-figure { display: block; margin-top: 1.5rem; }
   .inline-figure svg { width: 100%; height: auto; aspect-ratio: 600 / 760; }
-  .cta { display: block; min-height: 0; }
-  .cta__art { position: relative; height: 70svh; }
-  .cta__text { padding: 2rem 2rem 3rem; background: var(--field-deep); }
+  .cta { display: block; min-height: 0; padding: 0 var(--gap); }
+  .cta__photo { height: 56svh; }
+  .cta__text { padding: 2rem 1.5rem 2.5rem; margin-top: var(--gap); }
+  .cta__phone { font-size: 1.75rem; }
+  .place__list { grid-template-columns: 1fr; gap: 0.75rem; }
+  .footer__credits { padding: 0 1.25rem; }
+  .callbar { position: fixed; left: var(--gap); right: var(--gap); bottom: calc(var(--gap) + env(safe-area-inset-bottom, 0px)); z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.5rem 0.5rem 0.5rem 1rem; background: var(--ink); color: var(--paper); box-shadow: 0 10px 30px rgba(14, 34, 64, 0.28); transform: translateY(calc(100% + 24px)); transition: transform var(--t-ui) var(--ease-out); }
+  .callbar[hidden] { display: none; }
+  .callbar.is-on { transform: none; }
+  .callbar__hours { font-size: var(--step-small); font-weight: 500; }
+  .callbar__button { min-height: 2.75rem; padding: 0 1.25rem; }
   .section p, .section ul.plain, .steps, .lead-p, .measure, .cta__text p { max-width: none; }
   .cta__line { font-size: 28px; }
   .cta__text .button { width: 100%; }
