@@ -180,6 +180,58 @@ p + p { margin-top: 0.9em; }
 .bar__panel dd { font-variant-numeric: tabular-nums; text-align: right; font-weight: 500; white-space: nowrap; }
 .bar__panel p { margin-top: 0.9rem; font-size: var(--step-small); color: var(--muted); }
 
+/* 진료 일정 달력: 평일 다섯 칸, 군의관마다 한 가지 표 (채운 칸 / 테두리 칸) */
+.cal { container-type: inline-size; margin-top: 1.75rem; }
+.cal__empty { padding: 1.25rem 1.5rem; background: var(--surface); }
+.cal__today { font-size: var(--step-lead); font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; max-width: 28em; }
+.cal__today span { display: block; margin-top: 0.3rem; font-size: var(--step-body); font-weight: 400; letter-spacing: 0; color: var(--muted); }
+.cal__bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 2rem; }
+.cal__month { font-size: var(--step-lead); font-weight: 700; letter-spacing: -0.01em; }
+.cal__navs { display: flex; gap: 6px; }
+.cal__nav { width: 2.75rem; height: 2.75rem; display: inline-grid; place-items: center; background: var(--surface); color: var(--ink); transition: background-color var(--t-hover) ease, transform var(--t-press) var(--ease-out); }
+.cal__nav svg { width: 18px; height: 18px; }
+.cal__nav:active:not([disabled]) { transform: scale(0.94); }
+.cal__nav[disabled] { opacity: 0.35; cursor: default; }
+.cal__head, .cal__grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.cal__head { margin-top: 1rem; font-size: var(--step-small); color: var(--muted); }
+.cal__head li { padding: 0 0.6rem 0.4rem; }
+.cal__day { min-width: 0; min-height: 6.5rem; padding: 0.6rem 0.55rem; background: var(--surface); display: flex; flex-direction: column; gap: 4px; }
+.cal__date { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 2px; font-variant-numeric: tabular-nums; line-height: 1.2; }
+.cal__date b { font-size: 1rem; font-weight: 600; }
+.cal__dow { display: none; font-size: var(--step-small); color: var(--muted); }
+.cal__tag { margin-left: auto; padding: 1px 6px; font-size: 0.75rem; font-weight: 600; background: var(--ink); color: var(--paper); }
+.cal__docs { display: contents; }
+.cal__doc { display: block; padding: 3px 7px; font-size: 0.8125rem; font-weight: 500; line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cal__doc i { font-style: normal; font-weight: 400; opacity: 0.85; }
+.cal__doc--0 { background: var(--field); color: var(--field-ink); }
+.cal__doc--1 { background: var(--paper); color: var(--field-deep); box-shadow: inset 0 0 0 1.5px var(--field); }
+.cal__off { font-size: 0.8125rem; line-height: 1.35; color: var(--muted); }
+.cal__day.is-closed { background: transparent; box-shadow: inset 0 0 0 1px var(--surface-deep); }
+.cal__day.is-past { opacity: 0.45; }
+.cal__day.is-today { box-shadow: inset 0 0 0 2px var(--ink); }
+.cal__legend { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.6rem 1.75rem; font-size: var(--step-small); }
+.cal__legend li { display: flex; align-items: center; gap: 0.5rem; }
+.cal__legend .cal__doc { display: inline-block; }
+.cal__note { margin-top: 0.9rem; max-width: 40em; }
+.cal__done { display: none; padding: 1rem 0.85rem; background: var(--surface); color: var(--muted); font-size: var(--step-small); }
+@media (hover: hover) and (pointer: fine) { .cal__nav:not([disabled]):hover { background: var(--surface-deep); } }
+/* 좁은 칸에서는 지난 날을 빼고 날짜 목록으로 바꾼다 */
+@container (max-width: 520px) {
+  .cal__head, .cal__blank, .cal__day.is-past { display: none; }
+  .cal__grid { grid-template-columns: 1fr; }
+  .cal__day { min-height: 3.25rem; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 6px; padding: 0.65rem 0.85rem; }
+  .cal__day.is-mon:not(.is-past) ~ .cal__day.is-mon { margin-top: 10px; }
+  .cal__date { flex: none; width: 5.5rem; margin: 0; }
+  .cal__dow { display: inline; }
+  .cal__tag { margin-left: 0.15rem; }
+  .cal__doc { display: inline-block; }
+  .cal__done { display: block; }
+}
+
+/* 고정 판의 '오늘 진료' 한 줄 */
+.panel__docs { display: inline-block; margin-top: 0.75rem; padding: 4px 10px; font-size: var(--step-small); font-weight: 500; background: var(--field-deep); }
+.panel__docs[hidden] { display: none; }
+
 /* 자주 묻는 질문: 이어지는 글 */
 .faq p + p { margin-top: 1.1rem; }
 .faq b { font-weight: 600; }

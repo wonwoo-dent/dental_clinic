@@ -1,0 +1,55 @@
+# 한 시간마다 의무대대 공용 구글 캘린더를 읽어 치과 군의관 두 명의 부재만 data/schedule.json 에 저장한다.
+# 캘린더 주소는 저장소 Secret CAL_MEDICAL 에 있다. 급하면 Actions 탭 → "진료 일정 가져오기" → Run workflow.
+name: 진료 일정 가져오기
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/build_schedule.py
+      - .github/workflows/schedule.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: schedule
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 라이브러리 설치
+        run: pip install --quiet icalendar==6.1.3 recurring-ical-events==3.4.1
+
+      - name: 구글 캘린더에서 두 분 일정 가져오기
+        env:
+          CAL_MEDICAL: ${{ secrets.CAL_MEDICAL }}
+        run: python scripts/build_schedule.py
+
+      - name: 바뀐 일정이 있으면 저장
+        run: |
+          if [ -z "$(git status --porcelain -- data/schedule.json)" ]; then
+            echo "바뀐 일정이 없습니다."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/schedule.json
+          git commit -m "진료 일정 갱신"
+          for i in 1 2 3; do
+            git pull --rebase --quiet origin main && git push --quiet origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1

@@ -304,6 +304,7 @@
   <div class="panel__caption">
     <p class="panel__status" id="now-status">평일 09:00–16:00 진료</p>
     <p class="panel__next" id="now-next">점심시간 12:00–13:00. 토요일, 일요일, 공휴일은 휴진입니다.</p>
+    <p class="panel__docs" id="now-docs" hidden></p>
   </div>
 </div>
 
@@ -338,6 +339,12 @@
         </tbody>
       </table>
       <p>훈련, 부대 행사, 군의관 교육 기간에는 시간이 바뀝니다. 바뀌는 주에는 각 부대 의무실에 미리 알립니다.</p>
+    </section>
+
+    <section class="section" id="schedule" aria-labelledby="c-title">
+      <h2 id="c-title" data-reveal>군의관 진료 일정</h2>
+      <p data-reveal style="--i:1">사랑니와 발치는 구강악안면외과 이원우 대위, 크라운과 보철은 치과보철과 이종철 대위가 봅니다. 원하는 군의관이 있으면 그 날짜로 예약하세요.</p>
+      <div class="cal" data-cal><p class="cal__empty muted">진료 일정을 불러오는 중입니다.</p></div>
     </section>
 
     <section class="section" aria-labelledby="n-title">
@@ -396,6 +403,7 @@
   </div>
 </footer>
 <script src="site.js" defer></script>
+<script src="calendar.js" defer></script>
 
 </body>
 </html>
