@@ -97,7 +97,6 @@
       const first = `${ym}-01`;
       const w1 = parse(first).getUTCDay();
       let html = '';
-      let upcoming = false;
       for (let b = 0; b < (w1 >= 1 && w1 <= 5 ? w1 - 1 : 0); b++) html += '<li class="cal__blank" aria-hidden="true"></li>';
       for (let k = first; k.slice(0, 7) === ym; k = addDays(k, 1)) {
         const w = parse(k).getUTCDay();
@@ -105,8 +104,7 @@
         const n = Number(k.slice(8));
         const info = inRange(k, data) ? dayInfo(k, data) : { closed: false, docs: null };
         const cls = ['cal__day'];
-        if (w === 1) cls.push('is-mon');
-        if (k < today) cls.push('is-past'); else upcoming = true;
+        if (k < today) cls.push('is-past');
         if (k === today) cls.push('is-today');
         if (info.closed) cls.push('is-closed');
         let body, label;
@@ -127,7 +125,6 @@
           <span class="cal__date" aria-hidden="true"><b>${n}</b><span class="cal__dow">${DOW[w]}</span>${k === today ? '<span class="cal__tag">오늘</span>' : ''}</span>
           <span class="cal__docs" aria-hidden="true">${body}</span></li>`;
       }
-      if (!upcoming) html += '<li class="cal__done">이 달의 진료 일정은 모두 지났습니다.</li>';
       grid.innerHTML = html;
     }
     root.querySelectorAll('.cal__nav').forEach((btn) => btn.addEventListener('click', () => {
