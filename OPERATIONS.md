@@ -34,8 +34,11 @@ https://wonwoo-dent.github.io/dental_clinic/hours.html#schedule
 ## 2. 카카오톡 채널 설정
 
 ### 하단 메뉴 버튼
+"증례 보기"는 고정 메뉴로 두세요. 진료 의자에서 "병원 보내 주세요"라고 할 때 휴대폰이나 태블릿으로 바로 보여 주는 용도입니다.
+
 | 버튼 이름 | 연결 주소 |
 | --- | --- |
+| 증례 보기 (고정) | https://wonwoo-dent.github.io/dental_clinic/cases.html |
 | 예약 방법 | https://wonwoo-dent.github.io/dental_clinic/hours.html#how |
 | 보철 진행 | https://wonwoo-dent.github.io/dental_clinic/prosthesis.html |
 | 주의사항 | https://wonwoo-dent.github.io/dental_clinic/care.html |
