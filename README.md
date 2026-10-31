@@ -30,7 +30,7 @@
 `photos/` 폴더에 같은 이름으로 사진을 올리면 바로 바뀝니다 (GitHub 화면에서 **Add file → Upload files**).
 - `room-chair.jpg` (세로 960×1080): 홈 맨 아래 "전화 한 통이면 됩니다" 옆 사진
 - `room-unit.jpg` (가로 960×640): "오시는 길" 사진
-- `wisdom-pano.jpg`, `crown-case.jpg`, `exam-mirror.jpg` (가로 1400×875): 진료 과목 사진
+- `crown-case.jpg`, `exam-mirror.jpg` (가로 1400×875): 진료 과목 사진
 실제 진료실 사진으로 바꾸면 홈 맨 아래 "진료실 사진은 참고용 자료 사진입니다" 줄도 지우세요.
 
 ## 진료 일정 달력 (구글 캘린더 연동)

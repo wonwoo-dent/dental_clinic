@@ -170,6 +170,19 @@ p + p { margin-top: 0.9em; }
 .feature__trio img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: var(--paper); }
 .feature__trio figcaption { margin-top: 0.35rem; font-size: var(--step-small); line-height: 1.4; color: var(--muted); }
 
+/* 증례: 제목 한 줄과 치료 전후 사진 (두 장 또는 세 장) */
+.case { margin-top: 1.75rem; }
+.case__title { font-size: var(--step-body); font-weight: 600; letter-spacing: -0.01em; }
+.case__title--first { margin-top: 1.25rem; }
+.case__title--first + .feature__cases { margin-top: 0.6rem; }
+.case__grid { margin-top: 0.6rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.case__grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.case__grid figure { margin: 0; min-width: 0; }
+.case__grid img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: var(--surface-deep); }
+.case__grid--wide img { aspect-ratio: 16 / 10; }
+.case__grid figcaption { margin-top: 0.35rem; font-size: var(--step-small); line-height: 1.4; color: var(--muted); }
+.case + .feature__credit { margin-top: 0.75rem; }
+
 /* 오시는 길: 사진 한 장과 두 열 목록 */
 .place__photo { margin: 1.5rem 0 0; max-width: 36em; }
 .place__photo img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: var(--surface-deep); }
