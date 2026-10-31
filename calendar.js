@@ -1,6 +1,6 @@
 // 3사단 의무대대 치과 — 진료 일정 달력
 // data/schedule.json 은 GitHub Actions 가 한 시간마다 구글 캘린더에서 만들어 둔다 (scripts/build_schedule.py).
-// 평일만 보여 주고, 날마다 '초진 가능 / 재진만 / 휴진' 상태만 표시한다. 군의관 이름과 부재 사유는 파일에도 화면에도 없다.
+// 평일만 보여 주고, 날마다 진료하는 군의관을 표시한다. 휴가 종류는 파일에도 화면에도 없다.
 
 (() => {
   const roots = Array.from(document.querySelectorAll('[data-cal]'));
@@ -9,9 +9,6 @@
 
   const DOW = ['일', '월', '화', '수', '목', '금', '토'];
   const PHONE = '부대 내선 803-7112';
-  // 상태 이름은 여기서 바꾼다
-  const LABEL = { open: '초진 가능', limited: '재진만', closed: '휴진' };
-  const HINT = { open: '처음 오는 분도 예약할 수 있습니다', limited: '이어서 치료받는 분만 예약할 수 있습니다', closed: '치과 군의관이 모두 자리를 비웁니다' };
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const parse = (k) => new Date(`${k}T00:00:00Z`);
   const keyOf = (d) => d.toISOString().slice(0, 10);
@@ -19,24 +16,35 @@
   const seoulToday = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
   const md = (k) => { const d = parse(k); return `${d.getUTCMonth() + 1}월 ${d.getUTCDate()}일 (${DOW[d.getUTCDay()]})`; };
 
-  // 그날의 상태: 휴진(주말·공휴일) 또는 open / limited / closed
+  // 그날의 상태: 휴진(주말·공휴일) 또는 진료하는 군의관 목록
   function dayInfo(k, data) {
     const w = parse(k).getUTCDay();
-    if (w === 0 || w === 6) return { off: true, label: '휴진' };
-    if (data.holidays[k]) return { off: true, label: data.holidays[k] };
-    return { off: false, status: (data.days || {})[k] || 'open' };
+    if (w === 0 || w === 6) return { closed: true, label: '휴진' };
+    if (data.holidays[k]) return { closed: true, label: data.holidays[k] };
+    const away = data.away[k] || {};
+    const docs = [];
+    data.doctors.forEach((doc, i) => {
+      const a = away[doc.id];
+      if (a === 'day') return;
+      docs.push({ ...doc, i, part: a === 'am' ? '오후' : a === 'pm' ? '오전' : '' });
+    });
+    return { closed: false, docs };
   }
+  const who = (docs) => docs.length
+    ? docs.map((d) => `${d.name} ${d.rank}${d.part ? ` (${d.part}만)` : ''}`).join(' · ')
+    : '치과 군의관이 모두 자리를 비웁니다';
   const inRange = (k, data) => k >= data.from && k <= data.to;
 
   function todayText(data, today) {
     if (!inRange(today, data)) return { head: '진료 일정 정보가 없습니다', sub: `${PHONE}로 확인하세요.` };
     const t = dayInfo(today, data);
-    if (!t.off) return { head: `오늘 ${md(today)} · ${LABEL[t.status]}`, sub: HINT[t.status] };
+    if (!t.closed && !t.docs.length) return { head: `오늘 ${md(today)}은 치과 군의관이 모두 자리를 비웁니다`, sub: `${PHONE}로 확인하세요.` };
+    if (!t.closed) return { head: `오늘 ${md(today)} 진료`, sub: who(t.docs) };
     let k = addDays(today, 1);
-    while (inRange(k, data) && dayInfo(k, data).off) k = addDays(k, 1);
+    while (inRange(k, data) && dayInfo(k, data).closed) k = addDays(k, 1);
     const reason = t.label === '휴진' ? '' : ` · ${t.label}`;
     if (!inRange(k, data)) return { head: `오늘은 휴진입니다${reason}`, sub: '' };
-    return { head: `오늘은 휴진입니다${reason}`, sub: `다음 진료일 ${md(k)} · ${LABEL[dayInfo(k, data).status]}` };
+    return { head: `오늘은 휴진입니다${reason}`, sub: `다음 진료일 ${md(k)} · ${who(dayInfo(k, data).docs)}` };
   }
 
   function updatedText(iso) {
@@ -73,8 +81,7 @@
       <ol class="cal__head" aria-hidden="true"><li>월</li><li>화</li><li>수</li><li>목</li><li>금</li></ol>
       <ol class="cal__grid" data-grid></ol>
       <ul class="cal__legend">
-        <li><span class="cal__doc cal__doc--0">${LABEL.open}</span>${HINT.open}</li>
-        <li><span class="cal__doc cal__doc--1">${LABEL.limited}</span>${HINT.limited}</li>
+        ${data.doctors.map((d, i) => `<li><span class="cal__doc cal__doc--${i}">${esc(d.name)}</span>${esc(d.rank)} · ${esc(d.role)}</li>`).join('')}
       </ul>
       <p class="cal__note small muted">의무대대 진료 캘린더에서 한 시간마다 가져옵니다.${updatedText(data.updated)} 휴가와 출장으로 바뀔 수 있으니 오기 전에 전화로 확인하세요.</p>`;
 
@@ -95,16 +102,25 @@
         const w = parse(k).getUTCDay();
         if (w === 0 || w === 6) continue;
         const n = Number(k.slice(8));
-        const info = inRange(k, data) ? dayInfo(k, data) : { off: false, status: null };
+        const info = inRange(k, data) ? dayInfo(k, data) : { closed: false, docs: null };
         const cls = ['cal__day'];
         if (k < today) cls.push('is-past');
         if (k === today) cls.push('is-today');
-        if (info.off || info.status === 'closed') cls.push('is-closed');
+        if (info.closed) cls.push('is-closed');
         let body, label;
-        if (info.off) { body = `<span class="cal__off">${esc(info.label)}</span>`; label = info.label; }
-        else if (!info.status) { body = '<span class="cal__off">미정</span>'; label = '일정 미정'; }
-        else if (info.status === 'closed') { body = `<span class="cal__off">${LABEL.closed}</span>`; label = LABEL.closed; }
-        else { body = `<span class="cal__doc cal__doc--${info.status === 'open' ? 0 : 1}">${LABEL[info.status]}</span>`; label = LABEL[info.status]; }
+        if (info.closed) {
+          body = `<span class="cal__off">${esc(info.label)}</span>`;
+          label = info.label;
+        } else if (!info.docs) {
+          body = '<span class="cal__off">미정</span>';
+          label = '일정 미정';
+        } else if (!info.docs.length) {
+          body = '<span class="cal__off">군의관 부재</span>';
+          label = '군의관 부재, 전화로 확인';
+        } else {
+          body = info.docs.map((d) => `<span class="cal__doc cal__doc--${d.i}">${esc(d.name)}${d.part ? ` <i>${d.part}</i>` : ''}</span>`).join('');
+          label = `${who(info.docs)} 진료`;
+        }
         html += `<li class="${cls.join(' ')}" aria-label="${m}월 ${n}일 ${DOW[w]}요일${k === today ? ' 오늘' : ''}, ${esc(label)}">
           <span class="cal__date" aria-hidden="true"><b>${n}</b><span class="cal__dow">${DOW[w]}</span>${k === today ? '<span class="cal__tag">오늘</span>' : ''}</span>
           <span class="cal__docs" aria-hidden="true">${body}</span></li>`;
@@ -131,7 +147,7 @@
       const today = seoulToday();
       if (docLine && inRange(today, data)) {
         const t = dayInfo(today, data);
-        if (!t.off) { docLine.textContent = `오늘: ${LABEL[t.status]}`; docLine.hidden = false; }
+        if (!t.closed) { docLine.textContent = t.docs.length ? `오늘 진료: ${who(t.docs)}` : '오늘은 치과 군의관이 모두 자리를 비웁니다'; docLine.hidden = false; }
       }
     })
     .catch(() => roots.forEach(fail));
