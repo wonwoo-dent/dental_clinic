@@ -164,6 +164,12 @@ p + p { margin-top: 0.9em; }
 .feature__photo img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; background: var(--surface-deep); }
 .feature__photo figcaption { margin-top: 0.5rem; font-size: var(--step-small); line-height: 1.5; color: var(--muted); max-width: 36em; }
 
+/* 사진 세 장을 한 줄로 (이갈이·턱관절 치료) */
+.feature__trio { margin-top: 1.25rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.feature__trio figure { margin: 0; min-width: 0; }
+.feature__trio img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: var(--paper); }
+.feature__trio figcaption { margin-top: 0.35rem; font-size: var(--step-small); line-height: 1.4; color: var(--muted); }
+
 /* 오시는 길: 사진 한 장과 두 열 목록 */
 .place__photo { margin: 1.5rem 0 0; max-width: 36em; }
 .place__photo img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: var(--surface-deep); }
