@@ -3,13 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Sans:wght@500;600&display=swap">
 <link rel="icon" href="mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
-<script>document.documentElement.classList.add('js')</script>
 
 <title>치료 전후 주의사항 · 3사단 의무대대 치과</title>
 <meta name="description" content="마취, 발치, 신경치료, 스케일링 전후에 지킬 것. 훈련과 체력단련을 언제 다시 할 수 있는지.">
@@ -26,413 +25,230 @@
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <!-- 그림 공통: 평면 도형, 한 가지 선 굵기, 페이지 색만 사용 -->
-
-  <!-- 치식표 (FDI 번호 치아 기록표) -->
-  <symbol id="d-chart" viewBox="0 0 600 760">
-    <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
-    <rect x="48" y="56" width="504" height="648" fill="var(--paper)"/>
-    <!-- 집게 -->
-    <rect x="250" y="28" width="100" height="44" fill="var(--ink)"/>
-    <rect x="274" y="40" width="52" height="16" fill="var(--paper)"/>
-    <text x="80" y="118" font-size="34" font-weight="700" fill="var(--ink)">치식표</text>
-    <text x="80" y="150" font-size="18" fill="var(--muted)">3사단 의무대대 치과 · 진료 기록</text>
-    <!-- 잇몸 띠 -->
-    <rect x="80" y="286" width="440" height="20" fill="var(--field-light)"/>
-    <rect x="80" y="420" width="440" height="20" fill="var(--field-light)"/>
-    <!-- 위턱: 18 17 16 15 14 13 12 11 | 21 22 23 24 25 26 27 28 -->
-    <g fill="var(--surface-deep)">
-      <rect x="82" y="212" width="24" height="68" rx="6"/>
-      <rect x="110" y="212" width="24" height="68" rx="6"/>
-      <rect x="138" y="212" width="24" height="68" rx="6"/>
-      <rect x="166" y="222" width="20" height="58" rx="6"/>
-      <rect x="190" y="222" width="20" height="58" rx="6"/>
-      <rect x="214" y="206" width="20" height="74" rx="6"/>
-      <rect x="238" y="226" width="18" height="54" rx="6"/>
-      <rect x="260" y="222" width="20" height="58" rx="6"/>
-      <rect x="320" y="222" width="20" height="58" rx="6"/>
-      <rect x="344" y="226" width="18" height="54" rx="6"/>
-      <rect x="366" y="206" width="20" height="74" rx="6"/>
-      <rect x="390" y="222" width="20" height="58" rx="6"/>
-      <rect x="414" y="222" width="20" height="58" rx="6"/>
-      <rect x="438" y="212" width="24" height="68" rx="6"/>
-      <rect x="466" y="212" width="24" height="68" rx="6"/>
-      <rect x="494" y="212" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 아래턱 -->
-    <g fill="var(--surface-deep)">
-      <rect x="82" y="446" width="24" height="68" rx="6"/>
-      <rect x="110" y="446" width="24" height="68" rx="6"/>
-      <rect x="138" y="446" width="24" height="68" rx="6"/>
-      <rect x="166" y="446" width="20" height="58" rx="6"/>
-      <rect x="190" y="446" width="20" height="58" rx="6"/>
-      <rect x="214" y="446" width="20" height="74" rx="6"/>
-      <rect x="238" y="446" width="18" height="54" rx="6"/>
-      <rect x="260" y="446" width="20" height="54" rx="6"/>
-      <rect x="320" y="446" width="20" height="54" rx="6"/>
-      <rect x="344" y="446" width="18" height="54" rx="6"/>
-      <rect x="366" y="446" width="20" height="74" rx="6"/>
-      <rect x="390" y="446" width="20" height="58" rx="6"/>
-      <rect x="414" y="446" width="20" height="58" rx="6"/>
-      <rect x="438" y="446" width="24" height="68" rx="6"/>
-      <rect x="466" y="446" width="24" height="68" rx="6"/>
-      <rect x="494" y="446" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 충치 치료 자리: 큰어금니 16, 26, 36, 46 -->
-    <g fill="var(--field)">
-      <rect x="138" y="212" width="24" height="68" rx="6"/>
-      <rect x="438" y="212" width="24" height="68" rx="6"/>
-      <rect x="138" y="446" width="24" height="68" rx="6"/>
-      <rect x="438" y="446" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 사랑니: 18, 28, 38, 48 -->
-    <g fill="var(--ink)">
-      <rect x="82" y="212" width="24" height="68" rx="6"/>
-      <rect x="494" y="212" width="24" height="68" rx="6"/>
-      <rect x="82" y="446" width="24" height="68" rx="6"/>
-      <rect x="494" y="446" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 정중선 -->
-    <rect x="296" y="200" width="8" height="330" fill="var(--field-light)"/>
-    <g font-size="15" fill="var(--muted)" text-anchor="middle">
-      <text x="94" y="200">18</text><text x="122" y="200">17</text><text x="150" y="200">16</text><text x="176" y="200">15</text><text x="200" y="200">14</text><text x="224" y="200">13</text><text x="247" y="200">12</text><text x="270" y="200">11</text>
-      <text x="330" y="200">21</text><text x="353" y="200">22</text><text x="376" y="200">23</text><text x="400" y="200">24</text><text x="424" y="200">25</text><text x="450" y="200">26</text><text x="478" y="200">27</text><text x="506" y="200">28</text>
-      <text x="94" y="545">48</text><text x="122" y="545">47</text><text x="150" y="545">46</text><text x="176" y="545">45</text><text x="200" y="545">44</text><text x="224" y="545">43</text><text x="247" y="545">42</text><text x="270" y="545">41</text>
-      <text x="330" y="545">31</text><text x="353" y="545">32</text><text x="376" y="545">33</text><text x="400" y="545">34</text><text x="424" y="545">35</text><text x="450" y="545">36</text><text x="478" y="545">37</text><text x="506" y="545">38</text>
-    </g>
-    <!-- 범례 -->
-    <rect x="80" y="596" width="22" height="22" fill="var(--field)"/>
-    <text x="114" y="614" font-size="18" fill="var(--ink)">충치 치료가 잦은 큰어금니</text>
-    <rect x="80" y="630" width="22" height="22" fill="var(--ink)"/>
-    <text x="114" y="648" font-size="18" fill="var(--ink)">사랑니 (발치 상담)</text>
-    <rect x="80" y="664" width="22" height="22" fill="var(--field-light)"/>
-    <text x="114" y="682" font-size="18" fill="var(--ink)">잇몸선 (스케일링 · 잇몸 치료)</text>
-  </symbol>
-
-  <!-- 주간 진료 시간표 -->
-  <symbol id="d-week" viewBox="0 0 600 760">
-    <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
-    <rect x="48" y="56" width="504" height="648" fill="var(--paper)"/>
-    <circle cx="80" cy="84" r="7" fill="var(--ink)"/>
-    <circle cx="520" cy="84" r="7" fill="var(--ink)"/>
-    <text x="80" y="134" font-size="34" font-weight="700" fill="var(--ink)">주간 진료 시간표</text>
-    <text x="80" y="166" font-size="18" fill="var(--muted)">평일 09:00–16:00 · 점심 12:00–13:00</text>
-    <!-- 요일 머리 -->
-    <g font-size="18" font-weight="500" fill="var(--ink)" text-anchor="middle">
-      <text x="190" y="214">월</text><text x="250" y="214">화</text><text x="310" y="214">수</text><text x="370" y="214">목</text><text x="430" y="214">금</text>
-      <text x="490" y="214" fill="var(--muted)">토·일</text>
-    </g>
-    <!-- 시간 라벨 -->
-    <g font-size="16" fill="var(--muted)" text-anchor="end">
-      <text x="150" y="246">9</text><text x="150" y="290">10</text><text x="150" y="334">11</text><text x="150" y="378">12</text><text x="150" y="422">13</text><text x="150" y="466">14</text><text x="150" y="510">15</text><text x="150" y="554">16</text><text x="150" y="598">17</text>
-    </g>
-    <!-- 요일 열: 오전 09–12, 점심, 오후 13–17 -->
-    <g fill="var(--field)">
-      <rect x="166" y="230" width="48" height="128"/><rect x="166" y="406" width="48" height="132"/>
-      <rect x="226" y="230" width="48" height="128"/><rect x="226" y="406" width="48" height="132"/>
-      <rect x="286" y="230" width="48" height="128"/><rect x="286" y="406" width="48" height="132"/>
-      <rect x="346" y="230" width="48" height="128"/><rect x="346" y="406" width="48" height="132"/>
-      <rect x="406" y="230" width="48" height="128"/><rect x="406" y="406" width="48" height="132"/>
-    </g>
-    <g fill="var(--field-light)">
-      <rect x="166" y="362" width="48" height="40"/><rect x="226" y="362" width="48" height="40"/><rect x="286" y="362" width="48" height="40"/><rect x="346" y="362" width="48" height="40"/><rect x="406" y="362" width="48" height="40"/>
-    </g>
-    <rect x="466" y="230" width="48" height="308" fill="var(--surface-deep)"/>
-    <text x="490" y="392" font-size="16" fill="var(--muted)" text-anchor="middle">휴진</text>
-    <text x="290" y="388" font-size="14" fill="var(--ink)" text-anchor="middle">점심</text>
-    <!-- 비고 -->
-    <rect x="80" y="620" width="22" height="22" fill="var(--field)"/>
-    <text x="114" y="638" font-size="17" fill="var(--ink)">진료</text>
-    <rect x="200" y="620" width="22" height="22" fill="var(--field-light)"/>
-    <text x="234" y="638" font-size="17" fill="var(--ink)">점심시간</text>
-    <text x="80" y="676" font-size="16" fill="var(--muted)">훈련 · 행사 기간에는 진료 시간이 바뀔 수 있습니다</text>
-  </symbol>
-
-  <!-- 전화 예약 메모 -->
-  <symbol id="d-form" viewBox="0 0 600 760">
-    <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
-    <rect x="40" y="40" width="520" height="690" fill="var(--ink)"/>
-    <rect x="64" y="84" width="472" height="620" fill="var(--paper)"/>
-    <rect x="240" y="24" width="120" height="56" fill="var(--field)"/>
-    <rect x="270" y="40" width="60" height="18" fill="var(--paper)"/>
-    <text x="96" y="150" font-size="34" font-weight="700" fill="var(--ink)">전화 예약</text>
-    <text x="96" y="182" font-size="17" fill="var(--muted)">부대 내선 803-7112 · 평일 09:00–16:00</text>
-    <g font-size="16" fill="var(--muted)">
-      <text x="96" y="236">소속</text>
-      <text x="96" y="300">계급 · 성명</text>
-      <text x="96" y="364">군번</text>
-      <text x="96" y="428">증상</text>
-      <text x="96" y="540">희망 날짜</text>
-    </g>
-    <g fill="var(--surface-deep)">
-      <rect x="96" y="246" width="380" height="30"/>
-      <rect x="96" y="310" width="300" height="30"/>
-      <rect x="96" y="374" width="240" height="30"/>
-      <rect x="96" y="438" width="408" height="30"/>
-      <rect x="96" y="476" width="340" height="30"/>
-      <rect x="96" y="550" width="220" height="30"/>
-    </g>
-    <g fill="var(--field)">
-      <rect x="96" y="246" width="190" height="30"/>
-      <rect x="96" y="438" width="260" height="30"/>
-    </g>
-    <!-- 긴급 여부 체크 -->
-    <rect x="96" y="604" width="22" height="22" fill="var(--surface-deep)"/>
-    <text x="128" y="622" font-size="17" fill="var(--ink)">일반</text>
-    <rect x="196" y="604" width="22" height="22" fill="var(--field)"/>
-    <text x="228" y="622" font-size="17" fill="var(--ink)">응급 (치통 · 외상)</text>
-    <!-- 직인 -->
-    <circle cx="456" cy="600" r="40" fill="none" stroke="var(--field)" stroke-width="4"/>
-    <text x="456" y="606" font-size="16" font-weight="700" fill="var(--field)" text-anchor="middle">예약</text>
-    <text x="96" y="676" font-size="15" fill="var(--muted)">군번만 알면 됩니다</text>
-  </symbol>
-
-  <!-- 진료실: 유닛 체어 (왼쪽), 오른쪽 벽은 비워 글이 앉는다 -->
-  <symbol id="d-room" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
-    <rect x="0" y="0" width="1600" height="900" fill="var(--field)"/>
-    <rect x="0" y="640" width="1600" height="260" fill="var(--field-deep)"/>
-    <rect x="0" y="628" width="1600" height="12" fill="var(--ink)"/>
-    <!-- 창 -->
-    <rect x="360" y="100" width="300" height="240" fill="var(--field-light)"/>
-    <rect x="504" y="100" width="12" height="240" fill="var(--field)"/>
-    <rect x="360" y="216" width="300" height="12" fill="var(--field)"/>
-    <!-- 수납장 -->
-    <rect x="40" y="420" width="260" height="220" fill="var(--field-deep)"/>
-    <rect x="60" y="440" width="100" height="90" fill="var(--field-light)"/>
-    <rect x="180" y="440" width="100" height="90" fill="var(--field-light)"/>
-    <rect x="60" y="550" width="220" height="70" fill="var(--ink)"/>
-    <rect x="160" y="580" width="20" height="8" fill="var(--paper)"/>
-    <rect x="70" y="400" width="60" height="20" fill="var(--paper)"/>
-    <rect x="140" y="392" width="40" height="28" fill="var(--paper)"/>
-    <!-- 안내 표지: 오른쪽 위, 글이 앉는 아래쪽 삼분의 일을 피한다 -->
-    <rect x="1240" y="90" width="160" height="60" fill="var(--paper)"/>
-    <text x="1320" y="132" font-size="30" font-weight="700" fill="var(--ink)" text-anchor="middle">치과</text>
-    <!-- 조명 팔과 램프 -->
-    <rect x="690" y="0" width="16" height="200" fill="var(--ink)"/>
-    <rect x="560" y="196" width="146" height="14" fill="var(--ink)"/>
-    <rect x="500" y="200" width="100" height="60" rx="8" fill="var(--paper)"/>
-    <rect x="510" y="246" width="80" height="14" fill="var(--field-light)"/>
-    <!-- 체어: 받침, 기둥, 좌석, 등받이, 머리받침, 팔걸이 -->
-    <rect x="440" y="600" width="260" height="30" fill="var(--ink)"/>
-    <rect x="540" y="500" width="60" height="110" fill="var(--ink)"/>
-    <rect x="380" y="460" width="420" height="60" rx="16" fill="var(--paper)"/>
-    <rect x="380" y="500" width="420" height="22" fill="var(--surface-deep)"/>
-    <rect x="300" y="470" width="110" height="70" rx="16" fill="var(--paper)"/>
-    <rect x="300" y="520" width="110" height="20" fill="var(--surface-deep)"/>
-    <rect x="720" y="300" width="80" height="200" rx="16" fill="var(--paper)"/>
-    <rect x="720" y="300" width="22" height="200" fill="var(--surface-deep)"/>
-    <rect x="712" y="250" width="92" height="56" rx="14" fill="var(--paper)"/>
-    <rect x="560" y="420" width="120" height="30" rx="8" fill="var(--surface-deep)"/>
-    <!-- 타구대와 기구 트레이 -->
-    <rect x="880" y="380" width="24" height="230" fill="var(--ink)"/>
-    <rect x="840" y="370" width="110" height="40" rx="8" fill="var(--paper)"/>
-    <circle cx="896" cy="390" r="12" fill="var(--field-light)"/>
-    <rect x="830" y="300" width="130" height="30" rx="6" fill="var(--paper)"/>
-    <rect x="846" y="282" width="50" height="8" fill="var(--field)"/>
-    <rect x="906" y="282" width="30" height="8" fill="var(--field)"/>
-    <!-- 바닥 선 -->
-    <rect x="0" y="760" width="1600" height="14" fill="var(--ink)"/>
-  </symbol>
-
-  <!-- 진료 과목 그림 3개 (3:4) -->
-  <symbol id="d-cavity" viewBox="0 0 300 400">
-    <rect x="0" y="0" width="300" height="400" fill="var(--field-light)"/>
-    <rect x="0" y="250" width="300" height="150" fill="var(--field)"/>
-    <!-- 어금니: 치관과 뿌리 -->
-    <path d="M70 120 q10-50 50-50 q30 0 40 20 q10-20 40-20 q40 0 50 50 l0 110 q0 30-40 30 l-100 0 q-40 0-40-30z" fill="var(--paper)"/>
-    <path d="M110 260 l-16 90 q-4 20 16 20 l10 0 l14-90z M190 260 l16 90 q4 20-16 20 l-10 0 l-14-90z" fill="var(--paper)"/>
-    <path d="M90 120 q8-40 30-40 q20 0 30 16 q10-16 30-16 q22 0 30 40 l0 40 l-120 0z" fill="var(--surface-deep)" opacity="0.5"/>
-    <!-- 충치 자리와 메운 부분 -->
-    <ellipse cx="150" cy="150" rx="34" ry="20" fill="var(--ink)"/>
-    <ellipse cx="150" cy="150" rx="22" ry="12" fill="var(--field)"/>
-    <rect x="120" y="178" width="60" height="10" fill="var(--field-deep)"/>
-  </symbol>
-  <symbol id="d-wisdom" viewBox="0 0 300 400">
-    <rect x="0" y="0" width="300" height="400" fill="var(--field-light)"/>
-    <rect x="0" y="220" width="300" height="180" fill="var(--field)"/>
-    <!-- 바로 선 어금니 -->
-    <path d="M40 130 q10-40 40-40 q25 0 35 18 q10-18 35-18 q30 0 40 40 l0 90 q0 26-34 26 l-82 0 q-34 0-34-26z" fill="var(--paper)"/>
-    <path d="M70 246 l-12 70 q-2 16 14 16 l8 0 l10-70z M140 246 l12 70 q2 16-14 16 l-8 0 l-10-70z" fill="var(--paper)"/>
-    <!-- 기울어진 사랑니, 잇몸 아래 -->
-    <g transform="rotate(-38 230 250)">
-      <path d="M180 200 q8-36 34-36 q20 0 28 14 q8-14 28-14 q26 0 34 36 l0 70 q0 22-28 22 l-68 0 q-28 0-28-22z" fill="var(--ink)"/>
-      <path d="M204 292 l-10 56 q-2 14 12 14 l6 0 l8-56z M262 292 l10 56 q2 14-12 14 l-6 0 l-8-56z" fill="var(--ink)"/>
-    </g>
-    <rect x="0" y="220" width="300" height="18" fill="var(--field-deep)"/>
-  </symbol>
-  <symbol id="d-gum" viewBox="0 0 300 400">
-    <rect x="0" y="0" width="300" height="400" fill="var(--field-light)"/>
-    <rect x="0" y="230" width="300" height="170" fill="var(--field)"/>
-    <path d="M80 110 q10-46 48-46 q30 0 44 24 q18-24 48-24 q0 0 0 0 l0 140 q0 30-40 30 l-60 0 q-40 0-40-30z" fill="var(--paper)"/>
-    <path d="M110 230 l-14 84 q-3 18 14 18 l12 0 l12-84z" fill="var(--paper)"/>
-    <!-- 잇몸선의 치석 -->
-    <g fill="var(--ink)">
-      <rect x="84" y="214" width="18" height="18" rx="4"/>
-      <rect x="106" y="220" width="14" height="12" rx="4"/>
-      <rect x="126" y="216" width="12" height="16" rx="4"/>
-    </g>
-    <!-- 스케일러 -->
-    <rect x="192" y="40" width="22" height="200" rx="8" fill="var(--ink)"/>
-    <rect x="196" y="60" width="14" height="60" fill="var(--field)"/>
-    <path d="M203 240 l-10 30 l10 24 l10-24z" fill="var(--surface-deep)"/>
-    <rect x="0" y="230" width="300" height="16" fill="var(--field-deep)"/>
-  </symbol>
-</svg>
-
-<div class="stage">
-  <aside class="panel panel--short" aria-label="전화 예약 메모 그림">
-    <div class="panel__scene is-active" data-scene-name="form">
-      <div class="panel__art" aria-hidden="true"><svg aria-hidden="true" focusable="false"><use href="#d-form"/></svg></div>
-      <div class="panel__caption"><p class="panel__status">치료 뒤에도 전화하세요</p><p class="panel__next">피가 멎지 않거나, 사흘이 지나도 붓기가 그대로면 바로 연락하세요. 참는 쪽이 더 오래 걸립니다.</p></div>
-    </div>
-  </aside>
-  <main class="column">
-    <header class="card card--short">
-      <div class="stripe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="card__body"><a class="wordmark" href="index.html" data-load style="--d:150ms"><img class="mark mark--small" src="mark.svg" alt="3사단 부대 마크" width="56" height="49">3사단 의무대대 치과</a></div>
-      <nav class="nav" aria-label="주요 메뉴" data-load style="--d:300ms">
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+  <div class="site-header__in">
+    <a class="brand" href="index.html"><img src="mark.svg" alt="" width="24" height="21">3사단 의무대대 치과</a>
+    <nav class="site-nav" aria-label="주요 메뉴">
       <a href="clinic.html">진료 안내</a>
-      <a href="hours.html">진료 시간 · 예약</a>
+      <a href="hours.html">시간 · 예약</a>
       <a href="prosthesis.html">보철 진행</a>
-      <a href="care.html" aria-current="page">치료 전후 주의사항</a>
+      <a href="care.html" aria-current="page">주의사항</a>
+    </nav>
+    <a class="site-call" href="hours.html#call" aria-label="전화 예약 안내"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>내선 803-7112</span></a>
+    <details class="menu">
+      <summary aria-label="메뉴"><svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+      <nav aria-label="메뉴">
+        <a href="index.html">홈</a>
+        <a href="clinic.html">진료 안내</a>
+        <a href="hours.html">시간 · 예약</a>
+        <a href="prosthesis.html">보철 진행</a>
+        <a href="care.html" aria-current="page">주의사항</a>
+        <a class="menu__er" href="tel:033-450-7119"><span>응급 시에만 · 응급실</span><span>033-450-7119</span></a>
       </nav>
-    </header>
+    </details>
+  </div>
+</header>
 
-    <section class="section intro" aria-labelledby="page-title">
-      <h1 class="display" id="page-title">치료 전후 주의사항</h1>
-      <p class="lead-p">치료마다 지킬 것이 다릅니다. 훈련과 식사, 흡연이 걸리는 부분을 특히 적었습니다. 진료 뒤에 받은 안내지와 같은 내용입니다.</p>
-      <p class="small muted">바로 가기: <a class="link" href="#extraction">사랑니 발치</a> · <a class="link" href="#root-canal">신경치료</a> · <a class="link" href="#prosth">크라운 · 인레이</a> · <a class="link" href="#botox">보톡스</a> · <a class="link" href="#splint">교합안정장치</a></p>
-      <a class="button" href="hours.html#how">예약 · 부대 내선 803-7112</a>
-    </section>
+<main class="page" id="main">
+  <section class="intro" aria-labelledby="page-title">
+    <p class="eb eb--accent">After care</p>
+    <h1 id="page-title">치료 전후 주의사항</h1>
+    <p class="lead">진료 뒤 받은 안내지와 같은 내용입니다. 받은 치료를 눌러 바로 확인하세요.</p>
+    <nav class="chips" aria-label="치료별 바로가기">
+      <a class="chip" href="#extraction">사랑니 발치</a>
+      <a class="chip" href="#root-canal">신경치료</a>
+      <a class="chip" href="#prosth">크라운 · 인레이</a>
+      <a class="chip" href="#anesthesia">마취</a>
+      <a class="chip" href="#scaling">스케일링 · 충전</a>
+      <a class="chip" href="#botox">보톡스</a>
+      <a class="chip" href="#splint">교합안정장치</a>
+      <a class="chip" href="#before">치료 전</a>
+    </nav>
+  </section>
 
-    <section class="section" aria-labelledby="b-title">
-      <h2 id="b-title" data-reveal>치료 전에</h2>
-      <ul class="plain" data-reveal>
-        <li>식사는 하고 오세요. 빈속에 마취하면 어지러울 수 있습니다</li>
-        <li>복용 중인 약, 특히 피를 묽게 하는 약이 있으면 꼭 말하세요</li>
-        <li>발치나 신경치료가 예정된 날은 그날 훈련과 체력단련을 미리 조정하세요</li>
-        <li>심하게 아프면 전날 밤 진통제를 먹어도 됩니다. 먹은 약 이름을 말하세요</li>
-        <li>진료 전에 양치를 하고 오면 치료가 더 정확합니다</li>
-      </ul>
-    </section>
+  <section class="urgent" aria-labelledby="urgent-title">
+    <div class="urgent__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.01"/></svg><h2 id="urgent-title">이럴 땐 바로 연락하세요</h2></div>
+    <ul>
+      <li>발치 후 2~3시간이 지나도 피가 계속 날 때</li>
+      <li>사흘 뒤부터 통증이 오히려 심해질 때</li>
+      <li>볼이 눈 밑까지 붓거나 입이 잘 안 벌어질 때</li>
+      <li>열이 나거나 침을 삼키기 힘들 때</li>
+      <li>보톡스 뒤 숨이 차거나 삼키기 힘들 때</li>
+    </ul>
+    <div class="urgent__grid">
+      <div class="urgent__cell"><span>일과 중 · 군 전화</span><b>내선 803-7112</b></div>
+      <div class="urgent__cell"><span>일과 후 · 주말</span><b>당직 의무병</b></div>
+    </div>
+    <a class="urgent__er" href="tel:033-450-7119">응급실 033-450-7119 · 응급 시에만</a>
+  </section>
 
-    <section class="section" aria-labelledby="a-title">
-      <h2 id="a-title" data-reveal>마취 뒤</h2>
-      <p data-reveal style="--i:1">마취는 두 시간에서 세 시간 갑니다. 그동안 입술과 볼의 감각이 없어 깨물어도 모릅니다.</p>
-      <ul class="plain" data-reveal>
-        <li>감각이 돌아올 때까지 먹지 마세요. 물은 됩니다</li>
-        <li>뜨거운 음식과 음료는 감각이 돌아온 뒤에 드세요</li>
-        <li>입술을 깨물거나 빨지 마세요</li>
-      </ul>
-    </section>
+  <section class="block" id="extraction" aria-labelledby="extraction-title">
+    <p class="eb">01 · Extraction</p>
+    <h2 class="block-title" id="extraction-title">사랑니 발치 후</h2>
+    <div class="tags"><span class="tag">격한 훈련 2~3일 제한</span><span class="tag">술·담배 1주 금지</span><span class="tag">소견서 → 소속 부대</span></div>
+    <p class="sub">이렇게 하세요</p>
+    <ul class="checks">
+      <li class="do">거즈는 1~2시간 꽉 물고 있다가 조심스럽게 빼세요</li>
+      <li class="do">발치 당일에는 침과 피를 뱉지 말고 삼키세요</li>
+      <li class="do">양치액은 다음 날부터 씁니다. 발치 부위는 며칠 동안 칫솔 대신 양치액을 하루 2~3회 1분간 머금었다가, 입을 벌려 살며시 흘려 내보내세요</li>
+      <li class="do">나머지 부위는 부드럽게 칫솔질하세요</li>
+      <li class="do">먹기 힘들면 우유나 주스로 수분과 영양을 채우세요</li>
+    </ul>
+    <p class="sub">하지 마세요</p>
+    <ul class="checks">
+      <li class="dont">빨대 쓰기, 혀나 손가락으로 건드리기</li>
+      <li class="dont">당일 뜨겁거나 맵거나 딱딱한 음식</li>
+      <li class="dont">세게 뱉기. 피딱지가 떨어져 다시 피가 납니다</li>
+    </ul>
+  </section>
 
-    <section class="section" id="extraction" aria-labelledby="x-title">
-      <h2 id="x-title" data-reveal>사랑니 발치 후 주의사항</h2>
-      <ul class="plain" data-reveal>
-        <li>물려 드린 거즈는 단단하게 꼭 물고 있다가 1~2시간 후에 조심스럽게 빼내세요</li>
-        <li>발치 당일에는 침이나 피를 뱉지 말고 삼키세요. 세게 뱉으면 피딱지가 떨어져 다시 피가 납니다</li>
-        <li>치료 부위에 손가락을 대거나 혀로 빨지 마세요</li>
-        <li>발치 당일에는 지혈을 위해 뜨거운 음식을 삼가고, 자극적이거나 딱딱한 음식은 피하세요</li>
-        <li>술과 담배는 최소 1주일간 삼가세요</li>
-        <li>양치액은 발치 다음 날부터 씁니다. 며칠 동안 발치 부위는 칫솔질 대신 양치액을 하루 2~3회 1분간 머금었다가, 세게 뱉지 말고 입을 벌려 살며시 흘려 내보내세요. 나머지 부위는 부드럽게 칫솔질하세요</li>
-        <li>식사가 어려우면 우유나 주스로 수분과 영양을 섭취하세요. 이때 빨대는 사용하면 안 됩니다</li>
-        <li>격한 훈련과 체력단련은 2~3일 피하세요. 소견서를 소속 부대에 내세요</li>
-      </ul>
-      <p>그 밖에 이상이 생기면 일과 중에는 치과(부대 내선 803-7112)로 연락하세요. 일과 후 심한 출혈 같은 응급이면 의무대대 응급실(033-450-7119)로 연락하세요.</p>
-    </section>
+  <section class="block" id="root-canal" aria-labelledby="root-canal-title">
+    <p class="eb">02 · Root canal</p>
+    <h2 class="block-title" id="root-canal-title">신경치료 후</h2>
+    <div class="tags"><span class="tag">임시 재료 굳을 때까지 2시간 금식</span><span class="tag">끝날 때까지 딱딱한 음식 금지</span></div>
+    <p class="sub">이렇게 하세요</p>
+    <ul class="checks">
+      <li class="do">욱신거리면 평소 먹던 진통제를 드셔도 됩니다</li>
+      <li class="do">항생제를 받았다면 아프지 않아도 끝까지 드세요</li>
+      <li class="do">신경치료가 끝나면 씌우는 치료까지 빨리 이어서 받으세요. 늦어지면 다시 감염될 수 있습니다</li>
+      <li class="do">얼굴이 붓고 통증이 심해지면 일과 중에는 내선 803-7112, 일과 후에는 응급실로 연락하세요</li>
+    </ul>
+    <p class="sub">하지 마세요</p>
+    <ul class="checks">
+      <li class="dont">당일 치료한 쪽으로 씹기. 임시 재료가 빠질 수 있습니다</li>
+      <li class="dont">치료가 끝나기 전에 그 치아로 딱딱한 음식 씹기. 약해진 치아가 깨질 수 있습니다</li>
+    </ul>
+    <p class="small muted" style="margin-top:18px">일반적인 신경치료로 낫지 않으면 뿌리 끝을 정리하는 수술을 하기도 합니다.</p>
+  </section>
 
-    <section class="section" id="root-canal" aria-labelledby="r-title">
-      <h2 id="r-title" data-reveal>신경치료 후 주의사항</h2>
-      <ul class="plain" data-reveal>
-        <li>치료 후 일시적으로 욱신거리는 통증이 있을 수 있습니다. 평소 드시던 진통제를 드셔도 됩니다</li>
-        <li>얼굴이 부으면서 극심한 통증이 나타나면 치과로 전화해 지시에 따르고, 야간이나 휴일에는 응급실에 내원해 처치를 받으세요</li>
-        <li>근관치료가 끝날 때까지 치아가 매우 약한 상태라 파절될 수 있습니다. 치료 완료까지 딱딱한 음식은 피하세요</li>
-        <li>치료 중 채워 넣은 임시 재료는 빠질 수 있습니다. 임시 재료가 굳을 때까지 치료 후 2시간 동안 식사를 피하고, 당일은 반대쪽으로 식사하세요</li>
-        <li>세균 감염 등으로 근관 내가 다시 오염되면 재발할 수 있으므로, 근관 충전 후 가능한 한 빨리 치관부 수복을 해야 합니다</li>
-        <li>처방받은 약(항생제)이 있으면 통증이 사라졌더라도 반드시 다 드세요</li>
-        <li>통상적인 근관치료로 낫지 않으면 치근단 절제 수술 등 수술적 방법을 시도할 수도 있습니다</li>
-      </ul>
-      <p>그 밖에 이상이 생기면 일과 중에는 치과(부대 내선 803-7112)로 연락하세요. 일과 후 얼굴이 붓고 통증이 심해지는 응급이면 의무대대 응급실(033-450-7119)로 연락하세요.</p>
-    </section>
+  <section class="block" id="prosth" aria-labelledby="prosth-title">
+    <p class="eb">03 · Crown & inlay</p>
+    <h2 class="block-title" id="prosth-title">크라운 · 인레이 장착 후</h2>
+    <div class="tags"><span class="tag">장착 후 1시간 금식</span><span class="tag">당일 끈적·딱딱한 음식 피하기</span></div>
+    <p class="sub">이렇게 하세요</p>
+    <ul class="checks">
+      <li class="do">보철물과 잇몸 경계를 칫솔과 치실로 꼼꼼히 닦으세요. 이 경계에 충치가 다시 생기기 쉽습니다</li>
+      <li class="do">며칠 시린 것은 괜찮습니다. 2주가 지나도 계속되면 연락하세요</li>
+      <li class="do">씹을 때 새 보철물이 먼저 닿거나 높게 느껴지면 참지 말고 연락하세요. 금방 맞춥니다</li>
+    </ul>
+    <p class="sub">하지 마세요</p>
+    <ul class="checks">
+      <li class="dont">장착 후 1시간 안에 먹기</li>
+      <li class="dont">장착한 날 그쪽으로 떡, 캐러멜, 껌 씹기</li>
+      <li class="dont">얼음, 뼈, 병뚜껑처럼 아주 단단한 것 깨물기</li>
+    </ul>
+    <div class="softbox"><b>임시치아가 빠졌다면</b><p>버리지 말고 챙겨서 다음 일과 시간에 전화하세요. 오래 비워 두면 치아가 움직여 보철물을 다시 만들어야 할 수 있습니다. <a class="link" href="prosthesis.html#temporary">보철 진행 안내 보기</a></p></div>
+  </section>
 
-    <section class="section" aria-labelledby="s-title">
-      <h2 id="s-title" data-reveal>스케일링과 충전 뒤</h2>
-      <ul class="plain" data-reveal>
-        <li>스케일링 뒤 이가 시리고 잇몸에서 피가 조금 나는 것은 며칠 안에 가라앉습니다</li>
-        <li>레진으로 메운 날은 한 시간 동안 식사를 미루세요</li>
-        <li>메운 자리가 높아 씹을 때 먼저 닿으면 다시 오세요. 몇 분이면 맞춥니다</li>
-        <li>칫솔질은 당일부터 평소대로 하세요</li>
-      </ul>
-    </section>
+  <section class="block" id="anesthesia" aria-labelledby="anesthesia-title">
+    <p class="eb">04 · Anesthesia</p>
+    <h2 class="block-title" id="anesthesia-title">마취 후</h2>
+    <p class="text">마취는 2~3시간 갑니다. 감각이 없어 깨물어도 모릅니다.</p>
+    <p class="sub">하지 마세요</p>
+    <ul class="checks">
+      <li class="dont">감각이 돌아올 때까지 음식과 뜨거운 음료 (물은 괜찮습니다)</li>
+      <li class="dont">입술이나 볼을 깨물거나 빨기</li>
+    </ul>
+  </section>
 
-    <section class="section" id="prosth" aria-labelledby="p-title">
-      <h2 id="p-title" data-reveal>크라운 · 인레이 장착 후</h2>
-      <ul class="plain" data-reveal>
-        <li>붙이는 재료가 굳도록 장착 후 한 시간은 먹지 마세요</li>
-        <li>장착한 날은 그쪽으로 떡, 캐러멜, 껌처럼 끈적한 음식과 딱딱한 음식을 피하세요</li>
-        <li>며칠 동안 시리거나 씹을 때 어색할 수 있습니다. 2주가 지나도 계속되면 연락하세요</li>
-        <li>씹을 때 새 보철물이 먼저 닿거나 높게 느껴지면 조정이 필요합니다. 참지 말고 연락하세요</li>
-        <li>얼음, 뼈, 병뚜껑처럼 아주 단단한 것은 깨물지 마세요. 보철물이 깨지거나 맞은편 치아가 상할 수 있습니다</li>
-        <li>보철물과 잇몸이 만나는 경계에 충치가 다시 생기기 쉽습니다. 칫솔질과 치실을 꼼꼼히 하세요</li>
-      </ul>
-      <p>보철물을 기다리는 동안의 안내는 <a class="link" href="prosthesis.html">보철 진행 안내</a>에 있습니다.</p>
-    </section>
+  <section class="block" id="scaling" aria-labelledby="scaling-title">
+    <p class="eb">05 · Scaling & filling</p>
+    <h2 class="block-title" id="scaling-title">스케일링 · 충전 후</h2>
+    <p class="sub">이렇게 하세요</p>
+    <ul class="checks">
+      <li class="do">시리고 잇몸에서 피가 조금 나는 것은 며칠 안에 가라앉습니다</li>
+      <li class="do">레진으로 메운 날은 1시간 뒤에 식사하세요</li>
+      <li class="do">씹을 때 메운 자리가 먼저 닿으면 다시 오세요. 몇 분이면 맞춥니다</li>
+      <li class="do">칫솔질은 당일부터 평소대로 하세요</li>
+    </ul>
+  </section>
 
-    <section class="section" id="botox" aria-labelledby="bt-title">
-      <h2 id="bt-title" data-reveal>보톡스 시술 후</h2>
-      <ul class="plain" data-reveal>
-        <li>주사 맞은 자리는 당일 문지르거나 마사지하지 마세요. 약이 다른 근육으로 퍼질 수 있습니다</li>
-        <li>시술 후 네 시간은 눕지 말고, 당일은 사우나, 찜질방, 음주, 격한 운동을 피하세요</li>
-        <li>효과는 2~3일 뒤부터 나타나 1~2주에 뚜렷해지고, 보통 3~6개월 갑니다</li>
-        <li>처음 몇 주는 딱딱한 음식을 씹을 때 힘이 덜 들어가는 느낌이 들 수 있습니다. 대부분 자연스럽게 적응합니다</li>
-        <li>주사 자리에 작은 멍이나 붓기가 생길 수 있고, 며칠이면 가라앉습니다</li>
-        <li>내성이 생기지 않도록 다음 시술은 최소 3개월 간격을 둡니다</li>
-        <li>드물게 삼키기 힘들거나, 숨이 차거나, 눈꺼풀이 처지면 바로 연락하세요</li>
-      </ul>
-    </section>
+  <section class="block" id="botox" aria-labelledby="botox-title">
+    <p class="eb">06 · Botox</p>
+    <h2 class="block-title" id="botox-title">보톡스 시술 후</h2>
+    <div class="tags"><span class="tag">효과 2~3일 뒤부터</span><span class="tag">3~6개월 지속</span><span class="tag">다음 시술은 3개월 뒤</span></div>
+    <p class="sub">이렇게 하세요</p>
+    <ul class="checks">
+      <li class="do">효과는 2~3일 뒤부터 나타나 1~2주에 뚜렷해집니다</li>
+      <li class="do">주사 자리의 작은 멍이나 붓기는 며칠이면 가라앉습니다</li>
+      <li class="do">처음 몇 주는 씹을 때 힘이 덜 들어가는 느낌이 들 수 있습니다. 대부분 자연스럽게 적응합니다</li>
+    </ul>
+    <p class="sub">하지 마세요</p>
+    <ul class="checks">
+      <li class="dont">당일 주사 자리를 문지르거나 마사지하기. 약이 다른 근육으로 퍼질 수 있습니다</li>
+      <li class="dont">시술 후 4시간 안에 눕기</li>
+      <li class="dont">당일 사우나, 찜질방, 음주, 격한 운동</li>
+    </ul>
+    <p class="small muted" style="margin-top:18px">드물게 삼키기 힘들거나, 숨이 차거나, 눈꺼풀이 처지면 바로 연락하세요.</p>
+  </section>
 
-    <section class="section" id="splint" aria-labelledby="sp-title">
-      <h2 id="sp-title" data-reveal>교합안정장치 · 마우스가드 사용과 세척</h2>
-      <ul class="plain" data-reveal>
-        <li>교합안정장치는 잠잘 때 낍니다. 끼기 전에 양치를 하세요</li>
-        <li>처음 며칠은 어색하고 침이 많이 나올 수 있습니다. 대부분 일주일 안에 익숙해집니다</li>
-        <li>아침에 빼면 찬물이나 미지근한 물로 헹구고, 부드러운 칫솔로 닦으세요. 치약은 장치를 긁으니 쓰지 마세요</li>
-        <li>뜨거운 물로 씻거나 삶지 마세요. 장치가 휘어 맞지 않게 됩니다</li>
-        <li>일주일에 한 번쯤 틀니 세정제에 담가 두면 냄새와 얼룩이 줄어듭니다</li>
-        <li>다 마르면 통풍되는 보관통에 넣으세요. 햇빛이 드는 곳, 차 안, 난로 근처에 두지 마세요</li>
-        <li>끼울 때 아프거나, 헐거워지거나, 금이 가면 가져오세요. 조정하거나 다시 만듭니다</li>
-        <li>스포츠 마우스가드도 같은 방법으로 관리하고, 훈련이나 운동 뒤에는 바로 헹궈 말리세요</li>
-      </ul>
-    </section>
+  <section class="block" id="splint" aria-labelledby="splint-title">
+    <p class="eb">07 · Splint & mouthguard</p>
+    <h2 class="block-title" id="splint-title">교합안정장치 · 마우스가드</h2>
+    <p class="text">교합안정장치는 잠잘 때 낍니다. 처음 며칠은 어색하고 침이 많이 나올 수 있지만, 대부분 일주일 안에 익숙해집니다.</p>
+    <p class="sub">이렇게 하세요</p>
+    <ul class="checks">
+      <li class="do">끼기 전에 양치하세요</li>
+      <li class="do">아침에 빼면 찬물이나 미지근한 물로 헹구고 부드러운 칫솔로 닦으세요</li>
+      <li class="do">일주일에 한 번쯤 틀니 세정제에 담가 두세요</li>
+      <li class="do">다 마르면 통풍되는 보관통에 넣으세요</li>
+      <li class="do">아프거나, 헐거워지거나, 금이 가면 가져오세요. 조정하거나 다시 만듭니다</li>
+      <li class="do">스포츠 마우스가드는 훈련이나 운동 뒤 바로 헹궈 말리세요</li>
+    </ul>
+    <p class="sub">하지 마세요</p>
+    <ul class="checks">
+      <li class="dont">치약으로 닦기. 장치가 긁힙니다</li>
+      <li class="dont">뜨거운 물로 씻거나 삶기. 휘어서 맞지 않게 됩니다</li>
+      <li class="dont">햇빛이 드는 곳, 차 안, 난로 근처에 두기</li>
+    </ul>
+  </section>
 
-    <section class="section" aria-labelledby="c-title">
-      <h2 id="c-title" data-reveal>이럴 때는 바로 연락하세요</h2>
-      <ul class="plain" data-reveal>
-        <li>발치 뒤 두세 시간이 지나도 피가 계속 날 때</li>
-        <li>발치 사흘 뒤부터 통증이 더 심해질 때</li>
-        <li>볼이 눈까지 붓거나 입이 잘 안 벌어질 때</li>
-        <li>열이 나거나 삼키기 힘들 때</li>
-        <li>보톡스 뒤 숨이 차거나 삼키기 힘들 때</li>
-      </ul>
-      <p>일과 중에는 치과(부대 내선 803-7112)로 전화하세요. 내선은 일과 시간에만 연결됩니다. 일과 후와 휴일에는 당직 의무병에게 알리거나 의무대대 응급실(033-450-7119)로 연락하세요.</p>
-    </section>
-  </main>
-</div>
-<footer class="footer">
-  <div class="stripe stripe--thin" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-  <div class="footer__line">
-    <span class="muted">3사단 의무대대 치과</span>
-    <nav class="footer__links" aria-label="꼬리 링크">
+  <section class="block" id="before" aria-labelledby="before-title">
+    <p class="eb">08 · Before visit</p>
+    <h2 class="block-title" id="before-title">치료 받으러 오기 전</h2>
+    <p class="sub">이렇게 하세요</p>
+    <ul class="checks">
+      <li class="do">밥 먹고, 양치하고 오세요. 빈속에 마취하면 어지러울 수 있습니다</li>
+      <li class="do">먹는 약, 특히 피를 묽게 하는 약은 꼭 말하세요</li>
+      <li class="do">발치·신경치료 날은 훈련과 체력단련을 미리 조정하세요</li>
+      <li class="do">심하게 아프면 전날 밤 진통제를 먹어도 됩니다. 먹은 약 이름을 말하세요</li>
+    </ul>
+    <p class="sub">하지 마세요</p>
+    <ul class="checks">
+      <li class="dont">진료 전 흡연</li>
+    </ul>
+  </section>
+
+  <section class="callcard" id="call" aria-labelledby="call-title">
+    <p class="eb">Call script</p>
+    <h2 class="callcard__title" id="call-title">전화할 때 이렇게 말하세요</h2>
+    <p class="callcard__note">캡처해 두거나 적어 가세요. 내선은 평일 09:00–16:00, 행정반이나 사무실의 군 전화로만 걸립니다. 개인 휴대폰으로는 걸 수 없습니다.</p>
+    <dl class="callcard__list">
+      <dt>소속</dt><dd>○○연대 ○대대 ○중대</dd>
+      <dt>계급·이름</dt><dd>상병 홍길동</dd>
+      <dt>군번</dt><dd>00-00000000</dd>
+      <dt>용건</dt><dd>보철물 장착 예약 / 사랑니가 아파서 진료 예약</dd>
+    </dl>
+    <p class="callcard__foot">휴가, 훈련, 전역 일정이 있으면 함께 말해 주세요.</p>
+    <p class="callcard__num">내선 803-7112<small>평일 09:00–16:00 · 군 전화로만</small></p>
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="site-footer__in">
+    <p class="site-footer__name">3사단 의무대대 치과</p>
+    <p>의무대대 건물 2층 · 평일 09:00–16:00 · 점심 12:00–13:00 · 토·일·공휴일 휴진</p>
+    <p>예약 부대 내선 803-7112 (일과 시간, 군 전화로만) · 응급 시에만 응급실 033-450-7119</p>
+    <nav class="site-footer__links" aria-label="꼬리 메뉴">
+      <a href="index.html">홈</a>
       <a href="clinic.html">진료 안내</a>
-      <a href="hours.html">진료 시간 · 예약</a>
+      <a href="hours.html">시간 · 예약</a>
       <a href="prosthesis.html">보철 진행</a>
       <a href="care.html">주의사항</a>
     </nav>
-    <span class="footer__right muted">2026 · 3사단 의무대대</span>
   </div>
 </footer>
 <script src="site.js" defer></script>
-
 </body>
 </html>

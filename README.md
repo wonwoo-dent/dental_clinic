@@ -4,13 +4,13 @@
 
 | 파일 | 내용 |
 | --- | --- |
-| `index.html` | 홈: 첫 화면, 바로 가기, 진료 과목 요약, 의료진, 진료 일정, 연락처, 의견함 |
+| `index.html` | 홈: 소개, 오늘 진료 상태, 바로가기, 의료진, 예약 세 단계, 연락처, 의견함 |
 | `clinic.html` | 진료 안내 |
 | `hours.html` | 진료 시간, 예약 방법, 전화할 때 말할 것, 캘린더 추가, 응급, 자주 묻는 질문 |
 | `prosthesis.html` | 보철 진행 안내 (도착 문자의 링크가 여기로 옵니다) |
 | `care.html` | 치료 전후 주의사항 |
 | `style.css` | 글꼴, 색, 크기 등 모양 전부 |
-| `site.js` | 안내판 실시간 상태, 그림 전환, 의견함 전송 |
+| `site.js` | 홈의 "오늘 진료" 상태, 의견함 전송 |
 | `mark.svg` | 3사단 부대 마크 |
 | `calendar.js` | 홈과 진료 시간 페이지의 진료 일정 달력 |
 | `booking.js` | "내 예약 캘린더에 추가" (.ics 파일을 휴대폰 안에서 만듦, 서버로 보내지 않음) |
@@ -27,15 +27,13 @@
 4. 1~2분 뒤 홈페이지를 새로고침하면 바뀌어 있습니다.
 
 ## 글꼴을 바꾸는 법
-`style.css` 맨 위쪽의 `--font:` 줄에서 맨 앞 글꼴 이름을 바꿉니다. 지금은 Pretendard(없으면 Noto Sans KR)입니다.
-예를 들어 Google Fonts 의 `Nanum Gothic` 을 쓰려면, 네 HTML 파일의 `<head>` 안 `fonts.googleapis.com` 줄의 `Noto+Sans+KR` 을 `Nanum+Gothic` 으로 바꾸고, `--font:` 줄의 `"Noto Sans KR"` 을 `"Nanum Gothic"` 으로 바꿉니다.
+지금은 본문 IBM Plex Sans KR, 영문 라벨 IBM Plex Sans 입니다 (Google Fonts).
+바꾸려면 다섯 HTML 파일의 `<head>` 안 `fonts.googleapis.com` 줄의 글꼴 이름과, `style.css` 맨 위 `--font:`·`--font-eb:` 줄의 맨 앞 이름을 같이 바꿉니다.
 
 ## 사진을 바꾸는 법
 `photos/` 폴더에 같은 이름으로 사진을 올리면 바로 바뀝니다 (GitHub 화면에서 **Add file → Upload files**).
-- `room-chair.jpg` (세로 960×1080): 홈 맨 아래 "전화 한 통이면 됩니다" 옆 사진
-- `room-unit.jpg` (가로 960×640): "오시는 길" 사진
-- `crown-case.jpg`, `exam-mirror.jpg` (가로 1400×875): 진료 과목 사진
-실제 진료실 사진으로 바꾸면 홈 맨 아래 "진료실 사진은 참고용 자료 사진입니다" 줄도 지우세요.
+- `crown-case.jpg`, `exam-mirror.jpg`, `tmd-splint-wide.jpg` (가로 1400×875): 진료 안내의 과목 사진
+- `exam-mirror.jpg` 는 외부 자료 사진(CC BY-SA)입니다. 실제 진료 사진으로 바꾸면 `clinic.html` 맨 아래 출처 줄도 고치세요.
 
 ## 진료 일정 달력 (구글 캘린더 연동)
 - 의무대대 공용 구글 캘린더를 GitHub가 **한 시간마다** 읽어서, 제목에 `이원우`나 `이종철`이 들어간 일정만 골라 `data/schedule.json`에 저장합니다. 다른 군의관 일정과 휴가 종류(연가, 청원휴가 등)는 저장하지 않고, 누가 종일·오전·오후 비는지만 남깁니다.
@@ -50,7 +48,7 @@
 - 저장소에 두 달 넘게 아무 변경이 없으면 GitHub가 자동 작업을 멈출 수 있습니다. 그때는 Actions 탭에서 다시 켜면 됩니다.
 
 ## 자주 바꾸는 값
-- 진료 시간: `site.js` 맨 위 `HOURS` (9, 12, 13, 16), `index.html`·`hours.html` 본문, 안내판 그림의 막대 높이
+- 진료 시간: `site.js` 맨 위 `HOURS` (9, 12, 13, 16), `hours.html` 의 진료 시간 표
 - 예약 번호(부대 내선): 네 파일과 `calendar.js`에서 `803-7112` 찾기
 - 응급실 번호: 네 파일에서 `033-450-7119` 찾기 (응급 시에만 쓰도록 안내)
 - 의견함: `index.html` 의 `formResponse` 주소와 `entry.` 번호 (구글 폼을 새로 만들면 둘 다 바꿔야 합니다)

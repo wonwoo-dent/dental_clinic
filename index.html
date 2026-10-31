@@ -3,13 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Sans:wght@500;600&display=swap">
 <link rel="icon" href="mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
-<script>document.documentElement.classList.add('js')</script>
 
 <title>3사단 의무대대 치과</title>
 <meta name="description" content="구강악안면외과·치과보철과 전문의가 상주하는 3사단 의무대대 치과. 평일 09:00–16:00, 예약은 군 전화로 부대 내선 803-7112.">
@@ -27,277 +26,68 @@
 
 </head>
 <body>
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <!-- 그림 공통: 평면 도형, 한 가지 선 굵기, 페이지 색만 사용 -->
-
-  <!-- 치식표 (FDI 번호 치아 기록표) -->
-  <symbol id="d-chart" viewBox="0 0 600 760">
-    <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
-    <rect x="48" y="56" width="504" height="648" fill="var(--paper)"/>
-    <!-- 집게 -->
-    <rect x="250" y="28" width="100" height="44" fill="var(--ink)"/>
-    <rect x="274" y="40" width="52" height="16" fill="var(--paper)"/>
-    <text x="80" y="118" font-size="34" font-weight="700" fill="var(--ink)">치식표</text>
-    <text x="80" y="150" font-size="18" fill="var(--muted)">3사단 의무대대 치과 · 진료 기록</text>
-    <!-- 잇몸 띠 -->
-    <rect x="80" y="286" width="440" height="20" fill="var(--field-light)"/>
-    <rect x="80" y="420" width="440" height="20" fill="var(--field-light)"/>
-    <!-- 위턱: 18 17 16 15 14 13 12 11 | 21 22 23 24 25 26 27 28 -->
-    <g fill="var(--surface-deep)">
-      <rect x="82" y="212" width="24" height="68" rx="6"/>
-      <rect x="110" y="212" width="24" height="68" rx="6"/>
-      <rect x="138" y="212" width="24" height="68" rx="6"/>
-      <rect x="166" y="222" width="20" height="58" rx="6"/>
-      <rect x="190" y="222" width="20" height="58" rx="6"/>
-      <rect x="214" y="206" width="20" height="74" rx="6"/>
-      <rect x="238" y="226" width="18" height="54" rx="6"/>
-      <rect x="260" y="222" width="20" height="58" rx="6"/>
-      <rect x="320" y="222" width="20" height="58" rx="6"/>
-      <rect x="344" y="226" width="18" height="54" rx="6"/>
-      <rect x="366" y="206" width="20" height="74" rx="6"/>
-      <rect x="390" y="222" width="20" height="58" rx="6"/>
-      <rect x="414" y="222" width="20" height="58" rx="6"/>
-      <rect x="438" y="212" width="24" height="68" rx="6"/>
-      <rect x="466" y="212" width="24" height="68" rx="6"/>
-      <rect x="494" y="212" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 아래턱 -->
-    <g fill="var(--surface-deep)">
-      <rect x="82" y="446" width="24" height="68" rx="6"/>
-      <rect x="110" y="446" width="24" height="68" rx="6"/>
-      <rect x="138" y="446" width="24" height="68" rx="6"/>
-      <rect x="166" y="446" width="20" height="58" rx="6"/>
-      <rect x="190" y="446" width="20" height="58" rx="6"/>
-      <rect x="214" y="446" width="20" height="74" rx="6"/>
-      <rect x="238" y="446" width="18" height="54" rx="6"/>
-      <rect x="260" y="446" width="20" height="54" rx="6"/>
-      <rect x="320" y="446" width="20" height="54" rx="6"/>
-      <rect x="344" y="446" width="18" height="54" rx="6"/>
-      <rect x="366" y="446" width="20" height="74" rx="6"/>
-      <rect x="390" y="446" width="20" height="58" rx="6"/>
-      <rect x="414" y="446" width="20" height="58" rx="6"/>
-      <rect x="438" y="446" width="24" height="68" rx="6"/>
-      <rect x="466" y="446" width="24" height="68" rx="6"/>
-      <rect x="494" y="446" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 충치 치료 자리: 큰어금니 16, 26, 36, 46 -->
-    <g fill="var(--field)">
-      <rect x="138" y="212" width="24" height="68" rx="6"/>
-      <rect x="438" y="212" width="24" height="68" rx="6"/>
-      <rect x="138" y="446" width="24" height="68" rx="6"/>
-      <rect x="438" y="446" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 사랑니: 18, 28, 38, 48 -->
-    <g fill="var(--ink)">
-      <rect x="82" y="212" width="24" height="68" rx="6"/>
-      <rect x="494" y="212" width="24" height="68" rx="6"/>
-      <rect x="82" y="446" width="24" height="68" rx="6"/>
-      <rect x="494" y="446" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 정중선 -->
-    <rect x="296" y="200" width="8" height="330" fill="var(--field-light)"/>
-    <g font-size="15" fill="var(--muted)" text-anchor="middle">
-      <text x="94" y="200">18</text><text x="122" y="200">17</text><text x="150" y="200">16</text><text x="176" y="200">15</text><text x="200" y="200">14</text><text x="224" y="200">13</text><text x="247" y="200">12</text><text x="270" y="200">11</text>
-      <text x="330" y="200">21</text><text x="353" y="200">22</text><text x="376" y="200">23</text><text x="400" y="200">24</text><text x="424" y="200">25</text><text x="450" y="200">26</text><text x="478" y="200">27</text><text x="506" y="200">28</text>
-      <text x="94" y="545">48</text><text x="122" y="545">47</text><text x="150" y="545">46</text><text x="176" y="545">45</text><text x="200" y="545">44</text><text x="224" y="545">43</text><text x="247" y="545">42</text><text x="270" y="545">41</text>
-      <text x="330" y="545">31</text><text x="353" y="545">32</text><text x="376" y="545">33</text><text x="400" y="545">34</text><text x="424" y="545">35</text><text x="450" y="545">36</text><text x="478" y="545">37</text><text x="506" y="545">38</text>
-    </g>
-    <!-- 범례 -->
-    <rect x="80" y="596" width="22" height="22" fill="var(--field)"/>
-    <text x="114" y="614" font-size="18" fill="var(--ink)">충치 치료가 잦은 큰어금니</text>
-    <rect x="80" y="630" width="22" height="22" fill="var(--ink)"/>
-    <text x="114" y="648" font-size="18" fill="var(--ink)">사랑니 (발치 상담)</text>
-    <rect x="80" y="664" width="22" height="22" fill="var(--field-light)"/>
-    <text x="114" y="682" font-size="18" fill="var(--ink)">잇몸선 (스케일링 · 잇몸 치료)</text>
-  </symbol>
-
-  <!-- 주간 진료 시간표 -->
-  <symbol id="d-week" viewBox="0 0 600 760">
-    <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
-    <rect x="48" y="56" width="504" height="648" fill="var(--paper)"/>
-    <circle cx="80" cy="84" r="7" fill="var(--ink)"/>
-    <circle cx="520" cy="84" r="7" fill="var(--ink)"/>
-    <text x="80" y="134" font-size="34" font-weight="700" fill="var(--ink)">주간 진료 시간표</text>
-    <text x="80" y="166" font-size="18" fill="var(--muted)">평일 09:00–16:00 · 점심 12:00–13:00</text>
-    <!-- 요일 머리 -->
-    <g font-size="18" font-weight="500" fill="var(--ink)" text-anchor="middle">
-      <text x="190" y="214">월</text><text x="250" y="214">화</text><text x="310" y="214">수</text><text x="370" y="214">목</text><text x="430" y="214">금</text>
-      <text x="490" y="214" fill="var(--muted)">토·일</text>
-    </g>
-    <!-- 시간 라벨 -->
-    <g font-size="16" fill="var(--muted)" text-anchor="end">
-      <text x="150" y="246">9</text><text x="150" y="290">10</text><text x="150" y="334">11</text><text x="150" y="378">12</text><text x="150" y="422">13</text><text x="150" y="466">14</text><text x="150" y="510">15</text><text x="150" y="554">16</text><text x="150" y="598">17</text>
-    </g>
-    <!-- 요일 열: 오전 09–12, 점심, 오후 13–17 -->
-    <g fill="var(--field)">
-      <rect x="166" y="230" width="48" height="128"/><rect x="166" y="406" width="48" height="132"/>
-      <rect x="226" y="230" width="48" height="128"/><rect x="226" y="406" width="48" height="132"/>
-      <rect x="286" y="230" width="48" height="128"/><rect x="286" y="406" width="48" height="132"/>
-      <rect x="346" y="230" width="48" height="128"/><rect x="346" y="406" width="48" height="132"/>
-      <rect x="406" y="230" width="48" height="128"/><rect x="406" y="406" width="48" height="132"/>
-    </g>
-    <g fill="var(--field-light)">
-      <rect x="166" y="362" width="48" height="40"/><rect x="226" y="362" width="48" height="40"/><rect x="286" y="362" width="48" height="40"/><rect x="346" y="362" width="48" height="40"/><rect x="406" y="362" width="48" height="40"/>
-    </g>
-    <rect x="466" y="230" width="48" height="308" fill="var(--surface-deep)"/>
-    <text x="490" y="392" font-size="16" fill="var(--muted)" text-anchor="middle">휴진</text>
-    <text x="290" y="388" font-size="14" fill="var(--ink)" text-anchor="middle">점심</text>
-    <!-- 비고 -->
-    <rect x="80" y="620" width="22" height="22" fill="var(--field)"/>
-    <text x="114" y="638" font-size="17" fill="var(--ink)">진료</text>
-    <rect x="200" y="620" width="22" height="22" fill="var(--field-light)"/>
-    <text x="234" y="638" font-size="17" fill="var(--ink)">점심시간</text>
-    <text x="80" y="676" font-size="16" fill="var(--muted)">훈련 · 행사 기간에는 진료 시간이 바뀔 수 있습니다</text>
-  </symbol>
-
-  <!-- 전화 예약 메모 -->
-  <symbol id="d-form" viewBox="0 0 600 760">
-    <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
-    <rect x="40" y="40" width="520" height="690" fill="var(--ink)"/>
-    <rect x="64" y="84" width="472" height="620" fill="var(--paper)"/>
-    <rect x="240" y="24" width="120" height="56" fill="var(--field)"/>
-    <rect x="270" y="40" width="60" height="18" fill="var(--paper)"/>
-    <text x="96" y="150" font-size="34" font-weight="700" fill="var(--ink)">전화 예약</text>
-    <text x="96" y="182" font-size="17" fill="var(--muted)">부대 내선 803-7112 · 평일 09:00–16:00</text>
-    <g font-size="16" fill="var(--muted)">
-      <text x="96" y="236">소속</text>
-      <text x="96" y="300">계급 · 성명</text>
-      <text x="96" y="364">군번</text>
-      <text x="96" y="428">증상</text>
-      <text x="96" y="540">희망 날짜</text>
-    </g>
-    <g fill="var(--surface-deep)">
-      <rect x="96" y="246" width="380" height="30"/>
-      <rect x="96" y="310" width="300" height="30"/>
-      <rect x="96" y="374" width="240" height="30"/>
-      <rect x="96" y="438" width="408" height="30"/>
-      <rect x="96" y="476" width="340" height="30"/>
-      <rect x="96" y="550" width="220" height="30"/>
-    </g>
-    <g fill="var(--field)">
-      <rect x="96" y="246" width="190" height="30"/>
-      <rect x="96" y="438" width="260" height="30"/>
-    </g>
-    <!-- 긴급 여부 체크 -->
-    <rect x="96" y="604" width="22" height="22" fill="var(--surface-deep)"/>
-    <text x="128" y="622" font-size="17" fill="var(--ink)">일반</text>
-    <rect x="196" y="604" width="22" height="22" fill="var(--field)"/>
-    <text x="228" y="622" font-size="17" fill="var(--ink)">응급 (치통 · 외상)</text>
-    <!-- 직인 -->
-    <circle cx="456" cy="600" r="40" fill="none" stroke="var(--field)" stroke-width="4"/>
-    <text x="456" y="606" font-size="16" font-weight="700" fill="var(--field)" text-anchor="middle">예약</text>
-    <text x="96" y="676" font-size="15" fill="var(--muted)">군번만 알면 됩니다</text>
-  </symbol>
-
-
-</svg>
-
-<div class="stage">
-  <aside class="panel" aria-label="진료 시간 안내판과 치과 그림">
-<div class="panel__scene is-active" data-scene-name="board">
-  <div class="panel__art">
-    <svg viewBox="0 0 600 760" role="img" aria-labelledby="board-title">
-      <title id="board-title">오늘 진료 시간 안내판: 09:00–12:00, 13:00–16:00 진료, 12:00–13:00 점심</title>
-      <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
-      <rect x="284" y="0" width="32" height="40" fill="var(--ink)"/>
-      <rect x="48" y="40" width="504" height="680" fill="var(--paper)"/>
-      <circle cx="76" cy="68" r="7" fill="var(--ink)"/><circle cx="524" cy="68" r="7" fill="var(--ink)"/>
-      <circle cx="76" cy="692" r="7" fill="var(--ink)"/><circle cx="524" cy="692" r="7" fill="var(--ink)"/>
-      <image href="mark.svg" x="436" y="96" width="84" height="73"/>
-      <text x="80" y="128" font-size="36" font-weight="700" fill="var(--ink)">오늘 진료</text>
-      <text x="80" y="162" font-size="18" fill="var(--muted)">3사단 의무대대 치과 · 평일 09:00–16:00</text>
-      <text x="80" y="226" font-size="16" fill="var(--muted)" id="now-clock">한국 시간 기준</text>
-      <g font-size="17" fill="var(--muted)" text-anchor="end">
-        <text x="140" y="256">08:00</text><text x="140" y="300">09:00</text><text x="140" y="344">10:00</text><text x="140" y="388">11:00</text><text x="140" y="432">12:00</text><text x="140" y="476">13:00</text><text x="140" y="520">14:00</text><text x="140" y="564">15:00</text><text x="140" y="608">16:00</text><text x="140" y="652">17:00</text><text x="140" y="696">18:00</text>
-      </g>
-      <rect x="160" y="250" width="360" height="440" fill="var(--surface)"/>
-      <rect x="160" y="294" width="360" height="132" fill="var(--field)"/>
-      <rect x="160" y="426" width="360" height="44" fill="var(--field-light)"/>
-      <rect x="160" y="470" width="360" height="132" fill="var(--field)"/>
-      <text x="340" y="366" font-size="20" font-weight="500" fill="var(--paper)" text-anchor="middle">오전 진료</text>
-      <text x="340" y="454" font-size="17" fill="var(--ink)" text-anchor="middle">점심시간</text>
-      <text x="340" y="544" font-size="20" font-weight="500" fill="var(--paper)" text-anchor="middle">오후 진료</text>
-      <g id="now-line" style="transition: transform 600ms cubic-bezier(0.22,1,0.36,1)">
-        <rect x="150" y="247" width="380" height="6" fill="var(--ink)"/>
-        <rect x="150" y="226" width="76" height="26" fill="var(--ink)"/>
-        <text id="now-label" x="188" y="245" font-size="16" font-weight="700" fill="var(--paper)" text-anchor="middle">지금</text>
-      </g>
-    </svg>
-  </div>
-  <div class="panel__caption">
-    <p class="panel__status" id="now-status">평일 09:00–16:00 진료</p>
-    <p class="panel__next" id="now-next">점심시간 12:00–13:00. 토요일, 일요일, 공휴일은 휴진입니다.</p>
-    <p class="panel__docs" id="now-docs" hidden></p>
-  </div>
-</div>
-
-    <div class="panel__scene" data-scene-name="chart" hidden>
-      <div class="panel__art" aria-hidden="true"><svg aria-hidden="true" focusable="false"><use href="#d-chart"/></svg></div>
-      <div class="panel__caption"><p class="panel__status">치식표에서 보는 세 과목</p><p class="panel__next">큰어금니의 충치, 맨 안쪽의 사랑니, 잇몸선의 치석. 장병 진료의 대부분이 이 세 자리에서 생깁니다.</p></div>
-    </div>
-    <div class="panel__scene" data-scene-name="week" hidden>
-      <div class="panel__art" aria-hidden="true"><svg aria-hidden="true" focusable="false"><use href="#d-week"/></svg></div>
-      <div class="panel__caption"><p class="panel__status">일과 안에서 다녀옵니다</p><p class="panel__next">오전 09:00–12:00, 오후 13:00–16:00. 한 번 진료에 보통 30분이면 됩니다.</p></div>
-    </div>
-    <div class="panel__scene" data-scene-name="form" hidden>
-      <div class="panel__art" aria-hidden="true"><svg aria-hidden="true" focusable="false"><use href="#d-form"/></svg></div>
-      <div class="panel__caption"><p class="panel__status">저녁에 메모하고, 다음 날 전화하세요</p><p class="panel__next">내선은 일과 시간에 군 전화로만 걸 수 있습니다. 소속, 계급, 이름, 군번, 용건을 적어 두세요.</p></div>
-    </div>
-  </aside>
-
-  <main class="column">
-    <header class="card" data-scene="board">
-      <div class="stripe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="card__body">
-        <a class="wordmark" href="index.html" data-load style="--d:200ms"><img class="mark" src="mark.svg" alt="3사단 부대 마크" width="84" height="73">3사단 의무대대 치과</a>
-        <h1 class="display display--long lines">
-          <span class="line"><span data-line style="--i:0">부대 안에서 받는</span></span>
-          <span class="line"><span data-line style="--i:1">전문의 치과 진료</span></span>
-        </h1>
-        <p class="lead" data-load style="--d:420ms">구강악안면외과·치과보철과 전문의가 진료합니다. 예약은 전화로만 받고, 군번만 있으면 됩니다.</p>
-        <a class="button" href="hours.html#how" data-load style="--d:500ms">예약 · 부대 내선 803-7112</a>
-        <p class="hero__note small muted" data-load style="--d:560ms">내선은 군 전화로만 걸 수 있습니다. 저녁에 보셨다면 다음 날 일과 시간에 전화하세요.</p>
-      </div>
-      <nav class="nav" aria-label="주요 메뉴" data-load style="--d:600ms">
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+  <div class="site-header__in">
+    <a class="brand" href="index.html"><img src="mark.svg" alt="" width="24" height="21">3사단 의무대대 치과</a>
+    <nav class="site-nav" aria-label="주요 메뉴">
       <a href="clinic.html">진료 안내</a>
-      <a href="hours.html">진료 시간 · 예약</a>
+      <a href="hours.html">시간 · 예약</a>
       <a href="prosthesis.html">보철 진행</a>
-      <a href="care.html">치료 전후 주의사항</a>
+      <a href="care.html">주의사항</a>
+    </nav>
+    <a class="site-call" href="hours.html#call" aria-label="전화 예약 안내"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>내선 803-7112</span></a>
+    <details class="menu">
+      <summary aria-label="메뉴"><svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+      <nav aria-label="메뉴">
+        <a href="index.html" aria-current="page">홈</a>
+        <a href="clinic.html">진료 안내</a>
+        <a href="hours.html">시간 · 예약</a>
+        <a href="prosthesis.html">보철 진행</a>
+        <a href="care.html">주의사항</a>
+        <a class="menu__er" href="tel:033-450-7119"><span>응급 시에만 · 응급실</span><span>033-450-7119</span></a>
       </nav>
-    </header>
+    </details>
+  </div>
+</header>
 
-    <section class="section hub-section" data-scene="board" aria-labelledby="hub-title">
-      <h2 id="hub-title" data-reveal>바로 가기</h2>
-      <nav class="hub" aria-label="바로 가기" data-reveal style="--i:1">
-        <a class="is-key" href="hours.html#how"><b>예약 방법</b><span>저녁에 메모하고, 다음 날 일과 시간에 군 전화로</span></a>
-        <a href="prosthesis.html"><b>보철 진행 안내</b><span>보철물 도착 문자를 받았다면</span></a>
-        <a href="care.html"><b>치료 후 주의사항</b><span>발치, 신경치료, 크라운, 보톡스, 교합안정장치</span></a>
-        <a href="hours.html#emergency"><b>응급일 때</b><span>심한 통증, 부러진 치아, 멎지 않는 출혈</span></a>
-        <a href="hours.html#add-calendar"><b>예약 캘린더에 넣기</b><span>전날 저녁 7시에 알림</span></a>
-        <a href="hours.html#faq"><b>자주 묻는 질문</b><span>진료비, 소요 시간, 훈련과 발치</span></a>
-      </nav>
-    </section>
+<main class="page" id="main">
+  <section class="intro" aria-labelledby="page-title">
+    <p class="eb eb--accent">Dental clinic · 2F</p>
+    <h1 id="page-title">부대 안에서 받는<br>전문의 치과 진료</h1>
+    <p class="lead">구강악안면외과·치과보철과 전문의가 진료합니다. 예약은 전화로만 받고, 군번만 있으면 됩니다.</p>
+  </section>
 
-    <section class="features" data-scene="chart" aria-labelledby="features-title">
-      <h2 class="features__head" id="features-title">진료 과목</h2>
-      <p class="measure" data-reveal>임플란트, 교정을 제외한 모든 술식은 의무대 내에서 진행 가능합니다. 국군병원 진료가 필요하면 소견서나 의뢰서를 써 드립니다.</p>
-      <div class="subjects" data-reveal>
-        <a href="clinic.html#caries"><img src="photos/caries-1-after.jpg" alt="" width="1400" height="852" loading="lazy"><b>충치 치료</b><span>레진 수복, 신경치료, 치아 외상</span></a>
-        <a href="clinic.html#wisdom"><img src="photos/wisdom1-cbct.jpg" alt="" width="1200" height="900" loading="lazy"><b>사랑니와 발치</b><span>깊이 묻힌 사랑니까지 원내 발치</span></a>
-        <a href="clinic.html#prosth"><img src="photos/crown-case.jpg" alt="" width="1400" height="875" loading="lazy"><b>보철 치료</b><span>크라운, 지르코니아 인레이, 브릿지</span></a>
-        <a href="clinic.html#gum"><img src="photos/exam-mirror.jpg" alt="" width="1400" height="875" loading="lazy"><b>스케일링과 잇몸 치료</b><span>치석 제거와 잇몸 염증 관리</span></a>
-        <a href="clinic.html#tmd"><img src="photos/tmd-splint.jpg" alt="" width="800" height="800" loading="lazy"><b>이갈이와 턱관절 치료</b><span>보톡스, 교합안정장치, 마우스가드</span></a>
-        <a class="subjects__all" href="clinic.html"><b>전체 진료 안내</b><span>증례 사진과 국군병원에서 받는 치료까지</span></a>
-      </div>
-    </section>
+  <section class="today" aria-label="오늘 진료">
+    <div>
+      <p class="today__when" id="now-clock">오늘</p>
+      <p class="today__status" id="now-status">평일 09:00–16:00 진료</p>
+      <p class="today__next" id="now-next">점심시간 12:00–13:00. 토요일, 일요일, 공휴일은 휴진입니다.</p>
+      <p class="today__sched" id="now-docs" hidden></p>
+      <a class="today__link" href="hours.html#schedule">이번 달 진료 일정 보기</a>
+    </div>
+    <span class="today__badge" id="now-badge">HOURS</span>
+  </section>
 
-    <section class="section staff" id="staff" data-scene="board" aria-labelledby="staff-title">
-      <h2 id="staff-title" data-reveal>의료진</h2>
-      <p data-reveal style="--i:1">치과 군의관 두 명과 치위생부사관, 의무기록부사관, 군무원 치과위생사, 치과 의무병이 함께 진료합니다.</p>
-      <article class="doctor" data-reveal>
-        <h3>대위 이원우</h3>
-        <ul class="plain">
-          <li>구강악안면외과 전문의</li>
+  <section class="block block--flush" aria-labelledby="quick-title" style="margin-top:40px">
+    <p class="eb" id="quick-title">Quick menu</p>
+    <nav class="tiles" aria-label="바로가기">
+      <a class="tile" href="care.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg><span><b>치료 후 주의사항</b><span>발치 · 신경 · 보철</span></span></a>
+      <a class="tile" href="prosthesis.html#arrived"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg><span><b>보철물 도착 연락</b><span>장착 예약 방법</span></span></a>
+      <a class="tile" href="hours.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>진료 시간 · 예약</b><span>평일 09–16시</span></span></a>
+      <a class="tile" href="clinic.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span><b>진료 과목</b><span>여기서 / 국군병원</span></span></a>
+    </nav>
+    <a class="er-row" href="hours.html#emergency"><span>응급일 때</span><span>일과 후 응급실 033-450-7119</span></a>
+  </section>
+
+  <section class="block" id="staff" aria-labelledby="staff-title">
+    <p class="eb">Doctors</p>
+    <h2 class="block-title" id="staff-title">의료진</h2>
+    <div class="doctors">
+      <article class="doctor">
+        <h3 class="doctor__name">이원우<small>대위</small></h3>
+        <p class="doctor__role">구강악안면외과 전문의</p>
+        <ul>
           <li>악안면성형외과 인정의</li>
           <li>전북대학교 치과대학 학사</li>
           <li>한양대학교 의학과 석사</li>
@@ -305,135 +95,81 @@
           <li>한양대학교 서울병원 구강악안면외과 레지던트</li>
         </ul>
       </article>
-      <article class="doctor" data-reveal>
-        <h3>대위 이종철</h3>
-        <ul class="plain">
-          <li>치과보철과 전문의</li>
+      <article class="doctor">
+        <h3 class="doctor__name">이종철<small>대위</small></h3>
+        <p class="doctor__role">치과보철과 전문의</p>
+        <ul>
           <li>강릉원주대학교 치의학과 학사</li>
           <li>중앙보훈병원 치과병원 인턴</li>
           <li>중앙보훈병원 치과보철과 레지던트</li>
         </ul>
       </article>
-      <h3 class="staff__group" data-reveal>소속 간부</h3>
-      <article class="doctor doctor--staff" data-reveal>
-        <h3>중사 박하림</h3>
-        <p class="doctor__role">치위생부사관</p>
-        <ul class="plain">
-          <li>치과위생사 면허 (2015)</li>
-          <li>육군 의무병과 임관 (2018)</li>
-          <li>3사단 치과위생사 제169호 인명 (2018)</li>
-          <li>2018년부터 3사단 의무대대 치과반</li>
-        </ul>
-      </article>
-      <article class="doctor doctor--staff" data-reveal>
-        <h3>하사 김구연</h3>
-        <p class="doctor__role">의무기록부사관</p>
-        <ul class="plain">
-          <li>치과위생사 면허</li>
-          <li>육군 민간임관자전원장기 임관 (2022)</li>
-          <li>2025년부터 3사단 의무대대 치과반</li>
-        </ul>
-      </article>
-      <article class="doctor doctor--staff" data-reveal>
-        <h3>주무관 이성태</h3>
-        <p class="doctor__role">군무원 · 치과위생사</p>
-        <ul class="plain">
-          <li>치과위생사 면허 (2019)</li>
-          <li>56사단 의무대 치과 (2021–2023)</li>
-          <li>50사단 의무대 치과 (2023–2025)</li>
-          <li>현재 3사단 의무대대 치과</li>
-        </ul>
-      </article>
-      <h3 class="staff__group" data-reveal>소속 병사</h3>
-      <article class="doctor doctor--staff" data-reveal>
-        <h3>치과 의무병</h3>
-        <ul class="plain">
-          <li>치과 치료 및 처치 보조, 진료 및 예약 안내</li>
-        </ul>
-      </article>
-    </section>
+    </div>
+    <dl class="team">
+      <div class="team__row"><dt>치위생부사관</dt><dd><b>중사 박하림</b><span>치과위생사 면허 (2015) · 2018년부터 3사단 의무대대 치과반</span></dd></div>
+      <div class="team__row"><dt>의무기록부사관</dt><dd><b>하사 김구연</b><span>치과위생사 면허 · 2025년부터 3사단 의무대대 치과반</span></dd></div>
+      <div class="team__row"><dt>군무원 · 치과위생사</dt><dd><b>주무관 이성태</b><span>치과위생사 면허 (2019) · 56사단, 50사단 의무대 치과를 거쳐 현재 3사단</span></dd></div>
+      <div class="team__row"><dt>치과 의무병</dt><dd><b>진료 보조와 예약 안내</b></dd></div>
+    </dl>
+  </section>
 
-    <section class="section schedule" id="schedule" data-scene="week" aria-labelledby="schedule-title">
-      <h2 id="schedule-title" data-reveal>진료 일정</h2>
-      <p data-reveal style="--i:1">치과 군의관 두 명이 초진과 재진을 매일 번갈아 맡아 진료합니다.</p>
-      <div class="cal" data-cal><p class="cal__empty muted">진료 일정을 불러오는 중입니다.</p></div>
-    </section>
+  <section class="block" id="how" aria-labelledby="how-title">
+    <p class="eb">How to book</p>
+    <h2 class="block-title" id="how-title">예약은 세 단계</h2>
+    <ol class="numlist">
+      <li><div><b>일과 중 군 전화로 내선 803-7112</b><span>소속, 계급·이름, 군번, 증상을 말하세요. 개인 휴대폰으로는 걸 수 없으니, 저녁에 보셨다면 적어 두었다가 다음 날 거세요.</span></div></li>
+      <li><div><b>소속 부대에 예약 시간 보고</b><span>병사는 외출 처리를 받으세요. 응급이 아니면 초진은 당일 진료가 어렵습니다.</span></div></li>
+      <li><div><b>10분 전 의무대대 2층</b><span>신분증·의뢰서는 필요 없습니다. 먹는 약 이름만 챙기세요.</span></div></li>
+    </ol>
+    <p><a class="link" href="hours.html#call">전화할 때 말할 것</a> · <a class="link" href="hours.html#add-calendar">예약을 캘린더에 넣기</a></p>
+  </section>
 
-    <section class="section place" id="place" data-scene="form" aria-labelledby="place-title">
-      <h2 id="place-title" data-reveal>연락처와 오시는 길</h2>
-      <p data-reveal style="--i:1">3사단 의무대대 건물 2층, 계단을 올라 오른쪽이 치과 진료실입니다. 접수대에서 이름을 말하고 복도 의자에서 기다리면 순서대로 부릅니다.</p>
-      <figure class="place__photo" data-reveal style="--i:2">
-        <img src="photos/room-unit.jpg" alt="치과 유닛 체어와 진료 조명" width="960" height="640" loading="lazy">
-      </figure>
-      <dl class="place__list" data-reveal style="--i:3">
-        <div><dt>위치</dt><dd>3사단 의무대대 2층 치과 진료실</dd></div>
-        <div><dt>예약 · 문의</dt><dd>부대 내선 803-7112 <span class="muted small">군 전화로만</span></dd></div>
-        <div><dt>응급 시에만</dt><dd>응급실 <a class="link" href="tel:033-450-7119">033-450-7119</a></dd></div>
-        <div><dt>진료</dt><dd>평일 09:00–12:00, 13:00–16:00</dd></div>
-        <div><dt>휴진</dt><dd>토요일 · 일요일 · 공휴일</dd></div>
+  <section class="block" id="place" aria-labelledby="place-title">
+    <p class="eb">Contact</p>
+    <h2 class="block-title" id="place-title">연락처와 오시는 길</h2>
+    <div class="contact">
+      <p class="eb">부대 내선 · 군 전화로만</p>
+      <p class="contact__num">803-7112</p>
+      <p>평일 09:00–16:00 · 점심 12:00–13:00<br>일과 시간 밖에는 연결이 어렵습니다.</p>
+      <dl class="contact__rows">
+        <dt>위치</dt><dd>의무대대 건물 2층, 계단을 올라 오른쪽</dd>
+        <dt>휴진</dt><dd>토요일 · 일요일 · 공휴일</dd>
+        <dt>응급</dt><dd>응급 시에만 응급실 <a href="tel:033-450-7119">033-450-7119</a></dd>
       </dl>
-      <div class="callcard" data-reveal style="--i:2">
-        <p class="callcard__title">전화할 때 말할 것</p>
-        <p class="callcard__note">메모하거나 이 화면을 캡처해 두었다가, 일과 시간(평일 09:00–16:00)에 행정반이나 사무실의 군 전화로 <b>부대 내선 803-7112</b>에 거세요. 내선은 개인 휴대폰으로는 걸 수 없습니다.</p>
-        <ul class="callcard__list">
-          <li><b>소속</b><span>예: ○○연대 ○대대 ○중대</span></li>
-          <li><b>계급</b><span>예: 일병</span></li>
-          <li><b>이름</b><span>예: 홍길동</span></li>
-          <li><b>군번</b><span>예: 25-○○○○○○○○</span></li>
-          <li><b>용건</b><span>예: 사랑니가 아파서 진료 예약 / 보철물 도착, 장착 예약</span></li>
-        </ul>
-        <p class="callcard__foot">휴가, 훈련, 전역 일정이 있으면 함께 말해 주세요.</p>
+    </div>
+  </section>
+
+  <section class="block" id="feedback" aria-labelledby="fb-title">
+    <p class="eb">Feedback</p>
+    <h2 class="block-title" id="fb-title">의견함</h2>
+    <p>치과 진료 후 불편했던 점, 개선해야 할 점, 좋았던 점을 자유롭게 적어 주세요. 이름은 받지 않고, 적은 내용은 치과에만 전달됩니다.</p>
+    <form class="fb" id="fb-form" action="https://docs.google.com/forms/d/e/1FAIpQLScYv5OPSOPAkaIRf9biORDnwYV5szAisddn2qoDDCzbE45UtQ/formResponse" method="post" target="fb-sink" novalidate>
+      <label class="fb__label" for="fb-text">바라는 점이나 불편했던 점</label>
+      <textarea class="fb__field" id="fb-text" name="entry.2080021156" rows="5" required maxlength="1000" placeholder="예: 점심시간 직후에는 대기가 길어요"></textarea>
+      <div class="fb__row">
+        <button class="button" type="submit" id="fb-send">의견 보내기</button>
+        <span class="fb__note small muted" id="fb-note">보내면 치과 의견함에 바로 쌓입니다.</span>
       </div>
-    </section>
-
-    <section class="section feedback" data-scene="form" aria-labelledby="fb-title">
-      <h2 id="fb-title">의견함</h2>
-      <p class="measure">치과 진료 후 불편했던 점이나, 개선해야 할 점, 좋았던 점 등 자유롭게 의견을 적어주세요. 작성해주신 리뷰는 3사단 치과 의무대의 발전에 아주 큰 도움이 됩니다.</p>
-      <p class="measure small muted">이름은 받지 않습니다. 적은 내용은 치과에만 전달되고 이 페이지에는 보이지 않습니다.</p>
-      <form class="fb" id="fb-form" action="https://docs.google.com/forms/d/e/1FAIpQLScYv5OPSOPAkaIRf9biORDnwYV5szAisddn2qoDDCzbE45UtQ/formResponse" method="post" target="fb-sink" novalidate>
-        <label class="fb__label" for="fb-text">바라는 점이나 불편했던 점</label>
-        <textarea class="fb__field" id="fb-text" name="entry.2080021156" rows="5" required maxlength="1000" placeholder="예: 점심시간 직후에는 대기가 길어요"></textarea>
-        <div class="fb__row">
-          <button class="button" type="submit" id="fb-send">의견 보내기</button>
-          <span class="fb__note small muted" id="fb-note">보내면 치과 의견함에 바로 쌓입니다.</span>
-        </div>
-      </form>
-      <iframe name="fb-sink" class="sr-only" title="전송 처리" tabindex="-1" aria-hidden="true"></iframe>
-      <p class="fb__done" id="fb-done" hidden>보냈습니다. 읽고 진료에 반영하겠습니다. 하나 더 적으려면 칸에 다시 쓰면 됩니다.</p>
-    </section>
-  </main>
-</div>
-<section class="cta" data-reveal aria-labelledby="cta-title">
-  <figure class="cta__photo"><img src="photos/room-chair.jpg" alt="" width="960" height="1080" loading="lazy"></figure>
-  <div class="cta__text">
-    <h2 class="cta__line lines" id="cta-title"><span class="line"><span>저녁에 메모하고,</span></span><span class="line"><span>다음 날 전화하세요</span></span></h2>
-    <p>3사단 의무대대 2층 치과 진료실. 예약은 일과 시간에 행정반이나 사무실의 군 전화로만 받습니다. 개인 휴대폰으로는 내선에 걸 수 없습니다.</p>
-    <p class="cta__phone nums"><span class="cta__label">부대 내선 · 군 전화로만</span>803-7112<span class="cta__ext">평일 09:00–16:00. 그 외 시간에는 연결이 어렵습니다.</span></p>
-    <p class="cta__er">응급 시에만 · 의무대대 응급실 <a href="tel:033-450-7119">033-450-7119</a></p>
-    <a class="button button--paper" href="hours.html#call">전화할 때 말할 것</a>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="stripe stripe--thin" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-  <div class="footer__line">
-    <span class="muted">3사단 의무대대 치과</span>
-    <nav class="footer__links" aria-label="꼬리 링크">
+    </form>
+    <iframe name="fb-sink" class="sr-only" title="전송 처리" tabindex="-1" aria-hidden="true"></iframe>
+    <p class="fb__done" id="fb-done" hidden>보냈습니다. 읽고 진료에 반영하겠습니다. 하나 더 적으려면 칸에 다시 쓰면 됩니다.</p>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="site-footer__in">
+    <p class="site-footer__name">3사단 의무대대 치과</p>
+    <p>의무대대 건물 2층 · 평일 09:00–16:00 · 점심 12:00–13:00 · 토·일·공휴일 휴진</p>
+    <p>예약 부대 내선 803-7112 (일과 시간, 군 전화로만) · 응급 시에만 응급실 033-450-7119</p>
+    <nav class="site-footer__links" aria-label="꼬리 메뉴">
+      <a href="index.html">홈</a>
       <a href="clinic.html">진료 안내</a>
-      <a href="hours.html">진료 시간 · 예약</a>
+      <a href="hours.html">시간 · 예약</a>
       <a href="prosthesis.html">보철 진행</a>
       <a href="care.html">주의사항</a>
     </nav>
-    <span class="footer__right muted">2026 · 3사단 의무대대</span>
   </div>
-  <p class="footer__credits small muted">진료실 사진은 참고용 자료 사진입니다 (<a href="https://stocksnap.io/photo/3J10QN5PTS">StockSnap</a>, CC0). 검진: <a href="https://commons.wikimedia.org/wiki/File:Dentist_Examining_Patient%E2%80%99s_Teeth_with_Dental_Mirror.jpg">James Wasswa</a>, CC BY-SA 4.0. 진료 과목의 치료 전후 사진과 크라운·인레이·사랑니 사진은 본원 진료 사진입니다.</p>
 </footer>
-<div class="callbar" id="callbar" hidden>
-  <span class="callbar__hours nums" id="callbar-status">평일 09:00–16:00</span>
-  <a class="button callbar__button" href="hours.html#how">예약 방법</a>
-</div>
 <script src="site.js" defer></script>
 <script src="calendar.js" defer></script>
-
 </body>
 </html>

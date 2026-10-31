@@ -3,13 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Sans:wght@500;600&display=swap">
 <link rel="icon" href="mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
-<script>document.documentElement.classList.add('js')</script>
 
 <title>진료 안내 · 3사단 의무대대 치과</title>
 <meta name="description" content="충치 치료, 사랑니와 발치, 보철 치료, 스케일링과 잇몸 치료, 수면 이갈이와 턱관절 치료. 임플란트와 교정을 제외한 모든 술식을 의무대 안에서 시행.">
@@ -26,446 +25,195 @@
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <!-- 그림 공통: 평면 도형, 한 가지 선 굵기, 페이지 색만 사용 -->
-
-  <!-- 치식표 (FDI 번호 치아 기록표) -->
-  <symbol id="d-chart" viewBox="0 0 600 760">
-    <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
-    <rect x="48" y="56" width="504" height="648" fill="var(--paper)"/>
-    <!-- 집게 -->
-    <rect x="250" y="28" width="100" height="44" fill="var(--ink)"/>
-    <rect x="274" y="40" width="52" height="16" fill="var(--paper)"/>
-    <text x="80" y="118" font-size="34" font-weight="700" fill="var(--ink)">치식표</text>
-    <text x="80" y="150" font-size="18" fill="var(--muted)">3사단 의무대대 치과 · 진료 기록</text>
-    <!-- 잇몸 띠 -->
-    <rect x="80" y="286" width="440" height="20" fill="var(--field-light)"/>
-    <rect x="80" y="420" width="440" height="20" fill="var(--field-light)"/>
-    <!-- 위턱: 18 17 16 15 14 13 12 11 | 21 22 23 24 25 26 27 28 -->
-    <g fill="var(--surface-deep)">
-      <rect x="82" y="212" width="24" height="68" rx="6"/>
-      <rect x="110" y="212" width="24" height="68" rx="6"/>
-      <rect x="138" y="212" width="24" height="68" rx="6"/>
-      <rect x="166" y="222" width="20" height="58" rx="6"/>
-      <rect x="190" y="222" width="20" height="58" rx="6"/>
-      <rect x="214" y="206" width="20" height="74" rx="6"/>
-      <rect x="238" y="226" width="18" height="54" rx="6"/>
-      <rect x="260" y="222" width="20" height="58" rx="6"/>
-      <rect x="320" y="222" width="20" height="58" rx="6"/>
-      <rect x="344" y="226" width="18" height="54" rx="6"/>
-      <rect x="366" y="206" width="20" height="74" rx="6"/>
-      <rect x="390" y="222" width="20" height="58" rx="6"/>
-      <rect x="414" y="222" width="20" height="58" rx="6"/>
-      <rect x="438" y="212" width="24" height="68" rx="6"/>
-      <rect x="466" y="212" width="24" height="68" rx="6"/>
-      <rect x="494" y="212" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 아래턱 -->
-    <g fill="var(--surface-deep)">
-      <rect x="82" y="446" width="24" height="68" rx="6"/>
-      <rect x="110" y="446" width="24" height="68" rx="6"/>
-      <rect x="138" y="446" width="24" height="68" rx="6"/>
-      <rect x="166" y="446" width="20" height="58" rx="6"/>
-      <rect x="190" y="446" width="20" height="58" rx="6"/>
-      <rect x="214" y="446" width="20" height="74" rx="6"/>
-      <rect x="238" y="446" width="18" height="54" rx="6"/>
-      <rect x="260" y="446" width="20" height="54" rx="6"/>
-      <rect x="320" y="446" width="20" height="54" rx="6"/>
-      <rect x="344" y="446" width="18" height="54" rx="6"/>
-      <rect x="366" y="446" width="20" height="74" rx="6"/>
-      <rect x="390" y="446" width="20" height="58" rx="6"/>
-      <rect x="414" y="446" width="20" height="58" rx="6"/>
-      <rect x="438" y="446" width="24" height="68" rx="6"/>
-      <rect x="466" y="446" width="24" height="68" rx="6"/>
-      <rect x="494" y="446" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 충치 치료 자리: 큰어금니 16, 26, 36, 46 -->
-    <g fill="var(--field)">
-      <rect x="138" y="212" width="24" height="68" rx="6"/>
-      <rect x="438" y="212" width="24" height="68" rx="6"/>
-      <rect x="138" y="446" width="24" height="68" rx="6"/>
-      <rect x="438" y="446" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 사랑니: 18, 28, 38, 48 -->
-    <g fill="var(--ink)">
-      <rect x="82" y="212" width="24" height="68" rx="6"/>
-      <rect x="494" y="212" width="24" height="68" rx="6"/>
-      <rect x="82" y="446" width="24" height="68" rx="6"/>
-      <rect x="494" y="446" width="24" height="68" rx="6"/>
-    </g>
-    <!-- 정중선 -->
-    <rect x="296" y="200" width="8" height="330" fill="var(--field-light)"/>
-    <g font-size="15" fill="var(--muted)" text-anchor="middle">
-      <text x="94" y="200">18</text><text x="122" y="200">17</text><text x="150" y="200">16</text><text x="176" y="200">15</text><text x="200" y="200">14</text><text x="224" y="200">13</text><text x="247" y="200">12</text><text x="270" y="200">11</text>
-      <text x="330" y="200">21</text><text x="353" y="200">22</text><text x="376" y="200">23</text><text x="400" y="200">24</text><text x="424" y="200">25</text><text x="450" y="200">26</text><text x="478" y="200">27</text><text x="506" y="200">28</text>
-      <text x="94" y="545">48</text><text x="122" y="545">47</text><text x="150" y="545">46</text><text x="176" y="545">45</text><text x="200" y="545">44</text><text x="224" y="545">43</text><text x="247" y="545">42</text><text x="270" y="545">41</text>
-      <text x="330" y="545">31</text><text x="353" y="545">32</text><text x="376" y="545">33</text><text x="400" y="545">34</text><text x="424" y="545">35</text><text x="450" y="545">36</text><text x="478" y="545">37</text><text x="506" y="545">38</text>
-    </g>
-    <!-- 범례 -->
-    <rect x="80" y="596" width="22" height="22" fill="var(--field)"/>
-    <text x="114" y="614" font-size="18" fill="var(--ink)">충치 치료가 잦은 큰어금니</text>
-    <rect x="80" y="630" width="22" height="22" fill="var(--ink)"/>
-    <text x="114" y="648" font-size="18" fill="var(--ink)">사랑니 (발치 상담)</text>
-    <rect x="80" y="664" width="22" height="22" fill="var(--field-light)"/>
-    <text x="114" y="682" font-size="18" fill="var(--ink)">잇몸선 (스케일링 · 잇몸 치료)</text>
-  </symbol>
-
-  <!-- 주간 진료 시간표 -->
-  <symbol id="d-week" viewBox="0 0 600 760">
-    <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
-    <rect x="48" y="56" width="504" height="648" fill="var(--paper)"/>
-    <circle cx="80" cy="84" r="7" fill="var(--ink)"/>
-    <circle cx="520" cy="84" r="7" fill="var(--ink)"/>
-    <text x="80" y="134" font-size="34" font-weight="700" fill="var(--ink)">주간 진료 시간표</text>
-    <text x="80" y="166" font-size="18" fill="var(--muted)">평일 09:00–16:00 · 점심 12:00–13:00</text>
-    <!-- 요일 머리 -->
-    <g font-size="18" font-weight="500" fill="var(--ink)" text-anchor="middle">
-      <text x="190" y="214">월</text><text x="250" y="214">화</text><text x="310" y="214">수</text><text x="370" y="214">목</text><text x="430" y="214">금</text>
-      <text x="490" y="214" fill="var(--muted)">토·일</text>
-    </g>
-    <!-- 시간 라벨 -->
-    <g font-size="16" fill="var(--muted)" text-anchor="end">
-      <text x="150" y="246">9</text><text x="150" y="290">10</text><text x="150" y="334">11</text><text x="150" y="378">12</text><text x="150" y="422">13</text><text x="150" y="466">14</text><text x="150" y="510">15</text><text x="150" y="554">16</text><text x="150" y="598">17</text>
-    </g>
-    <!-- 요일 열: 오전 09–12, 점심, 오후 13–17 -->
-    <g fill="var(--field)">
-      <rect x="166" y="230" width="48" height="128"/><rect x="166" y="406" width="48" height="132"/>
-      <rect x="226" y="230" width="48" height="128"/><rect x="226" y="406" width="48" height="132"/>
-      <rect x="286" y="230" width="48" height="128"/><rect x="286" y="406" width="48" height="132"/>
-      <rect x="346" y="230" width="48" height="128"/><rect x="346" y="406" width="48" height="132"/>
-      <rect x="406" y="230" width="48" height="128"/><rect x="406" y="406" width="48" height="132"/>
-    </g>
-    <g fill="var(--field-light)">
-      <rect x="166" y="362" width="48" height="40"/><rect x="226" y="362" width="48" height="40"/><rect x="286" y="362" width="48" height="40"/><rect x="346" y="362" width="48" height="40"/><rect x="406" y="362" width="48" height="40"/>
-    </g>
-    <rect x="466" y="230" width="48" height="308" fill="var(--surface-deep)"/>
-    <text x="490" y="392" font-size="16" fill="var(--muted)" text-anchor="middle">휴진</text>
-    <text x="290" y="388" font-size="14" fill="var(--ink)" text-anchor="middle">점심</text>
-    <!-- 비고 -->
-    <rect x="80" y="620" width="22" height="22" fill="var(--field)"/>
-    <text x="114" y="638" font-size="17" fill="var(--ink)">진료</text>
-    <rect x="200" y="620" width="22" height="22" fill="var(--field-light)"/>
-    <text x="234" y="638" font-size="17" fill="var(--ink)">점심시간</text>
-    <text x="80" y="676" font-size="16" fill="var(--muted)">훈련 · 행사 기간에는 진료 시간이 바뀔 수 있습니다</text>
-  </symbol>
-
-  <!-- 전화 예약 메모 -->
-  <symbol id="d-form" viewBox="0 0 600 760">
-    <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
-    <rect x="40" y="40" width="520" height="690" fill="var(--ink)"/>
-    <rect x="64" y="84" width="472" height="620" fill="var(--paper)"/>
-    <rect x="240" y="24" width="120" height="56" fill="var(--field)"/>
-    <rect x="270" y="40" width="60" height="18" fill="var(--paper)"/>
-    <text x="96" y="150" font-size="34" font-weight="700" fill="var(--ink)">전화 예약</text>
-    <text x="96" y="182" font-size="17" fill="var(--muted)">부대 내선 803-7112 · 평일 09:00–16:00</text>
-    <g font-size="16" fill="var(--muted)">
-      <text x="96" y="236">소속</text>
-      <text x="96" y="300">계급 · 성명</text>
-      <text x="96" y="364">군번</text>
-      <text x="96" y="428">증상</text>
-      <text x="96" y="540">희망 날짜</text>
-    </g>
-    <g fill="var(--surface-deep)">
-      <rect x="96" y="246" width="380" height="30"/>
-      <rect x="96" y="310" width="300" height="30"/>
-      <rect x="96" y="374" width="240" height="30"/>
-      <rect x="96" y="438" width="408" height="30"/>
-      <rect x="96" y="476" width="340" height="30"/>
-      <rect x="96" y="550" width="220" height="30"/>
-    </g>
-    <g fill="var(--field)">
-      <rect x="96" y="246" width="190" height="30"/>
-      <rect x="96" y="438" width="260" height="30"/>
-    </g>
-    <!-- 긴급 여부 체크 -->
-    <rect x="96" y="604" width="22" height="22" fill="var(--surface-deep)"/>
-    <text x="128" y="622" font-size="17" fill="var(--ink)">일반</text>
-    <rect x="196" y="604" width="22" height="22" fill="var(--field)"/>
-    <text x="228" y="622" font-size="17" fill="var(--ink)">응급 (치통 · 외상)</text>
-    <!-- 직인 -->
-    <circle cx="456" cy="600" r="40" fill="none" stroke="var(--field)" stroke-width="4"/>
-    <text x="456" y="606" font-size="16" font-weight="700" fill="var(--field)" text-anchor="middle">예약</text>
-    <text x="96" y="676" font-size="15" fill="var(--muted)">군번만 알면 됩니다</text>
-  </symbol>
-
-  <!-- 진료실: 유닛 체어 (왼쪽), 오른쪽 벽은 비워 글이 앉는다 -->
-  <symbol id="d-room" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
-    <rect x="0" y="0" width="1600" height="900" fill="var(--field)"/>
-    <rect x="0" y="640" width="1600" height="260" fill="var(--field-deep)"/>
-    <rect x="0" y="628" width="1600" height="12" fill="var(--ink)"/>
-    <!-- 창 -->
-    <rect x="360" y="100" width="300" height="240" fill="var(--field-light)"/>
-    <rect x="504" y="100" width="12" height="240" fill="var(--field)"/>
-    <rect x="360" y="216" width="300" height="12" fill="var(--field)"/>
-    <!-- 수납장 -->
-    <rect x="40" y="420" width="260" height="220" fill="var(--field-deep)"/>
-    <rect x="60" y="440" width="100" height="90" fill="var(--field-light)"/>
-    <rect x="180" y="440" width="100" height="90" fill="var(--field-light)"/>
-    <rect x="60" y="550" width="220" height="70" fill="var(--ink)"/>
-    <rect x="160" y="580" width="20" height="8" fill="var(--paper)"/>
-    <rect x="70" y="400" width="60" height="20" fill="var(--paper)"/>
-    <rect x="140" y="392" width="40" height="28" fill="var(--paper)"/>
-    <!-- 안내 표지: 오른쪽 위, 글이 앉는 아래쪽 삼분의 일을 피한다 -->
-    <rect x="1240" y="90" width="160" height="60" fill="var(--paper)"/>
-    <text x="1320" y="132" font-size="30" font-weight="700" fill="var(--ink)" text-anchor="middle">치과</text>
-    <!-- 조명 팔과 램프 -->
-    <rect x="690" y="0" width="16" height="200" fill="var(--ink)"/>
-    <rect x="560" y="196" width="146" height="14" fill="var(--ink)"/>
-    <rect x="500" y="200" width="100" height="60" rx="8" fill="var(--paper)"/>
-    <rect x="510" y="246" width="80" height="14" fill="var(--field-light)"/>
-    <!-- 체어: 받침, 기둥, 좌석, 등받이, 머리받침, 팔걸이 -->
-    <rect x="440" y="600" width="260" height="30" fill="var(--ink)"/>
-    <rect x="540" y="500" width="60" height="110" fill="var(--ink)"/>
-    <rect x="380" y="460" width="420" height="60" rx="16" fill="var(--paper)"/>
-    <rect x="380" y="500" width="420" height="22" fill="var(--surface-deep)"/>
-    <rect x="300" y="470" width="110" height="70" rx="16" fill="var(--paper)"/>
-    <rect x="300" y="520" width="110" height="20" fill="var(--surface-deep)"/>
-    <rect x="720" y="300" width="80" height="200" rx="16" fill="var(--paper)"/>
-    <rect x="720" y="300" width="22" height="200" fill="var(--surface-deep)"/>
-    <rect x="712" y="250" width="92" height="56" rx="14" fill="var(--paper)"/>
-    <rect x="560" y="420" width="120" height="30" rx="8" fill="var(--surface-deep)"/>
-    <!-- 타구대와 기구 트레이 -->
-    <rect x="880" y="380" width="24" height="230" fill="var(--ink)"/>
-    <rect x="840" y="370" width="110" height="40" rx="8" fill="var(--paper)"/>
-    <circle cx="896" cy="390" r="12" fill="var(--field-light)"/>
-    <rect x="830" y="300" width="130" height="30" rx="6" fill="var(--paper)"/>
-    <rect x="846" y="282" width="50" height="8" fill="var(--field)"/>
-    <rect x="906" y="282" width="30" height="8" fill="var(--field)"/>
-    <!-- 바닥 선 -->
-    <rect x="0" y="760" width="1600" height="14" fill="var(--ink)"/>
-  </symbol>
-
-  <symbol id="d-crown" viewBox="0 0 300 400">
-    <rect x="0" y="0" width="300" height="400" fill="var(--field-light)"/>
-    <rect x="0" y="250" width="300" height="150" fill="var(--field)"/>
-    <!-- 삭제된 치아 위에 씌운 크라운 -->
-    <path d="M110 260 l-16 90 q-4 20 16 20 l10 0 l14-90z M190 260 l16 90 q4 20-16 20 l-10 0 l-14-90z" fill="var(--paper)"/>
-    <path d="M90 170 l0 60 q0 30 40 30 l40 0 q40 0 40-30 l0-60z" fill="var(--paper)"/>
-    <path d="M70 120 q10-50 50-50 q30 0 30 20 q0-20 30-20 q40 0 50 50 l0 50 q0 14-14 14 l-132 0 q-14 0-14-14z" fill="var(--field-deep)"/>
-    <path d="M86 118 q8-36 30-36 q20 0 24 16 q4-16 24-16 q22 0 30 36 l0 20 l-108 0z" fill="var(--field)" opacity="0.6"/>
-    <rect x="120" y="150" width="60" height="8" fill="var(--paper)" opacity="0.5"/>
-  </symbol>
-  <!-- 진료 과목 그림 3개 (3:4) -->
-  <symbol id="d-cavity" viewBox="0 0 300 400">
-    <rect x="0" y="0" width="300" height="400" fill="var(--field-light)"/>
-    <rect x="0" y="250" width="300" height="150" fill="var(--field)"/>
-    <!-- 어금니: 치관과 뿌리 -->
-    <path d="M70 120 q10-50 50-50 q30 0 40 20 q10-20 40-20 q40 0 50 50 l0 110 q0 30-40 30 l-100 0 q-40 0-40-30z" fill="var(--paper)"/>
-    <path d="M110 260 l-16 90 q-4 20 16 20 l10 0 l14-90z M190 260 l16 90 q4 20-16 20 l-10 0 l-14-90z" fill="var(--paper)"/>
-    <path d="M90 120 q8-40 30-40 q20 0 30 16 q10-16 30-16 q22 0 30 40 l0 40 l-120 0z" fill="var(--surface-deep)" opacity="0.5"/>
-    <!-- 충치 자리와 메운 부분 -->
-    <ellipse cx="150" cy="150" rx="34" ry="20" fill="var(--ink)"/>
-    <ellipse cx="150" cy="150" rx="22" ry="12" fill="var(--field)"/>
-    <rect x="120" y="178" width="60" height="10" fill="var(--field-deep)"/>
-  </symbol>
-  <symbol id="d-wisdom" viewBox="0 0 300 400">
-    <rect x="0" y="0" width="300" height="400" fill="var(--field-light)"/>
-    <rect x="0" y="220" width="300" height="180" fill="var(--field)"/>
-    <!-- 바로 선 어금니 -->
-    <path d="M40 130 q10-40 40-40 q25 0 35 18 q10-18 35-18 q30 0 40 40 l0 90 q0 26-34 26 l-82 0 q-34 0-34-26z" fill="var(--paper)"/>
-    <path d="M70 246 l-12 70 q-2 16 14 16 l8 0 l10-70z M140 246 l12 70 q2 16-14 16 l-8 0 l-10-70z" fill="var(--paper)"/>
-    <!-- 기울어진 사랑니, 잇몸 아래 -->
-    <g transform="rotate(-38 230 250)">
-      <path d="M180 200 q8-36 34-36 q20 0 28 14 q8-14 28-14 q26 0 34 36 l0 70 q0 22-28 22 l-68 0 q-28 0-28-22z" fill="var(--ink)"/>
-      <path d="M204 292 l-10 56 q-2 14 12 14 l6 0 l8-56z M262 292 l10 56 q2 14-12 14 l-6 0 l-8-56z" fill="var(--ink)"/>
-    </g>
-    <rect x="0" y="220" width="300" height="18" fill="var(--field-deep)"/>
-  </symbol>
-  <symbol id="d-gum" viewBox="0 0 300 400">
-    <rect x="0" y="0" width="300" height="400" fill="var(--field-light)"/>
-    <rect x="0" y="230" width="300" height="170" fill="var(--field)"/>
-    <path d="M80 110 q10-46 48-46 q30 0 44 24 q18-24 48-24 q0 0 0 0 l0 140 q0 30-40 30 l-60 0 q-40 0-40-30z" fill="var(--paper)"/>
-    <path d="M110 230 l-14 84 q-3 18 14 18 l12 0 l12-84z" fill="var(--paper)"/>
-    <!-- 잇몸선의 치석 -->
-    <g fill="var(--ink)">
-      <rect x="84" y="214" width="18" height="18" rx="4"/>
-      <rect x="106" y="220" width="14" height="12" rx="4"/>
-      <rect x="126" y="216" width="12" height="16" rx="4"/>
-    </g>
-    <!-- 스케일러 -->
-    <rect x="192" y="40" width="22" height="200" rx="8" fill="var(--ink)"/>
-    <rect x="196" y="60" width="14" height="60" fill="var(--field)"/>
-    <path d="M203 240 l-10 30 l10 24 l10-24z" fill="var(--surface-deep)"/>
-    <rect x="0" y="230" width="300" height="16" fill="var(--field-deep)"/>
-  </symbol>
-</svg>
-
-<div class="stage">
-  <aside class="panel panel--short" aria-label="치식표 그림">
-    <div class="panel__scene is-active" data-scene-name="chart">
-      <div class="panel__art" aria-hidden="true"><svg aria-hidden="true" focusable="false"><use href="#d-chart"/></svg></div>
-      <div class="panel__caption"><p class="panel__status">치식표에서 보는 세 과목</p><p class="panel__next">큰어금니의 충치, 맨 안쪽의 사랑니, 잇몸선의 치석. 장병 진료의 대부분이 이 세 자리에서 생깁니다.</p></div>
-    </div>
-  </aside>
-  <main class="column">
-    <header class="card card--short">
-      <div class="stripe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="card__body"><a class="wordmark" href="index.html" data-load style="--d:150ms"><img class="mark mark--small" src="mark.svg" alt="3사단 부대 마크" width="56" height="49">3사단 의무대대 치과</a></div>
-      <nav class="nav" aria-label="주요 메뉴" data-load style="--d:300ms">
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+  <div class="site-header__in">
+    <a class="brand" href="index.html"><img src="mark.svg" alt="" width="24" height="21">3사단 의무대대 치과</a>
+    <nav class="site-nav" aria-label="주요 메뉴">
       <a href="clinic.html" aria-current="page">진료 안내</a>
-      <a href="hours.html">진료 시간 · 예약</a>
-      <a href="prosthesis.html">보철 진행</a>
-      <a href="care.html">치료 전후 주의사항</a>
-      </nav>
-    </header>
-
-    <section class="section intro" aria-labelledby="page-title">
-      <h1 class="display" id="page-title">진료 안내</h1>
-      <p class="lead-p">임플란트, 교정을 제외한 모든 술식은 의무대 내에서 진행 가능합니다. 의료진의 판단, 혹은 환자의 요청에 따라 국군병원 진료가 필요하면 소견서나 의뢰서를 써 드리고, 소속 부대에서 가까운 국군병원에 직접 내원하시면 됩니다.</p>
-      <a class="button" href="hours.html#how">예약 · 부대 내선 803-7112</a>
-    </section>
-
-    <section class="features" aria-labelledby="f-title">
-      <h2 class="features__head" id="f-title">여기서 끝내는 치료</h2>
-      <div class="features__list">
-        <article class="feature" id="caries" data-reveal>
-          <h3>충치 치료</h3>
-          <p class="feature__statement">우식의 깊이와 범위에 따라 수복에서 근관치료까지 단계적으로 진행합니다.</p>
-          <p class="case__title case__title--first">레진 수복</p>
-          <div class="feature__cases">
-            <figure><img src="photos/caries-1-before.jpg" alt="치료 전: 상악 전치부 우식" width="1220" height="752" loading="lazy"><figcaption>치료 전</figcaption></figure>
-            <figure><img src="photos/caries-1-after.jpg" alt="치료 후: 레진 수복 완료" width="1400" height="852" loading="lazy"><figcaption>치료 후</figcaption></figure>
-            <figure><img src="photos/caries-3-before.jpg" alt="치료 전: 하악 전치 절단부 결손" width="1451" height="824" loading="lazy"><figcaption>치료 전</figcaption></figure>
-            <figure><img src="photos/caries-3-after.jpg" alt="치료 후: 레진 수복으로 절단부 형태 회복" width="1304" height="703" loading="lazy"><figcaption>치료 후</figcaption></figure>
-          </div>
-          <div class="case">
-            <p class="case__title">치아 외상 수복</p>
-            <div class="case__grid case__grid--wide">
-              <figure><img src="photos/trauma-before.jpg" alt="치료 전: 외상으로 치관이 부러진 하악 앞니" width="1400" height="875" loading="lazy"><figcaption>치료 전</figcaption></figure>
-              <figure><img src="photos/trauma-after.jpg" alt="치료 후: 부러진 앞니의 형태와 색을 회복" width="1400" height="875" loading="lazy"><figcaption>치료 후</figcaption></figure>
-            </div>
-          </div>
-          <p class="feature__credit small muted">Courtesy of Dr. Lee Won Woo</p>
-          <div class="feature__row feature__row--full">
-            <ul>
-              <li>최소 삭제 원칙에 따른 직접 레진 수복</li>
-              <li>치수까지 진행된 우식은 근관치료 후 수복</li>
-              <li>파절·외상 치아의 당일 응급 처치</li>
-              <li>파노라마 및 구내 방사선 촬영으로 인접면 우식 진단</li>
-              <li>통상 1~3회 내원, 근관치료는 3~4회</li>
-            </ul>
-          </div>
-        </article>
-        <article class="feature" id="wisdom" data-reveal>
-          <h3>사랑니와 발치</h3>
-          <p class="feature__statement">구강악안면외과 전문의가 매복 사랑니를 포함한 발치를 직접 시행합니다.</p>
-          <div class="case">
-            <p class="case__title">고난이도 사랑니 발치 1 · 깊이 묻힌 사랑니</p>
-            <div class="case__grid">
-              <figure><img src="photos/wisdom1-cbct.jpg" alt="치료 전: CBCT에서 뼈 속 깊이 비스듬히 묻힌 아래 사랑니" width="1200" height="900" loading="lazy"><figcaption>치료 전 · CBCT</figcaption></figure>
-              <figure><img src="photos/wisdom1-tooth.jpg" alt="치료 후: 치관과 뿌리로 나눠 뽑아낸 사랑니" width="1200" height="900" loading="lazy"><figcaption>치료 후 · 분할 발치</figcaption></figure>
-            </div>
-          </div>
-          <div class="case">
-            <p class="case__title">고난이도 사랑니 발치 2 · 신경관에 닿은 수평 매복</p>
-            <div class="case__grid case__grid--3">
-              <figure><img src="photos/wisdom2-pano.jpg" alt="치료 전: 방사선 사진에서 옆으로 누워 묻힌 아래 사랑니" width="1200" height="900" loading="lazy"><figcaption>치료 전 · 방사선</figcaption></figure>
-              <figure><img src="photos/wisdom2-cbct.jpg" alt="치료 전: CBCT에서 아래턱 신경관과 가까운 수평 매복 사랑니" width="1200" height="900" loading="lazy"><figcaption>치료 전 · CBCT</figcaption></figure>
-              <figure><img src="photos/wisdom2-tooth.jpg" alt="치료 후: 여러 조각으로 나눠 뽑아낸 사랑니" width="1200" height="900" loading="lazy"><figcaption>치료 후</figcaption></figure>
-            </div>
-          </div>
-          <p class="feature__credit small muted">Courtesy of Dr. Lee Won Woo</p>
-          <div class="feature__row feature__row--full">
-            <ul>
-              <li>방사선 영상으로 맹출 방향과 하치조신경 위치 확인</li>
-              <li>단순 발치부터 매복 사랑니 발치까지 원내 시행</li>
-              <li>발치 후 2~3일 훈련·체력단련 조정 소견서 발급</li>
-              <li>익일 소독, 1주 후 발사</li>
-              <li>전신마취가 필요한 경우 소견서를 써 드리고 국군병원 내원 안내</li>
-            </ul>
-          </div>
-        </article>
-        <article class="feature" id="prosth" data-reveal>
-          <h3>보철 치료</h3>
-          <p class="feature__statement">치과보철과 전문의가 손상된 치아의 형태와 기능을 회복합니다.</p>
-          <div class="case">
-            <p class="case__title">지르코니아 인레이</p>
-            <div class="case__grid case__grid--3">
-              <figure><img src="photos/inlay-before.jpg" alt="치료 전: 인레이를 위해 다듬은 아래 작은어금니" width="1200" height="900" loading="lazy"><figcaption>치료 전</figcaption></figure>
-              <figure><img src="photos/inlay-zirconia.jpg" alt="완성된 지르코니아 인레이" width="1200" height="900" loading="lazy"><figcaption>지르코니아 인레이</figcaption></figure>
-              <figure><img src="photos/inlay-after.jpg" alt="치료 후: 인레이를 붙여 형태를 회복한 어금니" width="1200" height="900" loading="lazy"><figcaption>치료 후</figcaption></figure>
-            </div>
-          </div>
-          <p class="feature__credit small muted">Courtesy of Dr. Lee Won Woo</p>
-          <p class="feature__more"><a class="link" href="prosthesis.html">보철 진행 순서와 보철물 도착 문자 안내 보기</a></p>
-          <div class="feature__row feature__row--full">
-            <ul>
-              <li>크라운, 인레이·온레이 수복</li>
-              <li>브릿지</li>
-              <li>근관치료 후 치아의 보철 수복</li>
-              <li>파절된 보철물의 수리와 재제작</li>
-              <li>틀니와 임플란트는 소견서를 써 드리고 국군병원 내원 안내</li>
-            </ul>
-          </div>
-        </article>
-        <article class="feature" id="gum" data-reveal>
-          <h3>스케일링과 잇몸 치료</h3>
-          <p class="feature__statement">치석 제거와 치주 치료로 잇몸의 염증을 관리합니다.</p>
-          <div class="feature__row">
-            <figure aria-hidden="true"><svg aria-hidden="true" focusable="false"><use href="#d-gum"/></svg></figure>
-            <ul>
-              <li>초음파 스케일링 및 치근활택술</li>
-              <li>치은염·치주염의 단계별 치료</li>
-              <li>지각과민(시린 이) 처치</li>
-              <li>칫솔질·치실 등 구강위생 교육</li>
-              <li>6개월 주기 정기 검진 권장</li>
-            </ul>
-          </div>
-        </article>
-        <article class="feature" id="tmd" data-reveal>
-          <h3>수면 이갈이와 턱관절 치료</h3>
-          <p class="feature__statement">이갈이·이악물기와 턱관절 장애(TMD)를 진단하고, 보톡스 진료와 교합안정장치, 스포츠 마우스가드로 치료합니다.</p>
-          <figure class="feature__photo">
-            <img src="photos/tmd-splint-wide.jpg" alt="투명한 레진으로 만든 교합안정장치" width="1400" height="875" loading="lazy">
-            <figcaption>교합안정장치. 본을 떠 맞춤 제작하고, 잠잘 때 끼워 치아와 턱관절을 보호합니다.</figcaption>
-          </figure>
-          <div class="feature__row feature__row--full">
-            <ul>
-              <li>턱관절 소리, 입 벌림 제한, 턱 근육 통증을 진찰해 이갈이와 턱관절 장애 진단</li>
-              <li>보톡스 진료: 턱 근육(교근)에 보툴리눔 독소를 주사해 이갈이 힘과 근육 통증 완화</li>
-              <li>교합안정장치: 본을 떠 맞춤 제작하는 수면용 장치로 치아 마모와 턱관절 부담 감소</li>
-              <li>스포츠 마우스가드: 구기·격투 종목과 훈련 중 치아 외상을 막는 맞춤 제작</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="out-title">
-      <h2 id="out-title" data-reveal>국군병원에서 받는 치료</h2>
-      <p data-reveal style="--i:1">아래 치료는 국군병원 치과에서 시행합니다. 필요하면 이곳에서 진단하고 소견서나 의뢰서를 써 드립니다.</p>
-      <ul class="plain" data-reveal>
-        <li>임플란트</li>
-        <li>틀니</li>
-        <li>교정 상담과 교정 치료</li>
-        <li>전신마취가 필요한 수술</li>
-        <li>의료진의 판단 또는 환자의 요청이 있는 경우</li>
-      </ul>
-      <p>외진 예약은 따로 잡아 드리지 않습니다. 써 드린 소견서나 의뢰서를 가지고 소속 부대에서 가까운 국군병원에 직접 내원하세요. 외진 날에는 소속 부대의 이동 계획이 필요하니 미리 부대에 알리세요.</p>
-    </section>
-
-    <section class="section" aria-labelledby="room-title">
-      <h2 id="room-title" data-reveal>진료실과 장비</h2>
-      <p data-reveal style="--i:1">3사단 의무대대 건물 2층 치과 진료실입니다. 유닛 체어 두 대와 파노라마 X선 촬영기, 멸균기를 갖추고 있습니다. 치과 군의관 두 명과 치과 의무병이 진료합니다. 의료진 소개는 <a class="link" href="index.html#staff">홈</a>에 있습니다.</p>
-      <p>모든 기구는 한 사람 진료가 끝날 때마다 멸균합니다. 진료실 안에서는 휴대전화를 꺼 주세요.</p>
-    </section>
-  </main>
-</div>
-<footer class="footer">
-  <div class="stripe stripe--thin" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-  <div class="footer__line">
-    <span class="muted">3사단 의무대대 치과</span>
-    <nav class="footer__links" aria-label="꼬리 링크">
-      <a href="clinic.html">진료 안내</a>
-      <a href="hours.html">진료 시간 · 예약</a>
+      <a href="hours.html">시간 · 예약</a>
       <a href="prosthesis.html">보철 진행</a>
       <a href="care.html">주의사항</a>
     </nav>
-    <span class="footer__right muted">2026 · 3사단 의무대대</span>
+    <a class="site-call" href="hours.html#call" aria-label="전화 예약 안내"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>내선 803-7112</span></a>
+    <details class="menu">
+      <summary aria-label="메뉴"><svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+      <nav aria-label="메뉴">
+        <a href="index.html">홈</a>
+        <a href="clinic.html" aria-current="page">진료 안내</a>
+        <a href="hours.html">시간 · 예약</a>
+        <a href="prosthesis.html">보철 진행</a>
+        <a href="care.html">주의사항</a>
+        <a class="menu__er" href="tel:033-450-7119"><span>응급 시에만 · 응급실</span><span>033-450-7119</span></a>
+      </nav>
+    </details>
   </div>
-  <p class="footer__credits small muted">검진 사진: <a href="https://commons.wikimedia.org/wiki/File:Dentist_Examining_Patient%E2%80%99s_Teeth_with_Dental_Mirror.jpg">James Wasswa</a>, CC BY-SA 4.0. 그 밖의 치료 전후, 크라운, 인레이, 사랑니 사진은 본원 진료 사진입니다.</p>
+</header>
+
+<main class="page" id="main">
+  <section class="intro" aria-labelledby="page-title">
+    <p class="eb eb--accent">Treatments</p>
+    <h1 id="page-title">진료 안내</h1>
+    <p class="lead">임플란트와 교정을 제외한 치료는 의무대 안에서 합니다. 국군병원 진료가 필요하면 소견서나 의뢰서를 써 드리고, 소속 부대에서 가까운 국군병원에 직접 내원하시면 됩니다.</p>
+    <nav class="chips" aria-label="과목 바로가기">
+      <a class="chip" href="#caries">충치 · 외상</a>
+      <a class="chip" href="#wisdom">사랑니 · 발치</a>
+      <a class="chip" href="#prosth">보철</a>
+      <a class="chip" href="#gum">스케일링 · 잇몸</a>
+      <a class="chip" href="#tmd">이갈이 · 턱관절</a>
+      <a class="chip" href="#referral">국군병원</a>
+    </nav>
+  </section>
+
+  <section class="block feature" id="caries" aria-labelledby="caries-title">
+    <p class="eb">01 · Caries &amp; trauma</p>
+    <h2 class="block-title" id="caries-title">충치 치료</h2>
+    <p class="feature__statement">우식의 깊이와 범위에 따라 수복에서 근관치료까지 단계적으로 진행합니다.</p>
+    <p class="case__title">레진 수복</p>
+    <div class="feature__cases">
+      <figure><img src="photos/caries-1-before.jpg" alt="치료 전: 상악 전치부 우식" width="1220" height="752" loading="lazy"><figcaption>치료 전</figcaption></figure>
+      <figure><img src="photos/caries-1-after.jpg" alt="치료 후: 레진 수복 완료" width="1400" height="852" loading="lazy"><figcaption>치료 후</figcaption></figure>
+      <figure><img src="photos/caries-3-before.jpg" alt="치료 전: 하악 전치 절단부 결손" width="1451" height="824" loading="lazy"><figcaption>치료 전</figcaption></figure>
+      <figure><img src="photos/caries-3-after.jpg" alt="치료 후: 레진 수복으로 절단부 형태 회복" width="1304" height="703" loading="lazy"><figcaption>치료 후</figcaption></figure>
+    </div>
+    <div class="case">
+      <p class="case__title">치아 외상 수복</p>
+      <div class="case__grid case__grid--wide">
+        <figure><img src="photos/trauma-before.jpg" alt="치료 전: 외상으로 치관이 부러진 하악 앞니" width="1400" height="875" loading="lazy"><figcaption>치료 전</figcaption></figure>
+        <figure><img src="photos/trauma-after.jpg" alt="치료 후: 부러진 앞니의 형태와 색을 회복" width="1400" height="875" loading="lazy"><figcaption>치료 후</figcaption></figure>
+      </div>
+    </div>
+    <p class="feature__credit small muted">Courtesy of Dr. Lee Won Woo</p>
+    <ul class="feature__list">
+      <li>최소 삭제 원칙에 따른 직접 레진 수복</li>
+      <li>치수까지 진행된 우식은 근관치료 후 수복</li>
+      <li>파절·외상 치아의 당일 응급 처치</li>
+      <li>파노라마 및 구내 방사선 촬영으로 인접면 우식 진단</li>
+      <li>통상 1~3회 내원, 근관치료는 3~4회</li>
+    </ul>
+  </section>
+  <section class="block feature" id="wisdom" aria-labelledby="wisdom-title">
+    <p class="eb">02 · Oral surgery</p>
+    <h2 class="block-title" id="wisdom-title">사랑니와 발치</h2>
+    <p class="feature__statement">구강악안면외과 전문의가 매복 사랑니를 포함한 발치를 직접 시행합니다.</p>
+    <div class="case">
+      <p class="case__title">고난이도 사랑니 발치 1 · 깊이 묻힌 사랑니</p>
+      <div class="case__grid">
+        <figure><img src="photos/wisdom1-cbct.jpg" alt="치료 전: CBCT에서 뼈 속 깊이 비스듬히 묻힌 아래 사랑니" width="1200" height="900" loading="lazy"><figcaption>치료 전 · CBCT</figcaption></figure>
+        <figure><img src="photos/wisdom1-tooth.jpg" alt="치료 후: 치관과 뿌리로 나눠 뽑아낸 사랑니" width="1200" height="900" loading="lazy"><figcaption>치료 후 · 분할 발치</figcaption></figure>
+      </div>
+    </div>
+    <div class="case">
+      <p class="case__title">고난이도 사랑니 발치 2 · 신경관에 닿은 수평 매복</p>
+      <div class="case__grid case__grid--3">
+        <figure><img src="photos/wisdom2-pano.jpg" alt="치료 전: 방사선 사진에서 옆으로 누워 묻힌 아래 사랑니" width="1200" height="900" loading="lazy"><figcaption>치료 전 · 방사선</figcaption></figure>
+        <figure><img src="photos/wisdom2-cbct.jpg" alt="치료 전: CBCT에서 아래턱 신경관과 가까운 수평 매복 사랑니" width="1200" height="900" loading="lazy"><figcaption>치료 전 · CBCT</figcaption></figure>
+        <figure><img src="photos/wisdom2-tooth.jpg" alt="치료 후: 여러 조각으로 나눠 뽑아낸 사랑니" width="1200" height="900" loading="lazy"><figcaption>치료 후</figcaption></figure>
+      </div>
+    </div>
+    <p class="feature__credit small muted">Courtesy of Dr. Lee Won Woo</p>
+    <ul class="feature__list">
+      <li>방사선 영상으로 맹출 방향과 하치조신경 위치 확인</li>
+      <li>단순 발치부터 매복 사랑니 발치까지 원내 시행</li>
+      <li>발치 후 2~3일 훈련·체력단련 조정 소견서 발급</li>
+      <li>익일 소독, 1주 후 발사</li>
+      <li>전신마취가 필요한 경우 소견서를 써 드리고 국군병원 내원 안내</li>
+    </ul>
+  </section>
+  <section class="block feature" id="prosth" aria-labelledby="prosth-title">
+    <p class="eb">03 · Prosthodontics</p>
+    <h2 class="block-title" id="prosth-title">보철 치료</h2>
+    <p class="feature__statement">치과보철과 전문의가 손상된 치아의 형태와 기능을 회복합니다.</p>
+    <figure class="feature__photo">
+      <img src="photos/crown-case.jpg" alt="완성된 앞니 지르코니아 크라운을 옆에서 본 모습" width="1400" height="875" loading="lazy">
+      <figcaption>지르코니아 크라운. 치아 색과 형태를 맞춰 제작해 씌웁니다.</figcaption>
+    </figure>
+    <div class="case">
+      <p class="case__title">지르코니아 인레이</p>
+      <div class="case__grid case__grid--3">
+        <figure><img src="photos/inlay-before.jpg" alt="치료 전: 인레이를 위해 다듬은 아래 작은어금니" width="1200" height="900" loading="lazy"><figcaption>치료 전</figcaption></figure>
+        <figure><img src="photos/inlay-zirconia.jpg" alt="완성된 지르코니아 인레이" width="1200" height="900" loading="lazy"><figcaption>지르코니아 인레이</figcaption></figure>
+        <figure><img src="photos/inlay-after.jpg" alt="치료 후: 인레이를 붙여 형태를 회복한 어금니" width="1200" height="900" loading="lazy"><figcaption>치료 후</figcaption></figure>
+      </div>
+    </div>
+    <p class="feature__credit small muted">Courtesy of Dr. Lee Won Woo</p>
+    <p class="feature__more"><a class="link" href="prosthesis.html">보철 진행 순서와 보철물 도착 연락 안내 보기</a></p>
+    <ul class="feature__list">
+      <li>크라운, 인레이·온레이 수복</li>
+      <li>브릿지</li>
+      <li>근관치료 후 치아의 보철 수복</li>
+      <li>파절된 보철물의 수리와 재제작</li>
+      <li>틀니와 임플란트는 소견서를 써 드리고 국군병원 내원 안내</li>
+    </ul>
+  </section>
+  <section class="block feature" id="gum" aria-labelledby="gum-title">
+    <p class="eb">04 · Periodontics</p>
+    <h2 class="block-title" id="gum-title">스케일링과 잇몸 치료</h2>
+    <p class="feature__statement">치석 제거와 치주 치료로 잇몸의 염증을 관리합니다.</p>
+    <figure class="feature__photo">
+      <img src="photos/exam-mirror.jpg" alt="치경으로 잇몸과 치아 상태를 살피는 모습" width="1400" height="875" loading="lazy">
+      <figcaption>잇몸 상태를 먼저 살핀 뒤 잇몸선 아래의 치석까지 제거합니다.</figcaption>
+    </figure>
+    <ul class="feature__list">
+      <li>초음파 스케일링 및 치근활택술</li>
+      <li>치은염·치주염의 단계별 치료</li>
+      <li>지각과민(시린 이) 처치</li>
+      <li>칫솔질·치실 등 구강위생 교육</li>
+      <li>6개월 주기 정기 검진 권장</li>
+    </ul>
+  </section>
+  <section class="block feature" id="tmd" aria-labelledby="tmd-title">
+    <p class="eb">05 · TMD &amp; bruxism</p>
+    <h2 class="block-title" id="tmd-title">수면 이갈이와 턱관절 치료</h2>
+    <p class="feature__statement">이갈이·이악물기와 턱관절 장애(TMD)를 진단하고, 보톡스 진료와 교합안정장치, 스포츠 마우스가드로 치료합니다.</p>
+    <figure class="feature__photo">
+      <img src="photos/tmd-splint-wide.jpg" alt="투명한 레진으로 만든 교합안정장치" width="1400" height="875" loading="lazy">
+      <figcaption>교합안정장치. 본을 떠 맞춤 제작하고, 잠잘 때 끼워 치아와 턱관절을 보호합니다.</figcaption>
+    </figure>
+    <ul class="feature__list">
+      <li>턱관절 소리, 입 벌림 제한, 턱 근육 통증을 진찰해 이갈이와 턱관절 장애 진단</li>
+      <li>보톡스 진료: 턱 근육(교근)에 보툴리눔 독소를 주사해 이갈이 힘과 근육 통증 완화</li>
+      <li>교합안정장치: 본을 떠 맞춤 제작하는 수면용 장치로 치아 마모와 턱관절 부담 감소</li>
+      <li>스포츠 마우스가드: 구기·격투 종목과 훈련 중 치아 외상을 막는 맞춤 제작</li>
+    </ul>
+  </section>
+
+  <section class="block" id="referral" aria-labelledby="ref-title">
+    <p class="eb">06 · Referral</p>
+    <h2 class="block-title" id="ref-title">국군병원에서 받는 치료</h2>
+    <p>아래 치료는 국군병원 치과에서 시행합니다. 필요하면 이곳에서 진단하고 소견서나 의뢰서를 써 드립니다.</p>
+    <ul class="plain">
+      <li>임플란트</li>
+      <li>틀니</li>
+      <li>교정 상담과 교정 치료</li>
+      <li>전신마취가 필요한 수술</li>
+      <li>의료진의 판단 또는 환자의 요청이 있는 경우</li>
+    </ul>
+    <div class="softbox"><b>외진 예약은 따로 잡지 않습니다</b><p>써 드린 소견서나 의뢰서를 가지고 소속 부대에서 가까운 국군병원에 직접 내원하세요. 외진 날에는 소속 부대의 이동 계획이 필요하니 미리 부대에 알리세요.</p></div>
+  </section>
+
+  <section class="block" id="room" aria-labelledby="room-title">
+    <p class="eb">07 · Clinic</p>
+    <h2 class="block-title" id="room-title">진료실과 장비</h2>
+    <p>3사단 의무대대 건물 2층 치과 진료실입니다. 유닛 체어 두 대와 파노라마 X선 촬영기, 멸균기를 갖추고 있습니다. 치과 군의관 두 명과 치과 의무병이 진료합니다. 의료진 소개는 <a class="link" href="index.html#staff">홈</a>에 있습니다.</p>
+    <p>모든 기구는 한 사람 진료가 끝날 때마다 멸균합니다. 진료실 안에서는 휴대전화를 꺼 주세요.</p>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="site-footer__in">
+    <p class="site-footer__name">3사단 의무대대 치과</p>
+    <p>의무대대 건물 2층 · 평일 09:00–16:00 · 점심 12:00–13:00 · 토·일·공휴일 휴진</p>
+    <p>예약 부대 내선 803-7112 (일과 시간, 군 전화로만) · 응급 시에만 응급실 033-450-7119</p>
+    <nav class="site-footer__links" aria-label="꼬리 메뉴">
+      <a href="index.html">홈</a>
+      <a href="clinic.html">진료 안내</a>
+      <a href="hours.html">시간 · 예약</a>
+      <a href="prosthesis.html">보철 진행</a>
+      <a href="care.html">주의사항</a>
+    </nav>
+    <p class="site-footer__credits">검진 사진: <a href="https://commons.wikimedia.org/wiki/File:Dentist_Examining_Patient%E2%80%99s_Teeth_with_Dental_Mirror.jpg">James Wasswa</a>, CC BY-SA 4.0. 그 밖의 치료 전후, 크라운, 인레이, 사랑니 사진은 본원 진료 사진입니다.</p>
+  </div>
 </footer>
-<script src="site.js" defer></script>
 
 </body>
 </html>
