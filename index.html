@@ -12,7 +12,7 @@
 <script>document.documentElement.classList.add('js')</script>
 
 <title>3사단 의무대대 치과</title>
-<meta name="description" content="구강악안면외과·치과보철과 전문의가 상주하는 3사단 의무대대 치과. 평일 09:00–16:00, 모든 진료는 예약제.">
+<meta name="description" content="구강악안면외과·치과보철과 전문의가 상주하는 3사단 의무대대 치과. 평일 09:00–16:00, 모든 진료는 전화 예약제.">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -138,21 +138,21 @@
     <text x="80" y="676" font-size="16" fill="var(--muted)">훈련 · 행사 기간에는 진료 시간이 바뀔 수 있습니다</text>
   </symbol>
 
-  <!-- 진료 의뢰서 -->
+  <!-- 전화 예약 메모 -->
   <symbol id="d-form" viewBox="0 0 600 760">
     <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
     <rect x="40" y="40" width="520" height="690" fill="var(--ink)"/>
     <rect x="64" y="84" width="472" height="620" fill="var(--paper)"/>
     <rect x="240" y="24" width="120" height="56" fill="var(--field)"/>
     <rect x="270" y="40" width="60" height="18" fill="var(--paper)"/>
-    <text x="96" y="150" font-size="34" font-weight="700" fill="var(--ink)">진료 의뢰서</text>
-    <text x="96" y="182" font-size="17" fill="var(--muted)">소속 부대 의무실 → 의무대대 치과</text>
+    <text x="96" y="150" font-size="34" font-weight="700" fill="var(--ink)">전화 예약</text>
+    <text x="96" y="182" font-size="17" fill="var(--muted)">033-450-7119 · 평일 09:00–16:00</text>
     <g font-size="16" fill="var(--muted)">
       <text x="96" y="236">소속</text>
       <text x="96" y="300">계급 · 성명</text>
       <text x="96" y="364">군번</text>
       <text x="96" y="428">증상</text>
-      <text x="96" y="540">의뢰 의무실</text>
+      <text x="96" y="540">희망 날짜</text>
     </g>
     <g fill="var(--surface-deep)">
       <rect x="96" y="246" width="380" height="30"/>
@@ -173,8 +173,8 @@
     <text x="228" y="622" font-size="17" fill="var(--ink)">응급 (치통 · 외상)</text>
     <!-- 직인 -->
     <circle cx="456" cy="600" r="40" fill="none" stroke="var(--field)" stroke-width="4"/>
-    <text x="456" y="606" font-size="16" font-weight="700" fill="var(--field)" text-anchor="middle">의무실</text>
-    <text x="96" y="676" font-size="15" fill="var(--muted)">군 신분증과 함께 지참</text>
+    <text x="456" y="606" font-size="16" font-weight="700" fill="var(--field)" text-anchor="middle">예약</text>
+    <text x="96" y="676" font-size="15" fill="var(--muted)">군번만 알면 됩니다</text>
   </symbol>
 
 
@@ -229,7 +229,7 @@
     </div>
     <div class="panel__scene" data-scene-name="form" hidden>
       <div class="panel__art" aria-hidden="true"><svg><use href="#d-form"/></svg></div>
-      <div class="panel__caption"><p class="panel__status">의뢰서 한 장이면 됩니다</p><p class="panel__next">소속 의무실에서 받은 진료 의뢰서와 군 신분증을 가지고 오세요. 간부는 전화 예약만으로 됩니다.</p></div>
+      <div class="panel__caption"><p class="panel__status">전화 한 통이면 됩니다</p><p class="panel__next">예약은 전화로만 받습니다. 군번만 알려 주시면 되고, 신분증과 의뢰서는 필요 없습니다.</p></div>
     </div>
   </aside>
 
@@ -242,7 +242,7 @@
           <span class="line"><span data-line style="--i:0">대학병원급 진료,</span></span>
           <span class="line"><span data-line style="--i:1">이제 부대 안에서<br class="only-narrow"> 받을 수 있습니다</span></span>
         </h1>
-        <p class="lead" data-load style="--d:420ms">구강악안면외과 전문의, 치과보철과 전문의 2명이 상주하며 3사단 장병과 간부들에게 최상의 진료를 제공합니다. 쾌적한 진료 퀄리티를 유지하기 위해, 치과의 모든 진료는 예약제로 운영됩니다.</p>
+        <p class="lead" data-load style="--d:420ms">구강악안면외과 전문의, 치과보철과 전문의 2명이 상주하며 3사단 장병과 간부들에게 최상의 진료를 제공합니다. 쾌적한 진료 퀄리티를 유지하기 위해, 치과의 모든 진료는 전화 예약제로 운영됩니다.</p>
         <a class="button" href="tel:033-450-7119" data-load style="--d:500ms">전화로 예약 문의</a>
       </div>
       <nav class="nav" aria-label="주요 메뉴" data-load style="--d:600ms">
@@ -401,7 +401,9 @@
           <summary>공지사항</summary>
           <div class="bar__panel">
             <ul class="plain">
-              <li>치과 진료는 100% 예약제입니다</li>
+              <li>치과 진료는 100% 전화 예약제입니다</li>
+              <li>응급이 아니면 초진은 당일 진료가 어렵습니다. 미리 전화로 예약해 주세요</li>
+              <li>신분증과 의뢰서는 필요 없습니다. 군번만 알려 주세요</li>
               <li>오전 09:00, 오후 13:30 출석 체크 시간을 지켜 주세요</li>
               <li>치과 진료 전 흡연은 금지입니다</li>
               <li>상검은 한 줄로 대기해 주세요</li>
@@ -419,14 +421,14 @@
         <details class="bar" data-reveal style="--i:3">
           <summary>병사 진료</summary>
           <div class="bar__panel">
-            <dl><dt>진료비</dt><dd>없음</dd><dt>필요한 것</dt><dd>의무실 진료 의뢰서</dd><dt>외출 처리</dt><dd>소속 부대</dd></dl>
-            <p>소속 의무실에 증상을 말하면 의뢰서를 써 줍니다. 의뢰서를 들고 전화 예약 후 방문하세요.</p>
+            <dl><dt>진료비</dt><dd>없음</dd><dt>필요한 것</dt><dd>전화 예약, 군번</dd><dt>외출 처리</dt><dd>소속 부대</dd></dl>
+            <p>의무실 의뢰서는 필요 없습니다. 치과에 직접 전화해 군번과 증상을 말하고 예약하세요.</p>
           </div>
         </details>
         <details class="bar" data-reveal style="--i:4">
           <summary>간부 · 군무원 진료</summary>
           <div class="bar__panel">
-            <dl><dt>진료비</dt><dd>없음</dd><dt>필요한 것</dt><dd>전화 예약, 군 신분증</dd></dl>
+            <dl><dt>진료비</dt><dd>없음</dd><dt>필요한 것</dt><dd>전화 예약, 군번</dd></dl>
             <p>가족과 민간인은 진료 대상이 아닙니다. 가까운 군병원을 안내해 드립니다.</p>
           </div>
         </details>
@@ -441,13 +443,13 @@
           <summary>응급일 때</summary>
           <div class="bar__panel">
             <dl><dt>일과 중</dt><dd>바로 전화</dd><dt>일과 후 · 주말</dt><dd>당직 의무병</dd></dl>
-            <p>심한 치통, 부러진 치아, 멎지 않는 출혈은 응급입니다. 예약 없이 연락하세요.</p>
+            <p>심한 치통, 부러진 치아, 멎지 않는 출혈은 응급입니다. 응급이면 예약이 없어도 당일 진료합니다. 먼저 전화로 알려 주세요.</p>
           </div>
         </details>
         <details class="bar" data-reveal style="--i:7">
           <summary>가져올 것</summary>
           <div class="bar__panel">
-            <dl><dt>군 신분증</dt><dd>필수</dd><dt>진료 의뢰서</dt><dd>병사</dd><dt>복용 중인 약 목록</dt><dd>있으면</dd></dl>
+            <dl><dt>군번</dt><dd>필수</dd><dt>신분증 · 의뢰서</dt><dd>필요 없음</dd><dt>복용 중인 약 목록</dt><dd>있으면</dd></dl>
             <p>약은 이름만 적어 와도 됩니다. 사진으로 찍어 와도 좋습니다. 피를 묽게 하는 약은 꼭 말하세요.</p>
           </div>
         </details>
@@ -544,16 +546,16 @@
         <div><dt>진료</dt><dd>평일 09:00–12:00, 13:00–16:00</dd></div>
         <div><dt>휴진</dt><dd>토요일 · 일요일 · 공휴일</dd></div>
       </dl>
-      <p class="small muted" data-reveal style="--i:4">병사는 소속 의무실의 진료 의뢰서와 군 신분증, 간부와 군무원은 군 신분증을 가지고 오세요.</p>
+      <p class="small muted" data-reveal style="--i:4">예약은 전화로만 받습니다. 병사, 간부, 군무원 모두 군번만 알려 주시면 되고, 신분증과 의뢰서는 필요 없습니다.</p>
     </section>
 
     <section class="section faq" data-scene="form" aria-labelledby="faq-title">
       <h2 id="faq-title">자주 묻는 질문</h2>
       <div class="inline-figure" aria-hidden="true"><svg><use href="#d-form"/></svg></div>
       <div class="measure">
-        <p data-reveal style="--i:0"><b>예약 없이 가도 되나요?</b> 응급이 아니면 전화 예약 후 오세요. 예약 환자가 먼저이고, 비는 시간이 있으면 그 자리에서 봐 드립니다.</p>
+        <p data-reveal style="--i:0"><b>예약 없이 가도 되나요?</b> 아닙니다. 예약은 전화로만 받고, 응급이 아니면 초진은 당일 진료가 어렵습니다. 미리 전화로 날짜를 잡아 주세요.</p>
         <p data-reveal style="--i:1"><b>진료비가 정말 없나요?</b> 네. 3사단 소속 병사, 간부, 군무원은 진료비와 약값이 없습니다.</p>
-        <p data-reveal style="--i:2"><b>의무실 의뢰서는 꼭 필요한가요?</b> 병사는 필요합니다. 소속 의무실에 증상을 말하면 바로 써 줍니다. 간부와 군무원은 전화 예약만으로 됩니다.</p>
+        <p data-reveal style="--i:2"><b>의뢰서나 신분증이 필요한가요?</b> 아닙니다. 병사, 간부, 군무원 모두 군번만 알려 주시면 됩니다.</p>
         <p data-reveal style="--i:3"><b>한 번 진료에 얼마나 걸리나요?</b> 검사와 상담은 20분, 충치 한 개는 30분쯤입니다. 신경치료와 발치는 한 시간을 잡으세요.</p>
         <p data-reveal style="--i:4"><b>훈련 중인데 치아가 아픕니다.</b> 훈련장 의무병에게 말하세요. 응급이면 바로 연락이 오고, 아니면 훈련 뒤 가장 빠른 시간으로 잡아 드립니다.</p>
         <p data-reveal style="--i:5"><b>사랑니는 꼭 빼야 하나요?</b> 아닙니다. 바르게 나고 닦을 수 있으면 둡니다. 자주 붓거나 옆 치아를 밀면 빼기를 권합니다.</p>
@@ -585,7 +587,7 @@
   <figure class="cta__photo"><img src="photos/room-chair.jpg" alt="" width="960" height="1080" loading="lazy"></figure>
   <div class="cta__text">
     <h2 class="cta__line lines" id="cta-title"><span class="line"><span>전화 한 통이면</span></span><span class="line"><span>됩니다</span></span></h2>
-    <p>3사단 의무대대 2층 치과 진료실. 평일 09:00–16:00, 점심 12:00–13:00. 소속 의무실의 진료 의뢰서와 군 신분증을 가지고 오세요.</p>
+    <p>3사단 의무대대 2층 치과 진료실. 평일 09:00–16:00, 점심 12:00–13:00. 예약은 전화로만 받습니다. 군번만 알려 주시면 되고, 신분증과 의뢰서는 필요 없습니다.</p>
     <p class="cta__phone nums">033-450-7119<span class="cta__ext">부대 내선 803-7112</span></p>
     <a class="button button--paper" href="tel:033-450-7119">전화로 예약 문의</a>
   </div>

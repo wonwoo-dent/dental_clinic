@@ -12,7 +12,7 @@
 <script>document.documentElement.classList.add('js')</script>
 
 <title>진료 시간과 예약 방법 · 3사단 의무대대 치과</title>
-<meta name="description" content="평일 09:00–16:00, 점심 12:00–13:00. 소속 의무실 진료 의뢰, 전화 예약, 방문까지 세 단계.">
+<meta name="description" content="평일 09:00–16:00, 점심 12:00–13:00. 예약은 전화로만, 군번만 알려 주시면 됩니다.">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -138,21 +138,21 @@
     <text x="80" y="676" font-size="16" fill="var(--muted)">훈련 · 행사 기간에는 진료 시간이 바뀔 수 있습니다</text>
   </symbol>
 
-  <!-- 진료 의뢰서 -->
+  <!-- 전화 예약 메모 -->
   <symbol id="d-form" viewBox="0 0 600 760">
     <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
     <rect x="40" y="40" width="520" height="690" fill="var(--ink)"/>
     <rect x="64" y="84" width="472" height="620" fill="var(--paper)"/>
     <rect x="240" y="24" width="120" height="56" fill="var(--field)"/>
     <rect x="270" y="40" width="60" height="18" fill="var(--paper)"/>
-    <text x="96" y="150" font-size="34" font-weight="700" fill="var(--ink)">진료 의뢰서</text>
-    <text x="96" y="182" font-size="17" fill="var(--muted)">소속 부대 의무실 → 의무대대 치과</text>
+    <text x="96" y="150" font-size="34" font-weight="700" fill="var(--ink)">전화 예약</text>
+    <text x="96" y="182" font-size="17" fill="var(--muted)">033-450-7119 · 평일 09:00–16:00</text>
     <g font-size="16" fill="var(--muted)">
       <text x="96" y="236">소속</text>
       <text x="96" y="300">계급 · 성명</text>
       <text x="96" y="364">군번</text>
       <text x="96" y="428">증상</text>
-      <text x="96" y="540">의뢰 의무실</text>
+      <text x="96" y="540">희망 날짜</text>
     </g>
     <g fill="var(--surface-deep)">
       <rect x="96" y="246" width="380" height="30"/>
@@ -173,8 +173,8 @@
     <text x="228" y="622" font-size="17" fill="var(--ink)">응급 (치통 · 외상)</text>
     <!-- 직인 -->
     <circle cx="456" cy="600" r="40" fill="none" stroke="var(--field)" stroke-width="4"/>
-    <text x="456" y="606" font-size="16" font-weight="700" fill="var(--field)" text-anchor="middle">의무실</text>
-    <text x="96" y="676" font-size="15" fill="var(--muted)">군 신분증과 함께 지참</text>
+    <text x="456" y="606" font-size="16" font-weight="700" fill="var(--field)" text-anchor="middle">예약</text>
+    <text x="96" y="676" font-size="15" fill="var(--muted)">군번만 알면 됩니다</text>
   </symbol>
 
   <!-- 진료실: 유닛 체어 (왼쪽), 오른쪽 벽은 비워 글이 앉는다 -->
@@ -350,7 +350,9 @@
     <section class="section" aria-labelledby="n-title">
       <h2 id="n-title" data-reveal>공지사항</h2>
       <ul class="plain" data-reveal>
-        <li>치과 진료는 100% 예약제입니다</li>
+        <li>치과 진료는 100% 전화 예약제입니다</li>
+        <li>응급이 아니면 초진은 당일 진료가 어렵습니다. 미리 전화로 예약해 주세요</li>
+        <li>신분증과 의뢰서는 필요 없습니다. 군번만 알려 주세요</li>
         <li>오전 09:00, 오후 13:30 출석 체크 시간을 지켜 주세요</li>
         <li>치과 진료 전 흡연은 금지입니다</li>
         <li>상검은 한 줄로 대기해 주세요</li>
@@ -361,16 +363,16 @@
     <section class="section" aria-labelledby="s-title">
       <h2 id="s-title" data-reveal>예약 방법</h2>
       <ol class="steps" data-reveal>
-        <li><strong>소속 의무실에 말하기</strong>병사는 소속 부대 의무실에 증상을 말하고 진료 의뢰서를 받습니다. 간부와 군무원은 이 단계를 건너뜁니다.</li>
-        <li><strong>전화로 시간 잡기</strong>치과에 전화해 이름, 소속, 증상을 말하면 가장 빠른 시간을 잡아 드립니다. 일과 중 외출 처리는 소속 부대에서 합니다.</li>
-        <li><strong>예약 시간에 방문</strong>군 신분증과 진료 의뢰서를 가지고 10분 전에 오세요. 복용 중인 약이 있으면 이름을 적어 오세요.</li>
+        <li><strong>전화로 예약하기</strong>예약은 전화로만 받습니다. 치과에 전화해 소속, 계급, 이름, 군번, 증상을 말하면 가장 빠른 날짜를 잡아 드립니다. 응급이 아니면 초진은 당일 진료가 어렵습니다.</li>
+        <li><strong>외출 처리</strong>병사는 예약한 시간을 소속 부대에 알리고 외출 처리를 받습니다.</li>
+        <li><strong>예약 시간에 방문</strong>10분 전에 오세요. 신분증과 의뢰서는 필요 없고, 군번만 알면 됩니다. 복용 중인 약이 있으면 이름을 적어 오세요.</li>
       </ol>
       <p>전화는 진료 시간 안에 받습니다. 진료 중이면 받지 못할 수 있으니 조금 뒤 다시 걸어 주세요.</p>
     </section>
 
     <section class="section" aria-labelledby="e-title">
       <h2 id="e-title" data-reveal>응급일 때</h2>
-      <p data-reveal style="--i:1">심한 치통, 부러진 치아, 빠진 치아, 멎지 않는 출혈은 응급입니다. 일과 중이면 예약 없이 바로 전화하세요. 일과 후와 주말에는 당직 의무병에게 알리면 당직 군의관이 연락합니다.</p>
+      <p data-reveal style="--i:1">심한 치통, 부러진 치아, 빠진 치아, 멎지 않는 출혈은 응급입니다. 일과 중이면 바로 전화하세요. 응급은 예약이 없어도 당일 진료합니다. 일과 후와 주말에는 당직 의무병에게 알리면 당직 군의관이 연락합니다.</p>
       <p>빠진 치아는 물로 살살 헹궈 우유나 생리식염수에 담아 오세요. 한 시간 안에 오면 다시 심을 수 있습니다.</p>
     </section>
 
@@ -385,7 +387,7 @@
   <div class="cta__art" aria-hidden="true"><svg><use href="#d-room"/></svg></div>
   <div class="cta__text">
     <h2 class="cta__line" id="cta-title">전화 한 통이면 됩니다</h2>
-    <p>3사단 의무대대 2층 치과 진료실. 전화 033-450-7119 (부대 내선 803-7112). 평일 09:00–16:00, 점심 12:00–13:00. 소속 의무실의 진료 의뢰서와 군 신분증을 가지고 오세요.</p>
+    <p>3사단 의무대대 2층 치과 진료실. 전화 033-450-7119 (부대 내선 803-7112). 평일 09:00–16:00, 점심 12:00–13:00. 예약은 전화로만 받습니다. 군번만 알려 주시면 되고, 신분증과 의뢰서는 필요 없습니다.</p>
     <a class="button button--paper" href="tel:033-450-7119">전화로 예약 문의</a>
   </div>
 </section>

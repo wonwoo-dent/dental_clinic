@@ -138,21 +138,21 @@
     <text x="80" y="676" font-size="16" fill="var(--muted)">훈련 · 행사 기간에는 진료 시간이 바뀔 수 있습니다</text>
   </symbol>
 
-  <!-- 진료 의뢰서 -->
+  <!-- 전화 예약 메모 -->
   <symbol id="d-form" viewBox="0 0 600 760">
     <rect x="0" y="0" width="600" height="760" fill="var(--field-deep)"/>
     <rect x="40" y="40" width="520" height="690" fill="var(--ink)"/>
     <rect x="64" y="84" width="472" height="620" fill="var(--paper)"/>
     <rect x="240" y="24" width="120" height="56" fill="var(--field)"/>
     <rect x="270" y="40" width="60" height="18" fill="var(--paper)"/>
-    <text x="96" y="150" font-size="34" font-weight="700" fill="var(--ink)">진료 의뢰서</text>
-    <text x="96" y="182" font-size="17" fill="var(--muted)">소속 부대 의무실 → 의무대대 치과</text>
+    <text x="96" y="150" font-size="34" font-weight="700" fill="var(--ink)">전화 예약</text>
+    <text x="96" y="182" font-size="17" fill="var(--muted)">033-450-7119 · 평일 09:00–16:00</text>
     <g font-size="16" fill="var(--muted)">
       <text x="96" y="236">소속</text>
       <text x="96" y="300">계급 · 성명</text>
       <text x="96" y="364">군번</text>
       <text x="96" y="428">증상</text>
-      <text x="96" y="540">의뢰 의무실</text>
+      <text x="96" y="540">희망 날짜</text>
     </g>
     <g fill="var(--surface-deep)">
       <rect x="96" y="246" width="380" height="30"/>
@@ -173,8 +173,8 @@
     <text x="228" y="622" font-size="17" fill="var(--ink)">응급 (치통 · 외상)</text>
     <!-- 직인 -->
     <circle cx="456" cy="600" r="40" fill="none" stroke="var(--field)" stroke-width="4"/>
-    <text x="456" y="606" font-size="16" font-weight="700" fill="var(--field)" text-anchor="middle">의무실</text>
-    <text x="96" y="676" font-size="15" fill="var(--muted)">군 신분증과 함께 지참</text>
+    <text x="456" y="606" font-size="16" font-weight="700" fill="var(--field)" text-anchor="middle">예약</text>
+    <text x="96" y="676" font-size="15" fill="var(--muted)">군번만 알면 됩니다</text>
   </symbol>
 
   <!-- 진료실: 유닛 체어 (왼쪽), 오른쪽 벽은 비워 글이 앉는다 -->
@@ -270,7 +270,7 @@
 </svg>
 
 <div class="stage">
-  <aside class="panel panel--short" aria-label="진료 의뢰서 그림">
+  <aside class="panel panel--short" aria-label="전화 예약 메모 그림">
     <div class="panel__scene is-active" data-scene-name="form">
       <div class="panel__art" aria-hidden="true"><svg><use href="#d-form"/></svg></div>
       <div class="panel__caption"><p class="panel__status">치료 뒤에도 전화하세요</p><p class="panel__next">피가 멎지 않거나, 사흘이 지나도 붓기가 그대로면 바로 연락하세요. 참는 쪽이 더 오래 걸립니다.</p></div>
@@ -369,7 +369,7 @@
   <div class="cta__art" aria-hidden="true"><svg><use href="#d-room"/></svg></div>
   <div class="cta__text">
     <h2 class="cta__line" id="cta-title">전화 한 통이면 됩니다</h2>
-    <p>3사단 의무대대 2층 치과 진료실. 전화 033-450-7119 (부대 내선 803-7112). 평일 09:00–16:00, 점심 12:00–13:00. 소속 의무실의 진료 의뢰서와 군 신분증을 가지고 오세요.</p>
+    <p>3사단 의무대대 2층 치과 진료실. 전화 033-450-7119 (부대 내선 803-7112). 평일 09:00–16:00, 점심 12:00–13:00. 예약은 전화로만 받습니다. 군번만 알려 주시면 되고, 신분증과 의뢰서는 필요 없습니다.</p>
     <a class="button button--paper" href="tel:033-450-7119">전화로 예약 문의</a>
   </div>
 </section>
