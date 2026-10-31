@@ -8,7 +8,7 @@
   if (!roots.length && !docLine) return;
 
   const DOW = ['일', '월', '화', '수', '목', '금', '토'];
-  const PHONE = '033-450-7119';
+  const PHONE = '부대 내선 803-7112';
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const parse = (k) => new Date(`${k}T00:00:00Z`);
   const keyOf = (d) => d.toISOString().slice(0, 10);
@@ -36,9 +36,9 @@
   const inRange = (k, data) => k >= data.from && k <= data.to;
 
   function todayText(data, today) {
-    if (!inRange(today, data)) return { head: '진료 일정 정보가 없습니다', sub: `${PHONE}으로 전화해 확인하세요.` };
+    if (!inRange(today, data)) return { head: '진료 일정 정보가 없습니다', sub: `${PHONE}로 확인하세요.` };
     const t = dayInfo(today, data);
-    if (!t.closed && !t.docs.length) return { head: `오늘 ${md(today)}은 치과 군의관이 모두 자리를 비웁니다`, sub: `${PHONE}으로 전화해 확인하세요.` };
+    if (!t.closed && !t.docs.length) return { head: `오늘 ${md(today)}은 치과 군의관이 모두 자리를 비웁니다`, sub: `${PHONE}로 확인하세요.` };
     if (!t.closed) return { head: `오늘 ${md(today)} 진료`, sub: who(t.docs) };
     let k = addDays(today, 1);
     while (inRange(k, data) && dayInfo(k, data).closed) k = addDays(k, 1);
@@ -137,7 +137,7 @@
   }
 
   function fail(root) {
-    root.innerHTML = `<p class="cal__empty">진료 일정을 불러오지 못했습니다. <a class="link" href="tel:${PHONE}">${PHONE}</a>으로 전화해 확인하세요.</p>`;
+    root.innerHTML = `<p class="cal__empty">진료 일정을 불러오지 못했습니다. ${PHONE}로 확인하세요.</p>`;
   }
 
   fetch('data/schedule.json', { cache: 'no-cache' })
