@@ -57,7 +57,10 @@ a { color: inherit; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 h1, h2, h3 { font-weight: 700; text-wrap: balance; letter-spacing: -0.02em; line-height: 1.15; }
-p { text-wrap: pretty; }
+p { text-wrap: wrap; }
+/* 본문 문단과 목록은 양쪽 정렬로 오른쪽 끝을 맞춘다 (단어 중간에서 끊지 않는다) */
+.section p, .features p, .feature__row li, .faq p { text-align: justify; word-break: normal; line-break: strict; }
+.cal p { text-align: left; }
 p + p { margin-top: 0.9em; }
 .nums { font-variant-numeric: tabular-nums; }
 .muted { color: var(--muted); }
@@ -168,6 +171,8 @@ p + p { margin-top: 0.9em; }
 .feature__trio { margin-top: 1.25rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
 .feature__trio figure { margin: 0; min-width: 0; }
 .feature__trio img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: var(--paper); }
+.feature__trio-pair { grid-column: span 2; }
+.feature__trio-pair > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
 .feature__trio figcaption { margin-top: 0.35rem; font-size: var(--step-small); line-height: 1.4; color: var(--muted); }
 
 /* 증례: 제목 한 줄과 치료 전후 사진 (두 장 또는 세 장) */
@@ -380,7 +385,6 @@ p + p { margin-top: 0.9em; }
   .section, .features { padding: 3.5rem 1.25rem; }
   .features__head { position: static; font-size: 9vw; padding: 0 0 12px; margin-top: 0; }
   .panel--short { height: 38svh; }
-  body { word-break: normal; }
   .feature__row, .feature:nth-child(even) .feature__row { grid-template-columns: 1fr; }
   .feature:nth-child(even) .feature__row figure { order: 0; }
   .feature__row figure { aspect-ratio: 4 / 3; }
