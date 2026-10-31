@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>케이스북</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1B3F7A}a:hover{color:#122B55}
+.eb{font-family:"IBM Plex Sans",sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.chip{display:inline-flex;align-items:center;height:36px;padding:0 14px;border:1px solid #D9DEE5;border-radius:999px;font-size:14px;font-weight:500;color:#101828;text-decoration:none;white-space:nowrap}
+.chip:hover{border-color:#101828;color:#101828}
+.ph{width:100%;height:100%;object-fit:cover;display:block}
+.cap{position:absolute;left:8px;bottom:8px;padding:2px 8px;border-radius:4px;background:rgba(16,24,40,.78);color:#FFFFFF;font-size:11px;font-weight:600}
+.row{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid #E5E8ED;font-size:14px;line-height:1.6}
+.row dt{color:#556070;font-weight:600}
+.row dd{margin:0;color:#101828}
+.fill{color:#8A6D1F}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 3400px; background: #FFFFFF; font-family: 'IBM Plex Sans KR', sans-serif; color: #101828; word-break: keep-all">
+
+<header style="height: 56px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #E5E8ED">
+<a href="Home.dc.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #101828">
+<span style="width: 24px; height: 24px; border-radius: 6px; background: {{accent}}; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">치</span>
+<span style="font-size: 15px; font-weight: 700">3사단 의무대대 치과</span>
+</a>
+<button aria-label="메뉴 열기" style="width: 44px; height: 44px; border: 0; background: transparent; display: flex; align-items: center; justify-content: center; color: #101828; padding: 0">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+</header>
+
+<section style="padding: 44px 20px 0">
+<p class="eb" style="margin: 0 0 14px; color: {{accent}}">Case book</p>
+<h1 style="margin: 0; font-size: 30px; line-height: 1.3; font-weight: 700; letter-spacing: -0.02em">이 진료실에서<br>직접 치료한 증례</h1>
+<p style="margin: 16px 0 0; font-size: 16px; line-height: 1.65; color: #556070">대학병원에서 4년 수련한 전문의 두 명이 진료합니다. 아래 사진은 모두 본원에서 직접 치료한 사례입니다.</p>
+</section>
+
+<section aria-label="전문의란" style="margin: 28px 20px 0; padding: 20px; background: #F4F6F9; border-radius: 12px">
+<p style="margin: 0; font-size: 15px; font-weight: 700">치과 전문의란?</p>
+<div style="margin-top: 14px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; text-align: center">
+<div style="padding: 10px 4px; background: #FFFFFF; border-radius: 8px"><p style="margin: 0; font-size: 12px; color: #556070">치대</p><p style="margin: 2px 0 0; font-size: 15px; font-weight: 700">6년</p></div>
+<div style="padding: 10px 4px; background: #FFFFFF; border-radius: 8px"><p style="margin: 0; font-size: 12px; color: #556070">인턴</p><p style="margin: 2px 0 0; font-size: 15px; font-weight: 700">1년</p></div>
+<div style="padding: 10px 4px; background: #FFFFFF; border-radius: 8px"><p style="margin: 0; font-size: 12px; color: #556070">레지던트</p><p style="margin: 2px 0 0; font-size: 15px; font-weight: 700">3년</p></div>
+<div style="padding: 10px 4px; background: {{accent}}; border-radius: 8px; color: #FFFFFF"><p style="margin: 0; font-size: 12px; opacity: .85">시험</p><p style="margin: 2px 0 0; font-size: 15px; font-weight: 700">전문의</p></div>
+</div>
+<p style="margin: 14px 0 0; font-size: 14px; line-height: 1.6; color: #556070">한 분야만 4년 더 수련하고 국가시험을 통과한 치과의사입니다. 민간 대학병원 치과에서 진료하는 의사와 같은 자격입니다.</p>
+</section>
+
+<nav aria-label="증례 분류" style="padding: 32px 20px 0; display: flex; flex-wrap: wrap; gap: 8px">
+<a class="chip" href="#c1" style="background: #101828; color: #FFFFFF; border-color: #101828">전체</a>
+<a class="chip" href="#c1">사랑니 · 발치</a>
+<a class="chip" href="#c2">보철</a>
+<a class="chip" href="#c3">외상 · 충치</a>
+</nav>
+
+<article id="c1" style="padding: 32px 20px 0">
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="padding: 4px 10px; background: #EEF2F8; border-radius: 6px; font-size: 12px; font-weight: 600; color: {{accent}}">구강악안면외과</span>
+<span style="padding: 4px 10px; background: #FFF3E0; border-radius: 6px; font-size: 12px; font-weight: 600; color: #9A3412">고난도</span>
+</div>
+<h2 style="margin: 12px 0 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em">신경관에 닿은 수평 매복 사랑니</h2>
+<div style="margin-top: 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px">
+<div style="grid-column: 1 / -1; position: relative; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: #EEF1F5"><img class="ph" src="/_blob/4855a29841f1c225ef975f12c0caf064" alt="파노라마 방사선 사진, 옆으로 누운 아래 사랑니"><span class="cap">치료 전 · 파노라마</span></div>
+<div style="position: relative; aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; background: #EEF1F5"><img class="ph" src="/_blob/15f9c30dca88311e426a0128b7b0d549" alt="CBCT, 신경관과 가까운 사랑니"><span class="cap">CBCT</span></div>
+<div style="position: relative; aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; background: #EEF1F5"><img class="ph" src="/_blob/27454ced2ade079aa513cd7efb68dd68" alt="여러 조각으로 나눠 뽑은 사랑니"><span class="cap">분할 발치</span></div>
+</div>
+<dl style="margin: 16px 0 0">
+<div class="row"><dt>문제</dt><dd>아래 사랑니가 옆으로 누운 채 뼈에 묻혀 신경관에 닿아 있음</dd></div>
+<div class="row"><dt>진단</dt><dd>CBCT로 신경관과의 거리를 3차원으로 확인</dd></div>
+<div class="row"><dt>치료</dt><dd>신경을 피해 치아를 여러 조각으로 나눠 발치</dd></div>
+<div class="row" style="border-bottom: 1px solid #E5E8ED"><dt>결과</dt><dd class="fill">[실제 경과로 작성: 예) 1주 뒤 발사, 감각 이상 없음]</dd></div>
+</dl>
+<p style="margin: 14px 0 0; padding: 12px 14px; background: #EEF2F8; border-radius: 8px; font-size: 14px; line-height: 1.6; color: #101828">개인 치과에서는 대학병원으로 의뢰하는 경우가 많은 난이도입니다.</p>
+</article>
+
+<div style="margin: 44px 20px 0; height: 1px; background: #E5E8ED"></div>
+
+<article id="c2" style="padding: 44px 20px 0">
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="padding: 4px 10px; background: #EEF2F8; border-radius: 6px; font-size: 12px; font-weight: 600; color: {{accent}}">치과보철과</span>
+</div>
+<h2 style="margin: 12px 0 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em">지르코니아 인레이</h2>
+<div style="margin-top: 16px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<div style="position: relative; aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; background: #EEF1F5"><img class="ph" src="/_blob/a4da64947b32baf202ca0e7c1e77e65c" alt="인레이를 위해 다듬은 아래 작은어금니"><span class="cap">전</span></div>
+<div style="position: relative; aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; background: #EEF1F5"><img class="ph" src="/_blob/380227e9d0af39af9b5c76df12655104" alt="완성된 지르코니아 인레이"><span class="cap">보철물</span></div>
+<div style="position: relative; aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; background: #EEF1F5"><img class="ph" src="/_blob/128934990b778086f9b8cc8f47dad469" alt="인레이를 붙여 형태를 회복한 어금니"><span class="cap">후</span></div>
+</div>
+<dl style="margin: 16px 0 0">
+<div class="row"><dt>문제</dt><dd class="fill">[실제 상태로 작성: 예) 큰 충치로 어금니 일부가 무너짐]</dd></div>
+<div class="row"><dt>치료</dt><dd>치아를 최소한으로 다듬고 본을 떠 지르코니아 인레이 제작·접착</dd></div>
+<div class="row" style="border-bottom: 1px solid #E5E8ED"><dt>기간</dt><dd class="fill">[내원 N회 · 약 N주]</dd></div>
+</dl>
+</article>
+
+<div style="margin: 44px 20px 0; height: 1px; background: #E5E8ED"></div>
+
+<article id="c3" style="padding: 44px 20px 0">
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="padding: 4px 10px; background: #EEF2F8; border-radius: 6px; font-size: 12px; font-weight: 600; color: {{accent}}">외상 수복</span>
+<span style="padding: 4px 10px; background: #F4F6F9; border-radius: 6px; font-size: 12px; font-weight: 600; color: #556070">당일 처치</span>
+</div>
+<h2 style="margin: 12px 0 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em">부러진 앞니를 레진으로 복원</h2>
+<div style="margin-top: 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px">
+<div style="position: relative; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; background: #EEF1F5"><img class="ph" src="/_blob/61b9c0365bcf7b0831a3a9bd59908163" alt="외상으로 부러진 아래 앞니"><span class="cap">치료 전</span></div>
+<div style="position: relative; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; background: #EEF1F5"><img class="ph" src="/_blob/8322994c7b3e0e981cd440fdd0b65e73" alt="형태와 색을 회복한 앞니"><span class="cap">치료 후</span></div>
+</div>
+<dl style="margin: 16px 0 0">
+<div class="row"><dt>문제</dt><dd class="fill">[실제 상황으로 작성: 예) 훈련 중 넘어져 앞니가 부러짐]</dd></div>
+<div class="row" style="border-bottom: 1px solid #E5E8ED"><dt>치료</dt><dd>자연치와 같은 색조의 레진으로 형태 복원</dd></div>
+</dl>
+</article>
+
+<section style="margin: 56px 20px 0; padding: 24px 20px; border: 1px solid #E5E8ED; border-radius: 12px">
+<p class="eb" style="margin: 0; color: #556070">This year</p>
+<div style="margin-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div><p style="margin: 0; font-size: 28px; font-weight: 700; color: {{accent}}">[N]건</p><p style="margin: 4px 0 0; font-size: 13px; color: #556070">매복 사랑니 발치</p></div>
+<div><p style="margin: 0; font-size: 28px; font-weight: 700; color: {{accent}}">[N]건</p><p style="margin: 4px 0 0; font-size: 13px; color: #556070">크라운 · 인레이</p></div>
+</div>
+<p style="margin: 14px 0 0; font-size: 12px; color: #6B7686">[기준 기간] 진료 기록 기준</p>
+</section>
+
+<section style="padding: 56px 20px 0">
+<p class="eb" style="margin: 0 0 8px; color: #556070">Voices</p>
+<h2 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em">먼저 치료받은 장병들</h2>
+<div style="margin-top: 16px; display: flex; flex-direction: column; gap: 10px">
+<figure style="margin: 0; padding: 18px; background: #F4F6F9; border-radius: 12px">
+<blockquote style="margin: 0; font-size: 15px; line-height: 1.65" class="fill">[의견함에서 본인 동의를 받은 의견 원문]</blockquote>
+<figcaption style="margin-top: 10px; font-size: 13px; color: #556070">[○○연대 상병 · 사랑니 발치]</figcaption>
+</figure>
+<figure style="margin: 0; padding: 18px; background: #F4F6F9; border-radius: 12px">
+<blockquote style="margin: 0; font-size: 15px; line-height: 1.65" class="fill">[의견함에서 본인 동의를 받은 의견 원문]</blockquote>
+<figcaption style="margin-top: 10px; font-size: 13px; color: #556070">[○○대대 일병 · 신경치료·크라운]</figcaption>
+</figure>
+</div>
+</section>
+
+<section style="padding: 56px 20px 0">
+<p class="eb" style="margin: 0 0 8px; color: #556070">Why here</p>
+<h2 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em">여기서 받으면</h2>
+<ul style="margin: 16px 0 0; padding: 0; list-style: none; border-top: 1px solid #E5E8ED">
+<li style="padding: 14px 0; border-bottom: 1px solid #E5E8ED; font-size: 15px; line-height: 1.6"><b>외진으로 하루를 빼지 않아도 됩니다.</b> 부대 안에서 30분~1시간이면 끝납니다.</li>
+<li style="padding: 14px 0; border-bottom: 1px solid #E5E8ED; font-size: 15px; line-height: 1.6"><b>같은 의사가 처음부터 끝까지</b> 진단, 치료, 경과를 봅니다.</li>
+<li style="padding: 14px 0; border-bottom: 1px solid #E5E8ED; font-size: 15px; line-height: 1.6"><b>진료비가 없습니다.</b> <span class="fill">[보철 비용 여부 확인 후 추가]</span></li>
+</ul>
+<div style="margin-top: 16px; padding: 16px; background: #F4F6F9; border-radius: 10px">
+<p style="margin: 0; font-size: 15px; font-weight: 600">이럴 땐 국군병원으로 바로 의뢰합니다</p>
+<p style="margin: 6px 0 0; font-size: 14px; line-height: 1.65; color: #556070">임플란트, 틀니, 교정, 전신마취가 필요한 수술. 이 치료는 국군병원이 맞는 곳이라 진단 후 소견서를 써 드립니다.</p>
+</div>
+</section>
+
+<section style="margin: 56px 20px 0; padding: 24px 20px; background: #101828; color: #FFFFFF; border-radius: 12px">
+<p class="eb" style="margin: 0; color: #9FB3D1">Book</p>
+<p style="margin: 10px 0 0; font-size: 18px; font-weight: 700; line-height: 1.45">상담만 받아 보고 결정해도 됩니다</p>
+<p style="margin: 10px 0 0; font-size: 26px; font-weight: 700">내선 803-7112</p>
+<p style="margin: 6px 0 0; font-size: 14px; line-height: 1.6; color: #C5CEDB">평일 09:00–16:00 · 군 전화로만 연결됩니다</p>
+</section>
+
+<footer style="padding: 40px 20px 48px; font-size: 12px; line-height: 1.7; color: #556070">
+<p style="margin: 0">증례 사진은 환자 동의를 받아 게재합니다. 치료 결과는 개인마다 다를 수 있습니다.</p>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1B3F7A","options":["#1B3F7A","#14532D","#101828","#7C2D12"]},"$preview":{"width":390,"height":3400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#1B3F7A' };
+  }
+}
+</script>
+</body>
+</html>
