@@ -264,6 +264,50 @@ p + p { margin-top: 0.9em; }
 .panel__docs { display: inline-block; margin-top: 0.75rem; padding: 4px 10px; font-size: var(--step-small); font-weight: 500; background: var(--field-deep); }
 .panel__docs[hidden] { display: none; }
 
+/* 바로 가기: 두 열 카드, 첫 카드만 푸른 면 */
+.hub { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-top: 1.5rem; }
+.hub a { display: flex; flex-direction: column; gap: 0.35rem; min-height: 8rem; padding: 1.1rem 1.2rem; background: var(--surface); text-decoration: none; transition: background-color var(--t-hover) ease; }
+.hub b { font-size: var(--step-lead); font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; }
+.hub span { font-size: var(--step-small); line-height: 1.45; color: var(--muted); }
+.hub a::after { content: "→"; margin-top: auto; font-weight: 500; color: var(--field); }
+.hub a.is-key { background: var(--field); color: var(--field-ink); }
+.hub a.is-key span, .hub a.is-key::after { color: inherit; opacity: 0.88; }
+@media (hover: hover) and (pointer: fine) { .hub a:not(.is-key):hover { background: var(--surface-deep); } .hub a.is-key:hover { background: var(--field-deep); } }
+
+/* 홈의 진료 과목 요약: 사진 타일 */
+.subjects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-top: 2rem; }
+.subjects a { display: flex; flex-direction: column; background: var(--paper); text-decoration: none; }
+.subjects img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: var(--surface-deep); }
+.subjects b { display: block; padding: 0.8rem 0.9rem 0; font-size: var(--step-body); font-weight: 700; letter-spacing: -0.01em; line-height: 1.3; }
+.subjects span { display: block; padding: 0.25rem 0.9rem 0.95rem; font-size: var(--step-small); line-height: 1.45; color: var(--muted); }
+.subjects .subjects__all { justify-content: flex-end; background: var(--field); color: var(--field-ink); min-height: 10rem; }
+.subjects .subjects__all span { color: inherit; opacity: 0.88; }
+.subjects .subjects__all b::after { content: " →"; }
+
+/* 전화할 때 말할 것: 메모하거나 캡처해 가는 카드 */
+.callcard { margin-top: 1.5rem; padding: 1.25rem 1.4rem 1.4rem; background: var(--paper); box-shadow: inset 0 0 0 2px var(--ink); max-width: 36em; }
+.callcard__title { font-size: var(--step-lead); font-weight: 700; letter-spacing: -0.02em; line-height: 1.3; }
+.section .callcard__note { margin-top: 0.5rem; font-size: var(--step-small); line-height: 1.55; color: var(--muted); }
+.callcard__list { margin: 1rem 0 0; padding: 0; list-style: none; }
+.callcard__list li { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 0.75rem; padding: 0.6rem 0; border-top: 1px solid var(--surface-deep); align-items: baseline; }
+.callcard__list b { font-weight: 700; }
+.callcard__list span { color: var(--muted); }
+.callcard__list .is-fill span { color: var(--ink); font-weight: 600; }
+.section .callcard__foot { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--surface-deep); font-size: var(--step-small); }
+
+/* 내 예약 캘린더에 추가 */
+.addcal { margin-top: 1.5rem; padding: 1.25rem 1.4rem 1.4rem; background: var(--surface); max-width: 36em; }
+.addcal__fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+.addcal label { display: grid; gap: 0.3rem; font-size: var(--step-small); font-weight: 500; }
+.addcal input, .addcal select { width: 100%; min-height: 2.9rem; padding: 0 0.7rem; border: 0; border-radius: 0; background: var(--paper); color: var(--ink); font: inherit; font-size: 1rem; }
+.addcal .button { margin-top: 1rem; }
+.section .addcal__msg { margin-top: 0.75rem; text-align: left; }
+@media (max-width: 520px) { .addcal__fields { grid-template-columns: 1fr 1fr; } .addcal__fields label:last-child { grid-column: 1 / -1; } }
+
+/* 홈 첫 화면 버튼 아래 한 줄 */
+.hero__note { margin-top: 0.9rem; max-width: 30em; }
+.feature__more { margin-top: 1rem; }
+
 /* 자주 묻는 질문: 이어지는 글 */
 .faq p + p { margin-top: 1.1rem; }
 .faq b { font-weight: 600; }
