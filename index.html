@@ -109,12 +109,46 @@
         </ul>
       </article>
     </div>
-    <dl class="team">
-      <div class="team__row"><dt>치위생부사관</dt><dd><b>중사 박하림</b><span>치과위생사 면허 (2015) · 2018년부터 3사단 의무대대 치과반</span></dd></div>
-      <div class="team__row"><dt>의무기록부사관</dt><dd><b>하사 김구연</b><span>치과위생사 면허 · 2025년부터 3사단 의무대대 치과반</span></dd></div>
-      <div class="team__row"><dt>군무원 · 치과위생사</dt><dd><b>주무관 이성태</b><span>치과위생사 면허 (2019) · 56사단, 50사단 의무대 치과를 거쳐 현재 3사단</span></dd></div>
-      <div class="team__row"><dt>치과 의무병</dt><dd><b>진료 보조와 예약 안내</b></dd></div>
-    </dl>
+    <h3 class="staff-title">함께 진료하는 사람들</h3>
+    <div class="doctors">
+      <article class="doctor">
+        <p class="doctor__role">치위생부사관</p>
+        <h4 class="doctor__name">박하림<small>중사</small></h4>
+        <ul>
+          <li>치과위생사 면허 (2015)</li>
+          <li>육군 의무병과 임관 (2018)</li>
+          <li>3사단 치과위생사 제169호 인명 (2018)</li>
+          <li>2018년부터 3사단 의무대대 치과반</li>
+        </ul>
+      </article>
+      <article class="doctor">
+        <p class="doctor__role">의무기록부사관</p>
+        <h4 class="doctor__name">김구연<small>하사</small></h4>
+        <ul>
+          <li>치과위생사 면허</li>
+          <li>육군 민간임관자전원장기 임관 (2022)</li>
+          <li>2025년부터 3사단 의무대대 치과반</li>
+        </ul>
+      </article>
+      <article class="doctor">
+        <p class="doctor__role">군무원 · 치과위생사</p>
+        <h4 class="doctor__name">이성태<small>주무관</small></h4>
+        <ul>
+          <li>치과위생사 면허 (2019)</li>
+          <li>56사단 의무대 치과 (2021–2023)</li>
+          <li>50사단 의무대 치과 (2023–2025)</li>
+          <li>현재 3사단 의무대대 치과</li>
+        </ul>
+      </article>
+      <article class="doctor">
+        <p class="doctor__role">치과 의무병</p>
+        <h4 class="doctor__name">소속 병사</h4>
+        <ul>
+          <li>치과 치료 및 처치 보조</li>
+          <li>진료 및 예약 안내</li>
+        </ul>
+      </article>
+    </div>
   </section>
 
   <section class="block" id="how" aria-labelledby="how-title">
@@ -125,7 +159,32 @@
       <li><div><b>소속 부대에 예약 시간 보고</b><span>병사는 외출 처리를 받으세요. 응급이 아니면 초진은 당일 진료가 어렵습니다.</span></div></li>
       <li><div><b>10분 전 의무대대 2층</b><span>신분증·의뢰서는 필요 없습니다. 먹는 약 이름만 챙기세요.</span></div></li>
     </ol>
-    <p><a class="link" href="hours.html#call">전화할 때 말할 것</a> · <a class="link" href="hours.html#add-calendar">예약을 캘린더에 넣기</a></p>
+    <p><a class="link" href="hours.html#call">전화할 때 말할 것</a></p>
+  </section>
+
+  <section class="block" id="add-calendar" aria-labelledby="addcal-title">
+    <p class="eb">Calendar</p>
+    <h2 class="block-title" id="addcal-title">내 예약 캘린더에 추가</h2>
+    <p class="text">전화로 잡은 날짜와 시간을 넣으면 휴대폰 캘린더에 일정이 들어가고, <b>진료 전날 18:00</b>에 알림이 울립니다. 진료 당일에는 휴대폰을 보기 어려우니 전날 저녁에 챙기세요. 이름과 군번은 받지 않고, 입력한 내용은 어디로도 보내지 않습니다.</p>
+    <form class="addcal" data-addcal>
+      <p class="addcal__kakao" data-addcal-kakao hidden>카카오톡 안에서는 캘린더 추가가 안 될 수 있습니다. 오른쪽 위 <b>⋯</b> → <b>다른 브라우저로 열기</b>를 누른 뒤 다시 해 주세요.</p>
+      <div class="addcal__fields">
+        <label>날짜<input type="date" name="date" required></label>
+        <label>시간<select name="time"></select></label>
+        <label>용건<select name="kind"><option>초진</option><option>재진</option><option>보철 장착</option><option>발치</option><option>신경치료</option><option>스케일링</option></select></label>
+      </div>
+      <div class="addcal__buttons">
+        <button class="button" type="submit">캘린더에 추가</button>
+        <button class="button button--ghost" type="button" data-addcal-google>구글 캘린더</button>
+      </div>
+      <p class="addcal__msg small" data-addcal-msg aria-live="polite"></p>
+      <p class="addcal__hint small muted">안 되면 오른쪽 위 ⋯ → 다른 브라우저로 열기</p>
+      <ul class="addcal__devices small muted">
+        <li><b>아이폰</b> '캘린더에 추가' 창이 뜨면 저장하세요. 창에서 다른 캘린더를 고를 수 있습니다.</li>
+        <li><b>갤럭시</b> 내려받은 파일을 삼성 캘린더로 열고 저장할 계정을 고르세요.</li>
+        <li><b>구글 캘린더 앱만 쓰는 경우</b> '구글 캘린더' 버튼을 누르세요. 알림은 직접 '전날'로 바꿔 주세요.</li>
+      </ul>
+    </form>
   </section>
 
   <section class="block" id="place" aria-labelledby="place-title">
@@ -176,5 +235,6 @@
 </footer>
 <script src="site.js" defer></script>
 <script src="calendar.js" defer></script>
+<script src="booking.js" defer></script>
 </body>
 </html>

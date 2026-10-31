@@ -93,15 +93,25 @@
   <section class="block" id="add-calendar" aria-labelledby="addcal-title">
     <p class="eb">Calendar</p>
     <h2 class="block-title" id="addcal-title">내 예약 캘린더에 추가</h2>
-    <p class="text">전화로 잡은 날짜와 시간을 넣으면 휴대폰 캘린더에 일정이 들어갑니다. 전날 저녁 7시와 1시간 전에 알림이 옵니다. 입력한 내용은 어디로도 보내지 않습니다.</p>
-    <form class="addcal" data-addcal data-kind="보철물 장착">
+    <p class="text">전화로 잡은 날짜와 시간을 넣으면 휴대폰 캘린더에 일정이 들어가고, <b>진료 전날 18:00</b>에 알림이 울립니다. 진료 당일에는 휴대폰을 보기 어려우니 전날 저녁에 챙기세요. 이름과 군번은 받지 않고, 입력한 내용은 어디로도 보내지 않습니다.</p>
+    <form class="addcal" data-addcal data-kind="보철 장착">
+      <p class="addcal__kakao" data-addcal-kakao hidden>카카오톡 안에서는 캘린더 추가가 안 될 수 있습니다. 오른쪽 위 <b>⋯</b> → <b>다른 브라우저로 열기</b>를 누른 뒤 다시 해 주세요.</p>
       <div class="addcal__fields">
         <label>날짜<input type="date" name="date" required></label>
         <label>시간<select name="time"></select></label>
-        <label>진료<select name="kind"><option>치과 진료</option><option>재진</option><option>보철물 장착</option><option>발치</option><option>신경치료</option><option>스케일링</option></select></label>
+        <label>용건<select name="kind"><option>초진</option><option>재진</option><option>보철 장착</option><option>발치</option><option>신경치료</option><option>스케일링</option></select></label>
       </div>
-      <button class="button" type="submit">캘린더에 추가</button>
-      <p class="addcal__msg small muted" data-addcal-msg aria-live="polite"></p>
+      <div class="addcal__buttons">
+        <button class="button" type="submit">캘린더에 추가</button>
+        <button class="button button--ghost" type="button" data-addcal-google>구글 캘린더</button>
+      </div>
+      <p class="addcal__msg small" data-addcal-msg aria-live="polite"></p>
+      <p class="addcal__hint small muted">안 되면 오른쪽 위 ⋯ → 다른 브라우저로 열기</p>
+      <ul class="addcal__devices small muted">
+        <li><b>아이폰</b> '캘린더에 추가' 창이 뜨면 저장하세요. 창에서 다른 캘린더를 고를 수 있습니다.</li>
+        <li><b>갤럭시</b> 내려받은 파일을 삼성 캘린더로 열고 저장할 계정을 고르세요.</li>
+        <li><b>구글 캘린더 앱만 쓰는 경우</b> '구글 캘린더' 버튼을 누르세요. 알림은 직접 '전날'로 바꿔 주세요.</li>
+      </ul>
     </form>
   </section>
 

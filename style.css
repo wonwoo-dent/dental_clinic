@@ -380,3 +380,15 @@ a:hover { color: var(--accent-deep); }
 .notice { margin-top: 40px; font-size: 12px; line-height: 1.7; color: var(--muted); }
 @media (max-width: 380px) { .specialist__steps b { font-size: 14px; } }
 .contact .contact__lead { margin-top: 10px; font-size: 18px; font-weight: 700; line-height: 1.45; color: #fff; }
+.addcal__buttons { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+.addcal__buttons .button { margin-top: 0; width: 100%; }
+.addcal__kakao { margin-bottom: 14px; padding: 12px 14px; background: var(--warn-bg); border-radius: 8px; font-size: 14px; line-height: 1.6; color: var(--warn-text); }
+.addcal__kakao[hidden] { display: none; }
+.addcal__msg { margin-top: 10px; font-weight: 600; color: var(--accent); }
+.addcal__msg:empty { display: none; }
+.addcal__hint { margin-top: 10px; }
+.addcal__devices { margin-top: 10px; padding: 12px 0 0; list-style: none; border-top: 1px solid var(--line-strong); display: grid; gap: 6px; }
+.addcal__devices b { margin-right: 4px; color: var(--ink); font-weight: 600; }
+.staff-title { margin-top: 32px; font-size: 16px; font-weight: 700; color: var(--muted); }
+.staff-title + .doctors { margin-top: 12px; }
+.doctor p.doctor__role + .doctor__name { margin-top: 2px; font-size: 17px; }
