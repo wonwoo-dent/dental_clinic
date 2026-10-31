@@ -33,8 +33,8 @@
 
 ## 사진을 바꾸는 법
 `photos/` 폴더에 같은 이름으로 사진을 올리면 바로 바뀝니다 (GitHub 화면에서 **Add file → Upload files**).
-- `crown-case.jpg`, `exam-mirror.jpg`, `tmd-splint-wide.jpg` (가로 1400×875): 진료 안내의 과목 사진
-- `exam-mirror.jpg` 는 외부 자료 사진(CC BY-SA)입니다. 실제 진료 사진으로 바꾸면 `clinic.html` 맨 아래 출처 줄도 고치세요.
+- `scaler.jpg`, `tmd-splint-wide.jpg` (가로 1400×875): 진료 안내의 과목 사진
+- `scaler.jpg` 는 외부 자료 사진(CC BY-SA)입니다. 실제 진료 사진으로 바꾸면 `clinic.html` 맨 아래 출처 줄도 고치세요.
 
 ## 케이스북에 정보 채우기
 `cases.html` 안의 `<!-- 채울 자리 ... -->` 주석이 실제 기록으로 채울 곳입니다. **지어낸 숫자나 후기는 넣지 마세요.**
