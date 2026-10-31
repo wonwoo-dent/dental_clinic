@@ -1,8 +1,11 @@
-"""의무대대 공용 구글 캘린더에서 치과 군의관 두 명의 부재만 골라 data/schedule.json 으로 저장한다.
+"""의무대대 공용 구글 캘린더에서 치과 군의관 부재를 읽어, 날짜별 '진료 상태'만 data/schedule.json 으로 저장한다.
 
 - 캘린더 주소는 GitHub Secret 의 CAL_MEDICAL 에서 읽는다. 주소와 원본 일정은 어디에도 저장하지 않는다.
+- 공개 파일에는 군의관 이름, 누가 언제 비는지, 휴가 종류를 남기지 않는다 (보안).
+  평일마다 아래 셋 중 하나만 남긴다. 평소(초진 가능)인 날은 적지 않는다.
+    limited : 군의관 한 명 이상이 하루 중 자리를 비움 → 화면에 '재진만'
+    closed  : 군의관이 모두 자리를 비움 → 화면에 '휴진'
 - 일정 제목은 "연가1) 이원우(5/9일)", "청원휴가3) 이종철" 처럼 "종류번호) 이름" 꼴이다.
-- 홈페이지에는 휴가 종류를 내보내지 않는다. 날짜마다 누가 종일·오전·오후 부재인지만 남긴다.
 - 공휴일은 구글의 공개 '대한민국의 휴일' 캘린더에서 '공휴일'만 가져온다 (기념일은 뺀다).
 """
 import json
@@ -143,6 +146,19 @@ def mark(away, d: date, doc: str, part: str, start: date, end: date):
     away[k][doc] = merge(away[k].get(doc), part)
 
 
+def day_status(away):
+    """군의관별 부재를 날짜별 상태로 줄인다. 이름은 여기서 버린다."""
+    out = {}
+    for k, who in sorted(away.items()):
+        if not who:
+            continue
+        if all(who.get(d["id"]) == "day" for d in DOCTORS):
+            out[k] = "closed"
+        else:
+            out[k] = "limited"
+    return out
+
+
 def build_holidays(cal_bytes: bytes, start: date, end: date):
     cal = icalendar.Calendar.from_ical(cal_bytes)
     out = {}
@@ -189,9 +205,8 @@ def main():
     data = {
         "from": start.isoformat(),
         "to": (end - timedelta(days=1)).isoformat(),
-        "doctors": DOCTORS,
         "holidays": dict(sorted(holidays.items())),
-        "away": {k: dict(sorted(v.items())) for k, v in sorted(away.items())},
+        "days": day_status(away),
     }
     same = {k: v for k, v in old.items() if k != "updated"} == data
     data["updated"] = old.get("updated") if same and old.get("updated") else datetime.now(KST).replace(microsecond=0).isoformat()
@@ -200,7 +215,7 @@ def main():
         return
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"저장: 부재 {sum(len(v) for v in away.values())}건, 공휴일 {len(holidays)}일, {data['from']} ~ {data['to']}")
+    print(f"저장: 재진만 {list(data['days'].values()).count('limited')}일, 휴진 {list(data['days'].values()).count('closed')}일, 공휴일 {len(holidays)}일, {data['from']} ~ {data['to']}")
 
 
 if __name__ == "__main__":
